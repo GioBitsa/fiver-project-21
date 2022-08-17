@@ -1,11 +1,13 @@
-import './App.css';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import { Teritories } from "./Pages";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      app
-    </div>
+    <Routes>
+      <Route path="/" element={<Teritories />} />
+    </Routes>
   );
-}
+};
 
 export default App;
