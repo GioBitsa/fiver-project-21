@@ -1,11 +1,12 @@
 import React from "react";
-import { Announcement, Navbar } from "../../Components";
+import { Announcement, Faq, Navbar } from "../../Components";
 
 const Teritories = () => {
   return (
     <>
       <Announcement />
       <Navbar />
+      <Faq />
     </>
   );
 };

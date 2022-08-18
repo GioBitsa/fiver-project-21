@@ -10,7 +10,7 @@ const Announcement = () => {
         component="p"
         sx={{
           textAlign: "center",
-          color: palette.text,
+          color: palette.whiteText,
           fontSize: "13px",
           lineHeight: "16px",
         }}

@@ -7,9 +7,13 @@ const palette = {
   darkElectric: "#3EFCE7",
   electric: "#6AFFEE",
   lightElectric: "#95FFF3",
-  grey: "#C0FFF8",
+  veryLightElectric: "#C0FFF8",
+  grey: "#979797",
   white: "#ECFFFD",
-  text: "#FFFFFF",
+  whiteText: "#FFFFFF",
+  navbarBackground: "#F3FBFB",
+  blackText: "#222222",
+  black: "#111827",
 };
 
 export default palette;
