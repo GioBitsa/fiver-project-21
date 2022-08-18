@@ -4,9 +4,9 @@ import palette from "../../Shared/palette";
 
 export const NewsLetter = styled(Stack)({
   position: "absolute",
-  top: "-200px",
+  top: "-150px",
   left: "50%",
-  width: "80%",
+  width: "100%",
   transform: "translate(-50%)",
   overflow: "hidden",
   padding: "70px 50px",

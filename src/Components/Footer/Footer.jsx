@@ -25,16 +25,17 @@ import { RiBehanceFill } from "react-icons/ri";
 const Footer = () => {
   return (
     <Box
-      sx={{ paddingTop: "200px", backgroundColor: palette.navbarBackground }}
+      sx={{ paddingTop: "150px", backgroundColor: palette.navbarBackground }}
     >
       <Box
         sx={{
           backgroundColor: palette.primary,
-          padding: "150px 0 50px",
-          position: "relative",
         }}
       >
-        <Container maxWidth="lg">
+        <Container
+          maxWidth="lg"
+          sx={{ padding: "150px 0 50px", position: "relative" }}
+        >
           <NewsLetter alignItems="center" direction="row" spacing={2}>
             <Box>
               <Typography
