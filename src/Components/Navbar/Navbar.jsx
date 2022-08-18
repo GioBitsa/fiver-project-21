@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Container, Stack, IconButton } from "@mui/material";
 import Logo from "../../Assets/Logo.png";
+import Ellipse from "../../Assets/Ellipse.png";
 import { BiChevronDown } from "react-icons/bi";
 import { MyButton } from "./Style";
 import { MainButton } from "../Common";
@@ -8,7 +9,9 @@ import palette from "../../Shared/palette";
 
 const Navbar = () => {
   return (
-    <Box sx={{ backgroundColor: palette.navbarBackground }}>
+    <Box
+      sx={{ backgroundColor: palette.navbarBackground, position: "relative" }}
+    >
       <Container maxWidth="lg" sx={{ py: 2 }}>
         <Stack direction="row" spacing={2} justifyContent="space-between">
           <Stack direction="row" spacing={1}>
@@ -39,6 +42,7 @@ const Navbar = () => {
           </Stack>
         </Stack>
       </Container>
+      <img src={Ellipse} alt="elipse" className="navbar-ellipse" />
     </Box>
   );
 };
