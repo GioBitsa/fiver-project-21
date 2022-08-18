@@ -2,10 +2,11 @@ import React from "react";
 import { Announcement, Faq, Footer, Navbar } from "../../Components";
 import HeroImg from "../../Assets/heroImg.png";
 import HighLight from "../../Assets/HighLight.png";
-import VideoPreview from "../../Assets/VideoPreview.png";
+// import VideoPreview from "../../Assets/VideoPreview.png";
 import { Container, Stack, Typography, Box } from "@mui/material";
 import { MainButton, OutlineMainButton } from "../../Components/Common";
 import palette from "../../Shared/palette";
+import Video from "../../Assets/video.mp4";
 
 const Teritories = () => {
   return (
@@ -85,7 +86,15 @@ const Teritories = () => {
               <MainButton text="Voir Offre & services" />
             </Box>
             <Box>
-              <img style={{ width: "600px" }} src={VideoPreview} alt="video" />
+              <video
+                controls
+                autostart
+                autoPlay
+                muted
+                src={Video}
+                type="video/mp4"
+                style={{ width: "600px", borderRadius: "7px" }}
+              />
             </Box>
           </Stack>
         </Container>
