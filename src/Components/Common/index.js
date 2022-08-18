@@ -1,3 +1,4 @@
 import MainButton from "./MainButton/MainButton";
+import OutlineMainButton from "./OutlineMainButton/OutlineMainButton";
 
-export { MainButton };
+export { MainButton, OutlineMainButton };

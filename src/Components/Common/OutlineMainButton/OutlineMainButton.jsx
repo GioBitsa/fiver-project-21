@@ -4,17 +4,18 @@ import { styled } from "@mui/system";
 import palette from "../../../Shared/palette";
 
 const MyButton = styled(Button)({
-  color: palette.whiteText,
-  backgroundColor: palette.primary,
+  color: palette.primary,
+  backgroundColor: "transparent",
   padding: "8px 12px",
   borderRadius: "7px",
+  border: `1px solid ${palette.primary}`,
 
   "&:hover": {
-    backgroundColor: palette.primary,
+    backgroundColor: "transparent",
   },
 });
 
-const MainButton = ({ text, onClick }) => {
+const OutlineMainButton = ({ text, onClick }) => {
   return (
     <MyButton disableRipple onClick={onClick}>
       {text}
@@ -22,4 +23,4 @@ const MainButton = ({ text, onClick }) => {
   );
 };
 
-export default MainButton;
+export default OutlineMainButton;
