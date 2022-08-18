@@ -1,5 +1,5 @@
 import React from "react";
-import { Announcement, Faq, Navbar } from "../../Components";
+import { Announcement, Faq, Footer, Navbar } from "../../Components";
 import HeroImg from "../../Assets/heroImg.png";
 import HighLight from "../../Assets/HighLight.png";
 import VideoPreview from "../../Assets/VideoPreview.png";
@@ -12,6 +12,7 @@ const Teritories = () => {
     <>
       <Announcement />
       <Navbar />
+      {/* hero section */}
       <Container maxWidth="lg" sx={{ py: 5 }}>
         <Stack direction="row" alignItems="center" spacing={3}>
           <Box>
@@ -64,6 +65,7 @@ const Teritories = () => {
           </Box>
         </Stack>
       </Container>
+      {/* end of hero section */}
       <Box sx={{ backgroundColor: palette.navbarBackground, py: "50px" }}>
         <Container maxWidth="lg" sx={{ pb: 5 }}>
           <Stack direction="row" alignItems="center" spacing={3}>
@@ -89,6 +91,7 @@ const Teritories = () => {
         </Container>
         <Faq />
       </Box>
+      <Footer />
     </>
   );
 };
