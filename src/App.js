@@ -1,11 +1,12 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { Teritories } from "./Pages";
+import { Teritories, Home } from "./Pages";
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Teritories />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/teritories" element={<Teritories />} />
     </Routes>
   );
 };
