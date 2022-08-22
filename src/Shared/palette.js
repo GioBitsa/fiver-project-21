@@ -14,6 +14,8 @@ const palette = {
   navbarBackground: "#F3FBFB",
   blackText: "#222222",
   black: "#111827",
+  linear:
+    "linear-gradient(180deg, rgba(18,183,167,1) 0%, rgba(47,232,182,1) 100%)",
 };
 
 export default palette;
