@@ -9,7 +9,7 @@ export const HeroHeading = styled(Typography)({
   lineHeight: "70px",
 
   "& span": {
-    background: palette.linear,
+    background: palette.linearVerticaly,
     "Webkit-background-clip": "text",
     "Webkit-text-fill-color": "transparent",
   },
@@ -32,5 +32,15 @@ export const HeroParagraph = styled(Typography)({
 
   "@media screen and (max-width: 600px)": {
     fontSize: "14px",
+  },
+});
+
+export const MyVideoPreview = styled("img")({
+  width: "450px",
+  maxWidth: "450px",
+
+  "@media screen and (max-width: 900px)": {
+    width: "100%",
+    marginTop: "20px",
   },
 });
