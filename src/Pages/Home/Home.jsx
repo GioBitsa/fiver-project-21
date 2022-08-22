@@ -1,5 +1,10 @@
 import React from "react";
-import { Announcement, Footer, Navbar } from "../../Components";
+import {
+  Announcement,
+  Footer,
+  Navbar,
+  SliderComponent,
+} from "../../Components";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { HeroHeading, HeroParagraph, MyVideoPreview } from "./Style";
 import Earth from "../../Assets/Earth.png";
@@ -109,6 +114,7 @@ const Home = () => {
         </Container>
       </Box>
       {/* End of Video section */}
+      <SliderComponent />
       <Footer />
     </>
   );
