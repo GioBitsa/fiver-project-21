@@ -1,9 +1,12 @@
 .slider-container {
-    padding: 0 70px;
+    padding: 40px 70px;
 }
 
 .slider-container > div img {
     display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
     margin: 0 auto;
 }
 
@@ -24,16 +27,16 @@
 }
 
 .slick-next {
-    right: 0 !important;
+    right: 0px !important;
 }
 
 .slick-prev {
-    left: 0 !important;
+    left: 0px !important;
 }
 
 @media screen and (max-width: 768px) {
     .slider-container {
-        padding: 0 40px;
+        padding: 20px 40px;
     }
     .arrow {
         width: 40px !important;
@@ -42,13 +45,12 @@
     .slider-container > div img {
         width: 50px;
         height: 50px;
-        object-fit: cover;
     }
 }
 
 @media screen and (max-width: 600px) {
     .slider-container > div img {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
     }
 }

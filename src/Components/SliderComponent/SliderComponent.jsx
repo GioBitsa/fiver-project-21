@@ -71,43 +71,50 @@ const SliderComponent = () => {
     ],
   };
   return (
-    <Container maxWidth="lg" sx={{ my: "50px" }}>
-      <Typography
-        component="h3"
-        variant="h4"
-        sx={{
-          pb: 3,
-          color: palette.primary,
-          fontWeight: "bold",
-          fontSize: "24px",
-        }}
+    <>
+      <Container maxWidth="lg" sx={{ mt: "50px" }}>
+        <Typography
+          component="h3"
+          variant="h4"
+          sx={{
+            pb: 3,
+            color: palette.primary,
+            fontWeight: "bold",
+            fontSize: "24px",
+          }}
+        >
+          ils nous font confiances
+        </Typography>
+      </Container>
+      <Container
+        maxWidth="lg"
+        sx={{ mb: "50px", backgroundColor: palette.lightGrey }}
       >
-        ils nous font confiances
-      </Typography>
-      <Slider className="slider-container" {...settings}>
-        <div>
-          <img src={SliderImage} alt="spotify" />
-        </div>
-        <div>
-          <img src={SliderImage2} alt="vite" />
-        </div>
-        <div>
-          <img src={SliderImage3} alt="slack" />
-        </div>
-        <div>
-          <img src={SliderImage4} alt="pie" />
-        </div>
-        <div>
-          <img src={SliderImage5} alt="fox" />
-        </div>
-        <div>
-          <img src={SliderImage6} alt="amazon" />
-        </div>
-        <div>
-          <img src={SliderImage7} alt="google" />
-        </div>
-      </Slider>
-    </Container>
+        <Slider className="slider-container" {...settings}>
+          <div>
+            <img src={SliderImage} alt="spotify" />
+          </div>
+          <div>
+            <img src={SliderImage2} alt="vite" />
+          </div>
+          <div>
+            <img src={SliderImage3} alt="slack" />
+          </div>
+          <div>
+            <img src={SliderImage4} alt="pie" />
+          </div>
+          <div>
+            <img src={SliderImage5} alt="fox" />
+          </div>
+          <div>
+            <img src={SliderImage6} alt="amazon" />
+          </div>
+          <div>
+            <img src={SliderImage7} alt="google" />
+          </div>
+        </Slider>
+      </Container>
+    </>
   );
 };
 

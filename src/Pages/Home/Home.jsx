@@ -4,6 +4,7 @@ import {
   Footer,
   Navbar,
   SliderComponent,
+  CabinetComponent,
 } from "../../Components";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { HeroHeading, HeroParagraph, MyVideoPreview } from "./Style";
@@ -115,6 +116,7 @@ const Home = () => {
       </Box>
       {/* End of Video section */}
       <SliderComponent />
+      <CabinetComponent />
       <Footer />
     </>
   );
