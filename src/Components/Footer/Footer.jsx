@@ -25,7 +25,7 @@ import { RiBehanceFill } from "react-icons/ri";
 const Footer = () => {
   return (
     <Box
-      sx={{ paddingTop: "150px", backgroundColor: palette.navbarBackground }}
+      sx={{ paddingTop: "200px", backgroundColor: palette.navbarBackground }}
     >
       <Box
         sx={{

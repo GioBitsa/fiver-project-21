@@ -6,12 +6,31 @@ import {
   SliderComponent,
   CabinetComponent,
 } from "../../Components";
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography, Grid } from "@mui/material";
 import { HeroHeading, HeroParagraph, MyVideoPreview } from "./Style";
 import Earth from "../../Assets/Earth.png";
 import HomeVideoPreview from "../../Assets/HomeVideoPreview.png";
 import { MainButton } from "../../Components/Common";
 import palette from "../../Shared/palette";
+import HomeGridImage1 from "../../Assets/HomeGridImage (1).png";
+import HomeGridImage2 from "../../Assets/HomeGridImage (2).png";
+import HomeGridImage3 from "../../Assets/HomeGridImage (3).png";
+import HomeGridImage4 from "../../Assets/HomeGridImage (4).png";
+import HomeGridImage5 from "../../Assets/HomeGridImage (5).png";
+import HomeGridImage6 from "../../Assets/HomeGridImage (6).png";
+import HomeGridImage7 from "../../Assets/HomeGridImage (7).png";
+import HomeGridImage8 from "../../Assets/HomeGridImage (8).png";
+
+const HomeGridImageArray = [
+  HomeGridImage2,
+  HomeGridImage5,
+  HomeGridImage6,
+  HomeGridImage4,
+  HomeGridImage7,
+  HomeGridImage1,
+  HomeGridImage3,
+  HomeGridImage8,
+];
 
 const Home = () => {
   return (
@@ -117,6 +136,44 @@ const Home = () => {
       {/* End of Video section */}
       <SliderComponent />
       <CabinetComponent />
+      <Box sx={{ backgroundColor: palette.navbarBackground, py: 5 }}>
+        <Container maxWidth="lg">
+          <Typography
+            component="h2"
+            variant="h3"
+            sx={{
+              fontSize: { xs: "18px", sm: "24px", md: "30px" },
+              textAlign: "center",
+              fontWeight: "bold",
+              color: palette.primary,
+              mb: 5,
+            }}
+          >
+            Vos données de santé sécurisées
+          </Typography>
+          <Grid container spacing={2}>
+            {HomeGridImageArray.map((item, index) => (
+              <Grid
+                key={index}
+                item
+                xs={6}
+                sm={3}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <img
+                  style={{ maxWidth: "150px", width: "100%" }}
+                  src={item}
+                  alt="logo"
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
       <Footer />
     </>
   );
