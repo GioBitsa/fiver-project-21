@@ -37,7 +37,7 @@ const Home = () => {
   return (
     <>
       <Announcement />
-      {/* <Navbar /> */}
+      <Navbar />
       {/* Hero section */}
       <Container maxWidth="lg">
         <Stack
@@ -178,7 +178,7 @@ const Home = () => {
         </Container>
       </Box>
       {/* End of Grid images section */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
