@@ -5,6 +5,7 @@ import {
   Navbar,
   SliderComponent,
   CabinetComponent,
+  EcosystemComponent,
 } from "../../Components";
 import { Box, Container, Stack, Typography, Grid } from "@mui/material";
 import { HeroHeading, HeroParagraph, MyVideoPreview } from "./Style";
@@ -36,7 +37,7 @@ const Home = () => {
   return (
     <>
       <Announcement />
-      <Navbar />
+      {/* <Navbar /> */}
       {/* Hero section */}
       <Container maxWidth="lg">
         <Stack
@@ -136,6 +137,8 @@ const Home = () => {
       {/* End of Video section */}
       <SliderComponent />
       <CabinetComponent />
+      <EcosystemComponent />
+      {/* Grid images section */}
       <Box sx={{ backgroundColor: palette.navbarBackground, py: 5 }}>
         <Container maxWidth="lg">
           <Typography
@@ -174,7 +177,8 @@ const Home = () => {
           </Grid>
         </Container>
       </Box>
-      <Footer />
+      {/* End of Grid images section */}
+      {/* <Footer /> */}
     </>
   );
 };
