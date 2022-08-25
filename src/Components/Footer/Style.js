@@ -30,6 +30,38 @@ export const NewsLetter = styled(Stack)({
     top: 0,
     right: 0,
   },
+
+  "@media screen and (max-width: 899px)": {
+    flexDirection: "column",
+    position: "relative",
+    top: "-5px",
+    left: "0",
+    transform: "translate(0)",
+
+    "&>div": {
+      width: "100%",
+    },
+
+    "&>div:first-of-type": {
+      width: "100%",
+      textAlign: "center",
+      marginBottom: "20px",
+    },
+
+    "&>div:first-of-type p": {
+      maxWidth: "100%",
+    },
+
+    "&>div:last-of-type": {
+      margin: 0,
+      padding: 0,
+      textAlign: "center",
+    },
+
+    "&>div:last-of-type form": {
+      width: "100%",
+    },
+  },
 });
 
 export const MyForm = styled("form")({
@@ -82,6 +114,45 @@ export const MyList = styled(List)({
     display: "inline-flex",
     width: "fit-content",
     paddingLeft: 0,
+  },
+  "& .MuiListItemButton-root:hover": {
+    backgroundColor: "transparent",
+  },
+
+  "@media screen and (max-width: 900px)": {
+    textAlign: "center",
+    marginTop: "0 !important",
+
+    "& .MuiListItemButton-root": {
+      display: "inline-flex",
+      width: "fit-content",
+      margin: "0 auto",
+      paddingLeft: "16px",
+      textAlign: "center",
+    },
+  },
+});
+
+export const MyListSecondary = styled(List)({
+  display: "flex",
+  flexDirection: "column",
+
+  "& .MuiListItemIcon-root": {
+    minWidth: "30px",
+  },
+  "& .MuiListItemIcon-root svg": {
+    fontSize: "20px",
+    color: palette.whiteText,
+    fontWeight: "bold",
+  },
+  "& .MuiListItemButton-root": {
+    display: "inline-flex",
+    width: "fit-content",
+    margin: "10px auto",
+    textAlign: "center",
+  },
+  "& .MuiListItemText-root": {
+    borderBottom: `1px solid ${palette.whiteText}`,
   },
   "& .MuiListItemButton-root:hover": {
     backgroundColor: "transparent",
