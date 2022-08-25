@@ -14,9 +14,9 @@ const MyButton = styled(Button)({
   },
 });
 
-const MainButton = ({ text, onClick, sx }) => {
+const MainButton = ({ text, onClick, sx, size }) => {
   return (
-    <MyButton sx={sx} disableRipple onClick={onClick}>
+    <MyButton sx={sx} size={size} disableRipple onClick={onClick}>
       {text}
     </MyButton>
   );
