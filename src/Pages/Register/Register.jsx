@@ -1,24 +1,13 @@
 import React, { useState } from "react";
+import { Box, Grid, Container, Typography } from "@mui/material";
 import {
-  Box,
-  Grid,
-  Container,
-  Typography,
-  Divider,
-  Stack,
-} from "@mui/material";
-import { MainInput, InputPassword, MainButton } from "../../Components/Common";
+  MainInput,
+  InputPassword,
+  MainButton,
+  MainSelect,
+} from "../../Components/Common";
 import palette from "../../Shared/palette";
-import {
-  MyLink,
-  GoogleButton,
-  OtherLoginButton,
-  LogoContainer,
-  RightContainer,
-  LoginImg,
-} from "./Style";
-import OtherLoginButton1 from "../../Assets/OtherLoginButton (1).png";
-import OtherLoginButton2 from "../../Assets/OtherLoginButton (2).png";
+import { LogoContainer, RightContainer, LoginImg } from "./Style";
 import LogoWhite from "../../Assets/LogoWhite.png";
 import LoginImage from "../../Assets/LoginImage.png";
 import BottomEllipse from "../../Assets/NewsLetterEllipse.png";
@@ -27,8 +16,12 @@ import BottomDots from "../../Assets/NewsLetterDots2.png";
 
 const Register = () => {
   const [values, setValues] = useState({
+    name: "",
     email: "",
+    address: "",
+    select: 0,
     password: "",
+    repeatPassword: "",
   });
 
   return (
@@ -47,7 +40,7 @@ const Register = () => {
         <Grid
           container
           spacing={2}
-          direction={{ xs: "column-reverse", md: "row" }}
+          direction={{ xs: "column-reverse", md: "row-reverse" }}
         >
           <Grid item xs={12} md={5.5}>
             <Typography
@@ -57,9 +50,10 @@ const Register = () => {
                 fontSize: "36px",
                 fontWeight: "bold",
                 color: palette.primary,
+                mb: 1,
               }}
             >
-              Se connecter
+              S’inscrire
             </Typography>
             <Typography
               component="p"
@@ -69,66 +63,62 @@ const Register = () => {
                 color: palette.blackText,
               }}
             >
-              Veuillez entrer les informations nécessaires :
+              Veuillez renseigner les champs suivants afin de créer votre compte
             </Typography>
             <Box sx={{ my: 4 }}>
               <MainInput
-                inputLabel="Email / Identifiant"
-                placeholder="votre adresse@email.com"
+                inputLabel="Nom / Prénom"
+                placeholder="Jonh Copper"
+                value={values.name}
+                onChange={(e) => setValues({ ...values, name: e.target.value })}
+              />
+              <MainInput
+                inputLabel="Email/ Numéro de téléphone"
+                placeholder="Entrer votre email/phone"
                 value={values.email}
                 onChange={(e) =>
                   setValues({ ...values, email: e.target.value })
                 }
               />
+              <MainInput
+                inputLabel="Adresse"
+                placeholder="Entrer votre adresse"
+                value={values.address}
+                onChange={(e) =>
+                  setValues({ ...values, address: e.target.value })
+                }
+              />
+              <MainSelect
+                inputLabel="Sélectionner le profil qui vous convient :"
+                placeholder="Selectionner dans le menu deroulant"
+                value={values.select}
+                onChange={(e) =>
+                  setValues({ ...values, select: e.target.value })
+                }
+              />
               <InputPassword
-                inputLabel="Mot de passe"
-                placeholder="Entrer votre mot de passe"
+                inputLabel="Créer votre mot de passe :"
+                placeholder="Choisissez un mot de passe"
                 value={values.password}
                 onChange={(e) =>
                   setValues({ ...values, password: e.target.value })
                 }
               />
-              <MyLink onClick={() => console.log("navigate to something")}>
-                Mot de passe oublié ?
-              </MyLink>
+              <InputPassword
+                inputLabel="Confirmer le mot de passe choisit :"
+                placeholder="Taper a nouveau votre mot de passe"
+                value={values.repeatPassword}
+                onChange={(e) =>
+                  setValues({ ...values, repeatPassword: e.target.value })
+                }
+              />
               <MainButton
                 sx={{ width: "100%", padding: "12px" }}
-                text="Se connecter"
+                text="S’inscrire"
               />
-              <Divider
-                sx={{ my: 2, fontSize: "14px", color: palette.blackText }}
-              >
-                or
-              </Divider>
-              <Typography
-                sx={{
-                  textAlign: "center",
-                  fontSize: "14px",
-                  color: palette.blackText,
-                }}
-                component="p"
-                variant="p"
-              >
-                Se connecter avec{" "}
-              </Typography>
-              <Stack
-                sx={{ my: 2 }}
-                direction={{ xs: "column", sm: "row" }}
-                justifyContent="center"
-                alignItems={{ xs: "center" }}
-                spacing={2}
-              >
-                <GoogleButton disableRipple>
-                  <img src={OtherLoginButton1} alt="google" />
-                  Google
-                </GoogleButton>
-                <OtherLoginButton disableRipple>
-                  <img src={OtherLoginButton2} alt="login" />
-                </OtherLoginButton>
-              </Stack>
             </Box>
             <Typography sx={{ textAlign: "center", fontSize: "14px" }}>
-              Vous n’avez pas de compte ?{" "}
+              Vous avez déjà un compte ?{" "}
               <strong
                 style={{
                   color: palette.primary,
@@ -136,7 +126,7 @@ const Register = () => {
                   cursor: "pointer",
                 }}
               >
-                S’inscrire
+                Se connecter
               </strong>
             </Typography>
           </Grid>
@@ -163,8 +153,9 @@ const Register = () => {
                 variant="p"
                 sx={{ textAlign: "center", color: palette.whiteText, mt: 3 }}
               >
-                Faites partie de ce nouvel écosystème qui place l’humain au
-                centre. des soins.
+                Créer par des médecins, optimiser par les utilisateurs, en
+                accord avec toutes les normes et recommandations en vigueur. La
+                télémédeci e humaine c’est maintenant avec MobilityCare.
               </Typography>
               <img className="top-ellipse" src={TopEllipse} alt="ellipse" />
               <img
