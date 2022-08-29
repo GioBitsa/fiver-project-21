@@ -10,6 +10,7 @@ const palette = {
   veryLightElectric: "#C0FFF8",
   grey: "#979797",
   lightGrey: "#F5F5F5",
+  secondaryButton: "#E9E9E9",
   white: "#ECFFFD",
   whiteText: "#FFFFFF",
   navbarBackground: "#F3FBFB",
