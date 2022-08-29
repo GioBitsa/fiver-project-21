@@ -38,6 +38,8 @@ const Login = () => {
         py: 4,
         px: { xs: 0, sm: 4, md: 0, lg: 4 },
         overflowY: "auto",
+        display: "flex",
+        alignItems: "center",
       }}
     >
       <Container
