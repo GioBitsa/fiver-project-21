@@ -1,37 +1,43 @@
 import React from "react";
-import { Box, Stack } from "@mui/material";
-import { MainInput } from "../../../Components/Common";
+import { Box, Grid } from "@mui/material";
+import { MainDatePicker, MainInput } from "../../../Components/Common";
 
 const PersonalInformation = () => {
   return (
     <Box>
-      <Stack
-        direction={{ xs: "columne", md: "row" }}
-        sx={{ mb: { xs: 3, md: 0 } }}
-        spacing={3}
-      >
-        <MainInput inputLabel="Nom" placeholder="Enter your last name" />
-        <MainInput inputLabel="Prénom" placeholder="Enter your first name" />
-      </Stack>
-      <Stack
-        direction={{ xs: "columne", md: "row" }}
-        sx={{ mb: { xs: 3, md: 0 } }}
-        spacing={3}
-      >
-        <MainInput inputLabel="Adresse" placeholder="Type your address" />
-        <MainInput
-          inputLabel="Numéro de téléphone :"
-          placeholder="Type your number"
-        />
-      </Stack>
-      <Stack
-        direction={{ xs: "columne", md: "row" }}
-        sx={{ mb: { xs: 3, md: 0 } }}
-        spacing={3}
-      >
-        <MainInput inputLabel="Ville" placeholder="Type your address" />
-        <MainInput inputLabel="Pays" placeholder="Type your number" />
-      </Stack>
+      <Grid container columnSpacing={3}>
+        <Grid item xs={12} md={6}>
+          <MainInput inputLabel="Nom" placeholder="Enter your last name" />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <MainInput inputLabel="Prénom" placeholder="Enter your first name" />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <MainInput
+            type="number"
+            inputLabel="Age"
+            placeholder="Type your age"
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <MainDatePicker inputLabel="Date de naissance" />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <MainInput inputLabel="Adresse" placeholder="Type your address" />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <MainInput
+            inputLabel="Numéro de téléphone :"
+            placeholder="Type your number"
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <MainInput inputLabel="Ville" placeholder="Type your address" />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <MainInput inputLabel="Pays" placeholder="Type your number" />
+        </Grid>
+      </Grid>
     </Box>
   );
 };

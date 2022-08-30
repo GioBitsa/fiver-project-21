@@ -1,5 +1,6 @@
 import { styled } from "@mui/system";
-import { Box, Select, InputLabel } from "@mui/material";
+import { Box, InputLabel } from "@mui/material";
+import { DesktopDatePicker } from "@mui/x-date-pickers";
 import palette from "../../../Shared/palette";
 
 export const InputContainer = styled(Box)({
@@ -12,12 +13,12 @@ export const MyInputLabel = styled(InputLabel)({
   marginBottom: "10px",
 });
 
-export const MySelect = styled(Select)({
+export const MyDesktopDatePicker = styled(DesktopDatePicker)({
   width: "100%",
   height: "42px",
 
-  "& > div": {
-    paddingLeft: 0,
+  "&>div": {
+    height: "42px",
   },
 
   "& .MuiOutlinedInput-notchedOutline": {
@@ -26,7 +27,11 @@ export const MySelect = styled(Select)({
     borderRadius: 0,
   },
 
-  "&.Mui-focused fieldset": {
+  ".Mui-focused fieldset": {
     borderBottom: `2px solid ${palette.primary} !important`,
+  },
+
+  "& .MuiInputBase-root:hover .MuiOutlinedInput-notchedOutline": {
+    borderWidth: "2px !important",
   },
 });

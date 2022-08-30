@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, Stack, Stepper } from "@mui/material";
+import { Typography, Stepper } from "@mui/material";
 import {
   MainBox,
   MyContainer,
@@ -8,7 +8,6 @@ import {
   MyStepLabel,
   ButtonContainer,
 } from "./Style";
-import palette from "../../Shared/palette";
 import TopEllipse from "../../Assets/NewsLetterEllipse.png";
 import BottomEllipse from "../../Assets/Ellipse.png";
 import Dots from "../../Assets/WhiteDots.png";
@@ -20,8 +19,10 @@ import Step2Disabled from "../../Assets/CreateProfile/Step2Disabled.png";
 import Step2Done from "../../Assets/CreateProfile/Step2Done.png";
 import Step3Current from "../../Assets/CreateProfile/Step3Current.png";
 import Step3Disabled from "../../Assets/CreateProfile/Step3Disabled.png";
-import { MainButton, MainInput } from "../../Components/Common";
+import { MainButton } from "../../Components/Common";
 import PersonalInformation from "./PersonalInformation/PersonalInformation";
+import History from "./History/History";
+import ProfilePhoto from "./ProfilePhoto/ProfilePhoto";
 
 const CreateProfile = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -69,7 +70,7 @@ const CreateProfile = () => {
               StepIconComponent={() => (
                 <img
                   src={activeStep === 2 ? Step3Current : Step3Disabled}
-                  alt="Photo de profil"
+                  alt="profil"
                 />
               )}
             >
@@ -77,7 +78,15 @@ const CreateProfile = () => {
             </MyStepLabel>
           </MyStep>
         </Stepper>
-        {activeStep === 0 ? <PersonalInformation /> : ""}
+        {activeStep === 0 ? (
+          <PersonalInformation />
+        ) : activeStep === 1 ? (
+          <History />
+        ) : activeStep === 2 ? (
+          <ProfilePhoto />
+        ) : (
+          ""
+        )}
         <ButtonContainer
           direction="row"
           spacing={3}
