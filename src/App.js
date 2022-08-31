@@ -7,6 +7,7 @@ import {
   Register,
   Recovery,
   CreateProfile,
+  CreateAssistantProfile,
 } from "./Pages";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -19,6 +20,7 @@ const App = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/recovery" element={<Recovery />} />
       <Route path="/create" element={<CreateProfile />} />
+      <Route path="/assistant" element={<CreateAssistantProfile />} />
       <Route path="/teritories" element={<Teritories />} />
     </Routes>
   );
