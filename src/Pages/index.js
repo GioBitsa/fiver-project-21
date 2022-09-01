@@ -5,6 +5,7 @@ import Register from "./Register/Register";
 import Recovery from "./Recovery/Recovery";
 import CreateProfile from "./CreateProfile/CreateProfile";
 import CreateAssistantProfile from "./CreateAssistantProfile/CreateAssistantProfile";
+import CompleteProfile from "./CompleteProfile/CompleteProfile";
 
 export {
   Teritories,
@@ -14,4 +15,5 @@ export {
   Recovery,
   CreateProfile,
   CreateAssistantProfile,
+  CompleteProfile,
 };
