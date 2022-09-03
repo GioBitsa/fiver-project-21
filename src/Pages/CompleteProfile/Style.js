@@ -6,7 +6,7 @@ export const MainBox = styled(Box)({
   background: palette.linearHorizontaly,
   minHeight: "100vh",
   position: "relative",
-  overflowX: "hidden",
+  overflow: "hidden",
   display: "flex",
   alignItems: "center",
   padding: "40px 0",
