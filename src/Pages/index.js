@@ -6,6 +6,7 @@ import Recovery from "./Recovery/Recovery";
 import CreateProfile from "./CreateProfile/CreateProfile";
 import CreateAssistantProfile from "./CreateAssistantProfile/CreateAssistantProfile";
 import CompleteProfile from "./CompleteProfile/CompleteProfile";
+import CompleteDoctorProfile from "./CompleteDoctorProfile/CompleteDoctorProfile";
 
 export {
   Teritories,
@@ -16,4 +17,5 @@ export {
   CreateProfile,
   CreateAssistantProfile,
   CompleteProfile,
+  CompleteDoctorProfile,
 };
