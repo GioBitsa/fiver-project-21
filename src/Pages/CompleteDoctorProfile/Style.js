@@ -1,5 +1,5 @@
 import { styled } from "@mui/system";
-import { Box, Container } from "@mui/material";
+import { Box, Container, IconButton } from "@mui/material";
 import palette from "../../Shared/palette";
 
 export const MainBox = styled(Box)({
@@ -68,4 +68,12 @@ export const LogoContainer = styled(Box)({
       fontSize: "28px",
     },
   },
+});
+
+export const MyIconButton = styled(IconButton)({
+  position: "absolute",
+  right: 0,
+  bottom: 0,
+  backgroundColor: palette.lightGrey,
+  border: `2px solid ${palette.whiteText}`,
 });

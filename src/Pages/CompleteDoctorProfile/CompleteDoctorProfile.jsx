@@ -1,22 +1,18 @@
-import React, { useState } from "react";
-import { Typography, IconButton, Box, Stack, Grid } from "@mui/material";
-import { MainBox, MyContainer, LogoContainer } from "./Style";
+import React from "react";
+import { Typography, Box, Stack, Grid } from "@mui/material";
+import { MainBox, MyContainer, LogoContainer, MyIconButton } from "./Style";
 import TopEllipse from "../../Assets/NewsLetterEllipse.png";
 import BottomEllipse from "../../Assets/Ellipse.png";
 import Dots from "../../Assets/WhiteDots.png";
 import Logo from "../../Assets/Logo.png";
-import { InputPassword, MainButton } from "../../Components/Common";
+import Badge from "../../Assets/Badge.svg";
+import { MainButton } from "../../Components/Common";
 import palette from "../../Shared/palette";
-import Step3Current from "../../Assets/CreateProfile/Step3Current.png";
+import DoctorImage from "../../Assets/DoctorImage.png";
 import { MainSelect, MainInput } from "../../Components/Common";
-import {
-  IoCheckmarkDoneCircleSharp,
-  IoCheckmarkDoneCircleOutline,
-} from "react-icons/io5";
+import { BiCamera } from "react-icons/bi";
 
 const CompleteDoctorProfile = () => {
-  const [checked, setChecked] = useState(false);
-
   return (
     <MainBox>
       <MyContainer maxWidth="lg">
@@ -48,7 +44,49 @@ const CompleteDoctorProfile = () => {
         </Box>
         <Grid container columnSpacing={3}>
           <Grid item xs={12} md={6}>
-            asd
+            <Stack alignItems={{ xs: "center", md: "flex-start" }}>
+              <Box
+                sx={{
+                  position: "relative",
+                  width: "170px",
+                  ml: { xs: 0, md: 3 },
+                }}
+              >
+                <img style={{ width: "100%" }} src={DoctorImage} alt="doctor" />
+                <MyIconButton
+                  aria-label="upload"
+                  component="label"
+                  disableRipple
+                >
+                  <input hidden accept="image/*" type="file" />
+                  <BiCamera
+                    style={{ color: palette.blackText, opacity: 0.5 }}
+                  />
+                </MyIconButton>
+              </Box>
+              <Stack direction="row" spacing={2} alignItems="center">
+                <Typography
+                  component="h4"
+                  variant="h5"
+                  sx={{ color: palette.primary, fontWeight: "600" }}
+                >
+                  Dr. Jonh Copper
+                </Typography>
+                <img style={{ width: "40px" }} src={Badge} alt="verified" />
+              </Stack>
+              <Typography
+                component="p"
+                variant="p"
+                sx={{
+                  color: palette.blackText,
+                  opacity: 0.8,
+                  mb: 3,
+                  fontSize: "14px",
+                }}
+              >
+                N° RPPS : 9823423
+              </Typography>
+            </Stack>
           </Grid>
           <Grid item xs={12} md={6}>
             <MainSelect
