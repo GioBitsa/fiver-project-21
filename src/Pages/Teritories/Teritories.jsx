@@ -5,14 +5,15 @@ import {
   Footer,
   Navbar,
   HeroImageContainer,
+  VideoPreview,
 } from "../../Components";
 import HeroImg from "../../Assets/heroImg.png";
 import HeroImageBackground from "../../Assets/HeroImageBackground.png";
+import TeritoriesVideoPreview from "../../Assets/TeritoriesVideoPreview.png";
 import HighLight from "../../Assets/HighLight.png";
 import { Container, Stack, Typography, Box, Grid } from "@mui/material";
 import { MainButton, OutlineMainButton } from "../../Components/Common";
 import palette from "../../Shared/palette";
-import Video from "../../Assets/video.mp4";
 import { NestedGrid, LeftGrid, RightGrid } from "./Style";
 
 const Teritories = () => {
@@ -21,15 +22,32 @@ const Teritories = () => {
       <Announcement />
       <Navbar />
       <Container maxWidth="lg" sx={{ py: 5 }}>
-        <Stack direction="row" alignItems="center" spacing={3}>
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          alignItems="center"
+          spacing={3}
+        >
           <Box>
+            <Typography
+              component="h2"
+              variant="h2"
+              sx={{
+                display: { xs: "block", md: "none" },
+                color: palette.primary,
+                fontSize: "30px",
+                fontWeight: "600",
+                mb: 2,
+              }}
+            >
+              MobilityCare
+            </Typography>
             <Typography
               component="h1"
               variant="h1"
               sx={{
-                fontSize: "50px",
+                fontSize: { xs: "26px", sm: "38px", md: "33px", lg: "50px" },
                 fontWeight: "900",
-                lineHeight: "70px",
+                lineHeight: { xs: "50px", lg: "70px" },
                 color: palette.black,
                 mb: 3,
               }}
@@ -62,12 +80,29 @@ const Teritories = () => {
               propose, permet de répondre aux besoins de santé que se soit en
               milieux urbains, semi-urbains et même ruraux.
             </Typography>
-            <Stack direction="row" spacing={2} sx={{ mt: "50px" }}>
+            <Stack
+              direction="row"
+              spacing={2}
+              sx={{ mt: "50px", display: { xs: "none", md: "flex" } }}
+            >
               <MainButton text="Démarrer maintenant" />
               <OutlineMainButton text="Contacter l’équipe commerciale" />
             </Stack>
           </Box>
-          <HeroImageContainer main={HeroImg} background={HeroImageBackground} />
+          <Stack alignItems="center" spacing={3}>
+            <HeroImageContainer
+              main={HeroImg}
+              background={HeroImageBackground}
+            />
+            <Stack
+              direction="row"
+              spacing={2}
+              sx={{ display: { xs: "flex", md: "none" } }}
+            >
+              <MainButton text="Démarrer maintenant" />
+              <OutlineMainButton text="Contacter l’équipe commerciale" />
+            </Stack>
+          </Stack>
         </Stack>
       </Container>
       <Container
@@ -171,37 +206,15 @@ const Teritories = () => {
           </NestedGrid>
         </Grid>
       </Container>
-      <Box sx={{ backgroundColor: palette.navbarBackground, py: "50px" }}>
-        <Container maxWidth="lg" sx={{ pb: 5 }}>
-          <Stack direction="row" alignItems="center" spacing={3}>
-            <Box>
-              <Typography
-                component="h3"
-                variant="h4"
-                sx={{ color: palette.primary, fontWeight: 600 }}
-              >
-                Notre concept en vidéo
-              </Typography>
-              <Typography component="p" variant="p" sx={{ mt: 3, mb: "60px" }}>
-                Notre concept et nos produits semblent répondre à vos besoins et
-                vous intéresse. découvrez dès maintenant nos services et
-                l’ensemble de nos prestations.
-              </Typography>
-              <MainButton text="Voir Offre & services" />
-            </Box>
-            <Box>
-              <video
-                controls
-                autostart
-                autoPlay
-                muted
-                src={Video}
-                type="video/mp4"
-                style={{ width: "600px", borderRadius: "7px" }}
-              />
-            </Box>
-          </Stack>
-        </Container>
+      <Box sx={{ backgroundColor: palette.navbarBackground, pb: "50px" }}>
+        <VideoPreview
+          preview={TeritoriesVideoPreview}
+          title="Notre concept en vidéo"
+          desc="Notre concept et nos produits semblent répondre à vos besoins et
+          vous intéresse. découvrez dès maintenant nos services et
+          l’ensemble de nos prestations."
+          button="Voir Offre & services"
+        />
         <Faq />
       </Box>
       <Footer />
