@@ -7,14 +7,21 @@ import {
   HeroImageContainer,
   VideoPreview,
 } from "../../Components";
-
-import StructureHeroImage from "../../Assets/StructureHeroImage.png";
+import StructureHeroImage from "../../Assets/Structure/StructureHeroImage.png";
 import HeroImageBackground from "../../Assets/HeroImageBackground.png";
 import HighLight from "../../Assets/HighLight.png";
-import { Container, Stack, Typography, Box } from "@mui/material";
+import { Container, Stack, Typography, Box, Grid } from "@mui/material";
 import { MainButton, OutlineMainButton } from "../../Components/Common";
 import palette from "../../Shared/palette";
-import StructureVideoPreview from "../../Assets/StructureVideoPreview.png";
+import StructureVideoPreview from "../../Assets/Structure/StructureVideoPreview.png";
+import { MyImageBox, GridTitle, MyGridItem } from "./Style";
+import StructureSvg1 from "../../Assets/Structure/StructureSvg (1).png";
+import StructureSvg2 from "../../Assets/Structure/StructureSvg (2).png";
+import StructureSvg3 from "../../Assets/Structure/StructureSvg (3).png";
+import StructureSvg4 from "../../Assets/Structure/StructureSvg (4).png";
+import StructureSvg5 from "../../Assets/Structure/StructureSvg (5).png";
+import StructureSvg6 from "../../Assets/Structure/StructureSvg (6).png";
+import StructureSvg7 from "../../Assets/Structure/StructureSvg (7).png";
 
 const Structure = () => {
   return (
@@ -105,6 +112,120 @@ const Structure = () => {
             </Stack>
           </Stack>
         </Stack>
+      </Container>
+      <Container
+        maxWidth="lg"
+        sx={{ backgroundColor: palette.navbarBackground, py: 5 }}
+      >
+        <Typography
+          component="h2"
+          variant="h2"
+          sx={{
+            color: palette.primary,
+            fontWeight: "bold",
+            fontSize: { xs: "18px", sm: "24px", md: "34px" },
+            textAlign: { xs: "left", md: "center" },
+          }}
+        >
+          Les atouts pour votre stucture de santé
+        </Typography>
+        <Typography
+          component="p"
+          variant="p"
+          sx={{
+            color: palette.black,
+            fontSize: { xs: "14px", sm: "16px", md: "18px" },
+            mt: 2,
+            mb: 4,
+            textAlign: { xs: "left", md: "center" },
+          }}
+        >
+          Une solution pour vos résidents et patients qui permettra d’éviter des
+          transferts inutiles, d’optimiser les délais de prises en charge et
+          d’apporter un confort à chacun.
+        </Typography>
+        <Grid
+          container
+          spacing={3}
+          justifyContent="center"
+          alignItems="flex-start"
+        >
+          <MyGridItem item xs={12} md={3}>
+            <MyImageBox>
+              <img src={StructureSvg1} alt="mobile" />
+            </MyImageBox>
+            <GridTitle>Dispositif mobile</GridTitle>
+            <Typography sx={{ color: palette.blackText }} align="center">
+              Notre E-cabinet peut être déplacé aisement grâce a ces 4 roues
+              auprès de chaque résident dans votre structure.
+            </Typography>
+          </MyGridItem>
+          <MyGridItem item xs={12} md={3}>
+            <MyImageBox>
+              <img src={StructureSvg2} alt="team" />
+            </MyImageBox>
+            <GridTitle>Team</GridTitle>
+            <Typography sx={{ color: palette.blackText }} align="center">
+              En tant qu’administrateur vous avez la possibilité de créer et
+              gérer des groupes selon les différents roulements effectifs dans
+              votre établissement.
+            </Typography>
+          </MyGridItem>
+          <MyGridItem item xs={12} md={3}>
+            <MyImageBox>
+              <img src={StructureSvg3} alt="budget" />
+            </MyImageBox>
+            <GridTitle>Budget respecté</GridTitle>
+            <Typography sx={{ color: palette.blackText }} align="center">
+              Pas de mauvaise surprise, tout est compris dans le prix de la
+              location.
+            </Typography>
+          </MyGridItem>
+          <MyGridItem item xs={12} md={3}>
+            <MyImageBox>
+              <img src={StructureSvg4} alt="list" />
+            </MyImageBox>
+            <GridTitle>Revalorisation</GridTitle>
+            <Typography sx={{ color: palette.blackText }} align="center">
+              Votre personnel acquiert des nouvelles compétences grâce à la
+              formation ce qui lui permet d’être plus impliqué dans les soins
+              qu’il prodigue.
+            </Typography>
+          </MyGridItem>
+          <MyGridItem item xs={12} md={4}>
+            <MyImageBox>
+              <img src={StructureSvg5} alt="cross" />
+            </MyImageBox>
+            <GridTitle>Sans pré-requis d’installation</GridTitle>
+            <Typography sx={{ color: palette.blackText }} align="center">
+              Notre E-cabinet est nomade, il n’a pas besoin d’installation
+              technique particulière pour sa mise en place dans votre structure.
+            </Typography>
+          </MyGridItem>
+          <MyGridItem item xs={12} md={4}>
+            <MyImageBox>
+              <img src={StructureSvg6} alt="capitaliser" />
+            </MyImageBox>
+            <GridTitle>Capitaliser</GridTitle>
+            <Typography sx={{ color: palette.blackText }} align="center">
+              Vous n’avez pas a recruter du personnel supplémentaire, vous
+              capitaliser sur les ressources internes tels que les
+              infirmièr(e)s, aides soignant(e)s et médecin(s) de votre
+              structure.
+            </Typography>
+          </MyGridItem>
+          <MyGridItem item xs={12} md={4}>
+            <MyImageBox>
+              <img src={StructureSvg7} alt="confort" />
+            </MyImageBox>
+            <GridTitle>Confort</GridTitle>
+            <Typography sx={{ color: palette.blackText }} align="center">
+              Avec sa mobilité et son ergonomie, le e-cabinet permet une prise
+              en charge plus confortable pour tous, que se soit pour le patient,
+              les soignants ou le médecin téléconsultant.
+            </Typography>
+          </MyGridItem>
+        </Grid>
       </Container>
       <Box sx={{ backgroundColor: palette.navbarBackground, pb: "50px" }}>
         <VideoPreview
