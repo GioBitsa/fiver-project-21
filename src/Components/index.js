@@ -6,6 +6,7 @@ import SliderComponent from "./SliderComponent/SliderComponent";
 import CabinetComponent from "./CabinetComponent/CabinetComponent";
 import EcosystemComponent from "./EcosystemComponent/EcosystemComponent";
 import HeroImageContainer from "./HeroImageContainer/HeroImageContainer";
+import VideoPreview from "./VideoPreview/VideoPreview";
 
 export {
   Announcement,
@@ -16,4 +17,5 @@ export {
   CabinetComponent,
   EcosystemComponent,
   HeroImageContainer,
+  VideoPreview,
 };

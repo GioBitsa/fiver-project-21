@@ -9,12 +9,29 @@ export const BackgroundImage = styled("img")({
   width: "100%",
   zIndex: -1,
   transform: "translate(20px, 20px)",
+
+  "@media screen and (max-width: 900px)": {
+    transform: "translate(10px, 10px)",
+  },
+});
+
+export const MyImage = styled("img")({
+  width: "400px",
+
+  "@media screen and (max-width: 600px)": {
+    width: "100%",
+  },
 });
 
 const HeroImageContainer = ({ main, background }) => {
   return (
-    <Box sx={{ position: "relative", mr: "24px !important" }}>
-      <img style={{ width: "400px" }} src={main} alt="hero" />
+    <Box
+      sx={{
+        position: "relative",
+        mr: { xs: "10px !important", md: "20px !important" },
+      }}
+    >
+      <MyImage src={main} alt="hero" />
       <BackgroundImage src={background} alt="background" />
     </Box>
   );

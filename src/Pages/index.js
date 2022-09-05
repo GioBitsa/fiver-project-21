@@ -7,6 +7,7 @@ import CreateProfile from "./CreateProfile/CreateProfile";
 import CreateAssistantProfile from "./CreateAssistantProfile/CreateAssistantProfile";
 import CompleteProfile from "./CompleteProfile/CompleteProfile";
 import CompleteDoctorProfile from "./CompleteDoctorProfile/CompleteDoctorProfile";
+import Structure from "./Structure/Structure";
 
 export {
   Teritories,
@@ -18,4 +19,5 @@ export {
   CreateAssistantProfile,
   CompleteProfile,
   CompleteDoctorProfile,
+  Structure,
 };
