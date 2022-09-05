@@ -1,11 +1,16 @@
 import React from "react";
-import { Announcement, Faq, Footer, Navbar } from "../../Components";
+import {
+  Announcement,
+  Faq,
+  Footer,
+  Navbar,
+  HeroImageContainer,
+} from "../../Components";
 import HeroImg from "../../Assets/heroImg.png";
 import HeroImageBackground from "../../Assets/HeroImageBackground.png";
 import HighLight from "../../Assets/HighLight.png";
 import { Container, Stack, Typography, Box } from "@mui/material";
 import { MainButton, OutlineMainButton } from "../../Components/Common";
-import { BackgroundImage } from "./Style";
 import palette from "../../Shared/palette";
 import Video from "../../Assets/video.mp4";
 
@@ -62,10 +67,7 @@ const Teritories = () => {
               <OutlineMainButton text="Contacter l’équipe commerciale" />
             </Stack>
           </Box>
-          <Box sx={{ position: "relative", mr: "24px !important" }}>
-            <img style={{ width: "400px" }} src={HeroImg} alt="hero" />
-            <BackgroundImage src={HeroImageBackground} alt="background" />
-          </Box>
+          <HeroImageContainer main={HeroImg} background={HeroImageBackground} />
         </Stack>
       </Container>
       {/* end of hero section */}
