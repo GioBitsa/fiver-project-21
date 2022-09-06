@@ -1,6 +1,13 @@
 import { styled } from "@mui/system";
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import palette from "../../Shared/palette";
+
+export const MyGridItem = styled(Grid)({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  maxWidth: "500px !important",
+});
 
 export const NestedGrid = styled(Grid)({
   paddingTop: "24px !important",
@@ -33,6 +40,13 @@ export const LeftGrid = styled(Grid)({
   color: palette.primary,
   fontWeight: "bold",
   fontSize: "20px",
+  display: "flex",
+  alignItems: "center",
+  alignSelf: "flex-start",
+
+  "& img": {
+    marginRight: "10px",
+  },
 
   "@media screen and (max-width: 900px)": {
     paddingLeft: "0 !important",
@@ -61,5 +75,42 @@ export const RightGrid = styled(Grid)({
   "@media screen and (max-width: 600px)": {
     paddingRight: "0 !important",
     fontSize: "15px",
+  },
+});
+
+export const MyItem = styled(Box)({
+  backgroundColor: palette.navbarBackground,
+  padding: "40px 20px",
+  borderRadius: "5px",
+  display: "flex",
+
+  "& h4": {
+    flex: 1,
+    fontSize: "20px",
+    color: palette.primary,
+    fontWeight: "bold",
+    minWidth: "150px",
+  },
+
+  "& p": {
+    flex: 4,
+    color: palette.blackText,
+    opacity: 0.5,
+    paddingLeft: "20px",
+    marginLeft: "20px",
+    borderLeft: "1px solid rgba(0, 0, 0, 0.5)",
+  },
+
+  "@media screen and (max-width: 768px)": {
+    flexDirection: "column",
+
+    "& p": {
+      border: "none",
+      marginLeft: 0,
+      paddingLeft: 0,
+      borderTop: "1px solid rgba(0, 0, 0, 0.5)",
+      paddingTop: "20px",
+      marginTop: "20px",
+    },
   },
 });

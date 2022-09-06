@@ -7,6 +7,7 @@ import CabinetComponent from "./CabinetComponent/CabinetComponent";
 import EcosystemComponent from "./EcosystemComponent/EcosystemComponent";
 import HeroImageContainer from "./HeroImageContainer/HeroImageContainer";
 import VideoPreview from "./VideoPreview/VideoPreview";
+import CommonQuestions from "./CommonQuestions/CommonQuestions";
 
 export {
   Announcement,
@@ -18,4 +19,5 @@ export {
   EcosystemComponent,
   HeroImageContainer,
   VideoPreview,
+  CommonQuestions,
 };

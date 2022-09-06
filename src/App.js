@@ -11,6 +11,7 @@ import {
   CompleteProfile,
   CompleteDoctorProfile,
   Structure,
+  Priorite,
 } from "./Pages";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -28,6 +29,7 @@ const App = () => {
       <Route path="/doctor" element={<CompleteDoctorProfile />} />
       <Route path="/teritories" element={<Teritories />} />
       <Route path="/structure" element={<Structure />} />
+      <Route path="/priorite" element={<Priorite />} />
     </Routes>
   );
 };

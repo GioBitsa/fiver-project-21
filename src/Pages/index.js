@@ -8,6 +8,7 @@ import CreateAssistantProfile from "./CreateAssistantProfile/CreateAssistantProf
 import CompleteProfile from "./CompleteProfile/CompleteProfile";
 import CompleteDoctorProfile from "./CompleteDoctorProfile/CompleteDoctorProfile";
 import Structure from "./Structure/Structure";
+import Priorite from "./Priorite/Priorite";
 
 export {
   Teritories,
@@ -20,4 +21,5 @@ export {
   CompleteProfile,
   CompleteDoctorProfile,
   Structure,
+  Priorite,
 };
