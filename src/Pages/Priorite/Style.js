@@ -1,5 +1,5 @@
 import { styled } from "@mui/system";
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Stack } from "@mui/material";
 import palette from "../../Shared/palette";
 
 export const MyGridItem = styled(Grid)({
@@ -112,5 +112,79 @@ export const MyItem = styled(Box)({
       paddingTop: "20px",
       marginTop: "20px",
     },
+  },
+});
+
+export const SocialButton = styled(Stack)({
+  border: "1px solid black",
+  borderRadius: "10px",
+  padding: "7px 15px",
+  alignItems: "center",
+  lineHeight: "20px",
+  minWidth: "200px",
+  justifyContent: "center",
+  cursor: "pointer",
+
+  "& span": {
+    fontSize: "12px",
+    color: palette.black,
+  },
+
+  "& p": {
+    fontSize: "18px",
+    color: palette.black,
+    textTransform: "uppercase",
+    fontWeight: "bold",
+  },
+
+  "& img": {
+    width: "30px",
+    height: "30px",
+    objectFit: "contain",
+    marginRight: "5px",
+  },
+
+  "@media screen and (max-width: 900px)": {
+    border: "1px solid white",
+    minWidth: "180px",
+
+    "& span": {
+      fontSize: "12px",
+      color: palette.whiteText,
+    },
+
+    "& p": {
+      fontSize: "16px",
+      color: palette.whiteText,
+    },
+  },
+
+  "@media screen and (max-width: 600px)": {
+    border: "1px solid white",
+    minWidth: "150px",
+
+    "& span": {
+      fontSize: "12px",
+    },
+
+    "& p": {
+      fontSize: "14px",
+    },
+
+    "& img": {
+      width: "20px",
+      height: "20px",
+    },
+  },
+});
+
+export const AnimationPreviewImage = styled("img")({
+  display: "block",
+  width: "100%",
+  maxWidth: "450px",
+  margin: "0 auto",
+
+  "@media screen and (max-width: 550px)": {
+    maxWidth: "initial",
   },
 });

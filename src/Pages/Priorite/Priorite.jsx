@@ -10,15 +10,25 @@ import PrioriteHeroImage from "../../Assets/Priorite/PrioriteHeroImage.png";
 import HeroImageBackground from "../../Assets/HeroImageBackground.png";
 import HighLight from "../../Assets/HighLight.png";
 import { Container, Stack, Typography, Box, Grid } from "@mui/material";
-import { OutlineMainButton } from "../../Components/Common";
+import { MainButton, OutlineMainButton } from "../../Components/Common";
 import palette from "../../Shared/palette";
-import { NestedGrid, LeftGrid, RightGrid, MyItem } from "./Style";
+import {
+  NestedGrid,
+  LeftGrid,
+  RightGrid,
+  MyItem,
+  SocialButton,
+  AnimationPreviewImage,
+} from "./Style";
 import PrioriteSvg1 from "../../Assets/Priorite/PrioriteSvg (1).png";
 import PrioriteSvg2 from "../../Assets/Priorite/PrioriteSvg (2).png";
 import PrioriteSvg3 from "../../Assets/Priorite/PrioriteSvg (3).png";
 import PrioriteSvg4 from "../../Assets/Priorite/PrioriteSvg (4).png";
 import PrioriteSvg5 from "../../Assets/Priorite/PrioriteSvg (5).png";
 import PrioriteSvg6 from "../../Assets/Priorite/PrioriteSvg (6).png";
+import GooglePlay from "../../Assets/GooglePlay.png";
+import AppStore from "../../Assets/AppStore.png";
+import AnimationPreview from "../../Assets/Priorite/AnimationPreview.png";
 
 const Priorite = () => {
   return (
@@ -110,6 +120,137 @@ const Priorite = () => {
           </Stack>
         </Stack>
       </Container>
+      <Box
+        sx={{
+          background: {
+            xs: palette.linearVerticaly,
+            md: palette.navbarBackground,
+          },
+          my: 5,
+          py: 5,
+        }}
+      >
+        <Container maxwidth="lg">
+          <Stack
+            direction={{ xs: "column", md: "row" }}
+            spacing={3}
+            justifyContent="space-between"
+          >
+            <Box sx={{ flex: 1, maxWidth: "600px" }}>
+              <Typography
+                component="h2"
+                variant="h2"
+                sx={{
+                  color: { xs: palette.whiteText, md: palette.primary },
+                  fontWeight: "bold",
+                  fontSize: { xs: "20px", sm: "24px", md: "28px", lg: "34px" },
+                }}
+              >
+                Comment ça fonctionne ?
+              </Typography>
+              <Typography
+                component="p"
+                variant="p"
+                sx={{
+                  color: palette.blackText,
+                  opacity: { xs: 0.6, md: 1 },
+                  fontSize: { xs: "14px", sm: "16px", md: "18px" },
+                  mt: 5,
+                  mb: { xs: 0, md: 5 },
+                  "& div": { display: "flex", alignItems: "flex-start", pl: 1 },
+                  "& div span": { pr: 1 },
+                }}
+              >
+                Vous n’avez rien a payer et vous disposez d’un ensemble de
+                fonctionnalité habituellement payante. Notre priorité est
+                l’amélioration de votre prise en charge médical grâce à notre
+                concept unique tout en étant assité par un professionel.
+                <div>
+                  <span>1.</span> de vous connecter a votre compte{" "}
+                </div>
+                <div>
+                  <span>2.</span> demander ou organiser une consultation avec un
+                  médecin
+                </div>
+                <div>
+                  <span>3.</span> l’assistant se deplace chez vous à la
+                  date/heure que vous aurez programmé
+                </div>
+                <div>
+                  <span>4.</span> la consultation peut commencer{" "}
+                </div>
+              </Typography>
+              <Box sx={{ mt: "60px", display: { xs: "none", md: "block" } }}>
+                <MainButton text="Télécharger l’application" />
+                <Stack direction="row" spacing={3} sx={{ mt: 5 }}>
+                  <SocialButton direction="row" spacing={1}>
+                    <img src={GooglePlay} alt="googleplay" />
+                    <Box>
+                      <Typography component="span" variant="span">
+                        Disponible sur
+                      </Typography>
+                      <Typography component="p" variant="p">
+                        Google Play
+                      </Typography>
+                    </Box>
+                  </SocialButton>
+                  <SocialButton direction="row" spacing={1}>
+                    <img src={AppStore} alt="app store" />
+                    <Box>
+                      <Typography component="span" variant="span">
+                        Disponible sur
+                      </Typography>
+                      <Typography component="p" variant="p">
+                        App Store
+                      </Typography>
+                    </Box>
+                  </SocialButton>
+                </Stack>
+              </Box>
+            </Box>
+            <Box>
+              <AnimationPreviewImage src={AnimationPreview} alt="animation" />
+              <Stack
+                alignItems="center"
+                sx={{ display: { xs: "flex", md: "none" } }}
+              >
+                <MainButton
+                  text="Télécharger l’application"
+                  sx={{
+                    backgroundColor: palette.whiteText,
+                    color: palette.primary,
+                    width: "250px",
+                  }}
+                />
+                <Stack direction="row" spacing={3} sx={{ mt: 5 }}>
+                  <SocialButton direction="row" spacing={1}>
+                    <img src={GooglePlay} alt="googleplay" />
+                    <Box>
+                      <Typography component="span" variant="span">
+                        Disponible sur
+                      </Typography>
+                      <Typography component="p" variant="p">
+                        Google Play
+                      </Typography>
+                    </Box>
+                  </SocialButton>
+                  <SocialButton direction="row" spacing={1}>
+                    <img src={AppStore} alt="app store" />
+                    <Box>
+                      <Typography component="span" variant="span">
+                        Disponible sur
+                      </Typography>
+                      <Typography component="p" variant="p">
+                        App Store
+                      </Typography>
+                    </Box>
+                  </SocialButton>
+                </Stack>
+              </Stack>
+            </Box>
+          </Stack>
+        </Container>
+      </Box>
       <Container
         maxWidth="lg"
         sx={{ backgroundColor: palette.navbarBackground, py: 5, mb: "50px" }}
