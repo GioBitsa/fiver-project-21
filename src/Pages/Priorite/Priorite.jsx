@@ -13,7 +13,7 @@ import { Container, Stack, Typography, Box, Grid } from "@mui/material";
 import { MainButton, OutlineMainButton } from "../../Components/Common";
 import palette from "../../Shared/palette";
 import { NestedGrid, LeftGrid, RightGrid, MyItem, SocialButton } from "./Style";
-// import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import PrioriteSvg1 from "../../Assets/Priorite/PrioriteSvg (1).png";
 import PrioriteSvg2 from "../../Assets/Priorite/PrioriteSvg (2).png";
 import PrioriteSvg3 from "../../Assets/Priorite/PrioriteSvg (3).png";
@@ -22,18 +22,9 @@ import PrioriteSvg5 from "../../Assets/Priorite/PrioriteSvg (5).png";
 import PrioriteSvg6 from "../../Assets/Priorite/PrioriteSvg (6).png";
 import GooglePlay from "../../Assets/GooglePlay.png";
 import AppStore from "../../Assets/AppStore.png";
-// import animationData from "../../Assets/Animations/Priorite/jaanoun.json";
+import animationData from "../../Assets/Animations/Priorite/jaanoun.json";
 
 const Priorite = () => {
-  // const defaultOptions = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: animationData,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //   },
-  // };
-
   return (
     <>
       <Announcement />
@@ -218,7 +209,11 @@ const Priorite = () => {
                 alignSelf: { xs: "center", md: "initial" },
               }}
             >
-              {/* <Lottie options={defaultOptions} height={"100%"} width={"100%"} /> */}
+              <Lottie
+                style={{ width: "100%", height: "100%" }}
+                animationData={animationData}
+                loop={true}
+              />
               <Stack
                 alignItems="center"
                 sx={{ display: { xs: "flex", md: "none" }, mt: 3 }}
