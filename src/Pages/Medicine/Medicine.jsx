@@ -6,6 +6,7 @@ import {
   HeroImageContainer,
   CommonQuestions,
   StartingSteps,
+  Functionalities,
 } from "../../Components";
 import MedicineHeroImage from "../../Assets/Medicine/MedicineHeroImage.png";
 import HeroImageBackground from "../../Assets/HeroImageBackground.png";
@@ -98,6 +99,7 @@ const Medicine = () => {
           />
         </Stack>
       </Container>
+      <Functionalities />
       <Container
         maxWidth="lg"
         sx={{ backgroundColor: palette.navbarBackground, py: 5, mb: "50px" }}

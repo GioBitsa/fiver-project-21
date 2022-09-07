@@ -9,6 +9,7 @@ import HeroImageContainer from "./HeroImageContainer/HeroImageContainer";
 import VideoPreview from "./VideoPreview/VideoPreview";
 import CommonQuestions from "./CommonQuestions/CommonQuestions";
 import StartingSteps from "./StartingSteps/StartingSteps";
+import Functionalities from "./Functionalities/Functionalities";
 
 export {
   Announcement,
@@ -22,4 +23,5 @@ export {
   VideoPreview,
   CommonQuestions,
   StartingSteps,
+  Functionalities,
 };
