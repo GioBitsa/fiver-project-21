@@ -12,14 +12,8 @@ import HighLight from "../../Assets/HighLight.png";
 import { Container, Stack, Typography, Box, Grid } from "@mui/material";
 import { MainButton, OutlineMainButton } from "../../Components/Common";
 import palette from "../../Shared/palette";
-import {
-  NestedGrid,
-  LeftGrid,
-  RightGrid,
-  MyItem,
-  SocialButton,
-  AnimationPreviewImage,
-} from "./Style";
+import { NestedGrid, LeftGrid, RightGrid, MyItem, SocialButton } from "./Style";
+import Lottie from "react-lottie";
 import PrioriteSvg1 from "../../Assets/Priorite/PrioriteSvg (1).png";
 import PrioriteSvg2 from "../../Assets/Priorite/PrioriteSvg (2).png";
 import PrioriteSvg3 from "../../Assets/Priorite/PrioriteSvg (3).png";
@@ -28,9 +22,18 @@ import PrioriteSvg5 from "../../Assets/Priorite/PrioriteSvg (5).png";
 import PrioriteSvg6 from "../../Assets/Priorite/PrioriteSvg (6).png";
 import GooglePlay from "../../Assets/GooglePlay.png";
 import AppStore from "../../Assets/AppStore.png";
-import AnimationPreview from "../../Assets/Priorite/AnimationPreview.png";
+import animationData from "../../Assets/Animations/Priorite/jaanoun.json";
 
 const Priorite = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <>
       <Announcement />
@@ -144,6 +147,7 @@ const Priorite = () => {
                   color: { xs: palette.whiteText, md: palette.primary },
                   fontWeight: "bold",
                   fontSize: { xs: "20px", sm: "24px", md: "28px", lg: "34px" },
+                  whiteSpace: "nowrap",
                 }}
               >
                 Comment ça fonctionne ?
@@ -208,11 +212,16 @@ const Priorite = () => {
                 </Stack>
               </Box>
             </Box>
-            <Box>
-              <AnimationPreviewImage src={AnimationPreview} alt="animation" />
+            <Stack
+              sx={{
+                maxWidth: { xs: "initial", sm: "450px" },
+                alignSelf: { xs: "center", md: "initial" },
+              }}
+            >
+              <Lottie options={defaultOptions} height={"100%"} width={"100%"} />
               <Stack
                 alignItems="center"
-                sx={{ display: { xs: "flex", md: "none" } }}
+                sx={{ display: { xs: "flex", md: "none" }, mt: 3 }}
               >
                 <MainButton
                   text="Télécharger l’application"
@@ -247,7 +256,7 @@ const Priorite = () => {
                   </SocialButton>
                 </Stack>
               </Stack>
-            </Box>
+            </Stack>
           </Stack>
         </Container>
       </Box>

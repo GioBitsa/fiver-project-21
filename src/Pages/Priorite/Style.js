@@ -177,14 +177,3 @@ export const SocialButton = styled(Stack)({
     },
   },
 });
-
-export const AnimationPreviewImage = styled("img")({
-  display: "block",
-  width: "100%",
-  maxWidth: "450px",
-  margin: "0 auto",
-
-  "@media screen and (max-width: 550px)": {
-    maxWidth: "initial",
-  },
-});
