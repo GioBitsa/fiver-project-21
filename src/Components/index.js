@@ -10,6 +10,7 @@ import VideoPreview from "./VideoPreview/VideoPreview";
 import CommonQuestions from "./CommonQuestions/CommonQuestions";
 import StartingSteps from "./StartingSteps/StartingSteps";
 import Functionalities from "./Functionalities/Functionalities";
+import StrengthSection from "./StrengthSection/StrengthSection";
 
 export {
   Announcement,
@@ -24,4 +25,5 @@ export {
   CommonQuestions,
   StartingSteps,
   Functionalities,
+  StrengthSection,
 };

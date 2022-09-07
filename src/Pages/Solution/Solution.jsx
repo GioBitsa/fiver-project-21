@@ -7,6 +7,7 @@ import {
   CommonQuestions,
   StartingSteps,
   Functionalities,
+  StrengthSection,
 } from "../../Components";
 import SolutionHeroImage from "../../Assets/Solution/SolutionHeroImage.png";
 import HeroImageBackground from "../../Assets/HeroImageBackground.png";
@@ -14,22 +15,22 @@ import HighLight from "../../Assets/HighLight.png";
 import { Container, Stack, Typography, Box, Grid } from "@mui/material";
 import { MainButton } from "../../Components/Common";
 import palette from "../../Shared/palette";
-import { MyImageBox, MyGridItem, GridTitle, RightButton } from "./Style";
-import MedicineSvg1 from "../../Assets/Medicine/MedicineSvg (1).png";
-import MedicineSvg2 from "../../Assets/Medicine/MedicineSvg (2).png";
-import MedicineSvg3 from "../../Assets/Medicine/MedicineSvg (3).png";
-import MedicineSvg4 from "../../Assets/Medicine/MedicineSvg (4).png";
-import MedicineSvg5 from "../../Assets/Medicine/MedicineSvg (5).png";
-import MedicineSvg6 from "../../Assets/Medicine/MedicineSvg (6).png";
-import MedicineVideoPreview from "../../Assets/Medicine/MedicineVideoPreview.png";
-import { BsChevronRight } from "react-icons/bs";
+import { MyImageBox, MyGridItem, GridTitle, SocialButton } from "./Style";
+import SolutionSvg1 from "../../Assets/Solution/SolutionSvg (1).png";
+import SolutionSvg2 from "../../Assets/Solution/SolutionSvg (2).png";
+import SolutionSvg3 from "../../Assets/Solution/SolutionSvg (3).png";
+import SolutionSvg4 from "../../Assets/Solution/SolutionSvg (4).png";
+import SolutionSvg5 from "../../Assets/Solution/SolutionSvg (5).png";
+import SolutionSvg6 from "../../Assets/Solution/SolutionSvg (6).png";
+import GooglePlay from "../../Assets/GooglePlay.png";
+import AppStore from "../../Assets/AppStore.png";
 
 const Solution = () => {
   return (
     <>
       <Announcement />
       <Navbar />
-      <Container maxWidth="lg" sx={{ py: 5 }}>
+      <Container maxWidth="lg" sx={{ py: 5, mb: "50px" }}>
         <Stack
           direction={{ xs: "column", md: "row" }}
           alignItems="center"
@@ -74,34 +75,97 @@ const Solution = () => {
               variant="p"
               sx={{ fontWeight: "300", mb: 3 }}
             >
-              Notre solution vous ont gagner un temps précieux. Elle vous permet
-              de désengorger votre cabinet médical pour des pathologies
-              bénignes, de consulter vos patients (à domicile) pour lesquels
-              vous ne pouvez plus vous déplacer ,de partager plus rapidement et
-              efficacement les informations entre les professionnels... <br />{" "}
-              Notre concept se veut être une pratique différente de la médecine
-              et non pas une alternative à la médecine actuelle.
+              La télémedecine actuelle est une avancée en santé qui permet de
+              répondre à plusieurs problématiques cependant un élément
+              primordial semble avoir été négligé : le contact humain. <br />
+              Mobility Care place l’humain au centre du soin, c’est pour cette
+              raison que nous avons créé le concept de téléconsultation assistée
+              pour tous.
             </Typography>
             <Typography
-              component="h2"
-              variant="h2"
-              sx={{
-                color: palette.primary,
-                fontWeight: "bold",
-                fontSize: { xs: "24px", sm: "28px", md: "34px", lg: "38px" },
-                textAlign: { xs: "center", md: "left" },
-              }}
+              component="p"
+              variant="p"
+              sx={{ fontWeight: "300", mb: 3 }}
             >
-              100% Gratuit
+              Ainsi, grâce aux assistant(e)s, le soin à domicile assisté par un
+              médecin téléconsultant est possible. <br /> Les assistant(e)s
+              contribuent à accompagner les personnes à leur domicile, ce qui
+              apporte professionalisme, empathie, conseils et bienveillance pour
+              que l’activité de télémedecine soit plus humaine que jamais.
             </Typography>
+            <Box sx={{ mt: "60px", display: { xs: "none", md: "block" } }}>
+              <MainButton text="Télécharger l’application" />
+              <Stack direction="row" spacing={3} sx={{ mt: 5 }}>
+                <SocialButton direction="row" spacing={1}>
+                  <img src={GooglePlay} alt="googleplay" />
+                  <Box>
+                    <Typography component="span" variant="span">
+                      Disponible sur
+                    </Typography>
+                    <Typography component="p" variant="p">
+                      Google Play
+                    </Typography>
+                  </Box>
+                </SocialButton>
+                <SocialButton direction="row" spacing={1}>
+                  <img src={AppStore} alt="app store" />
+                  <Box>
+                    <Typography component="span" variant="span">
+                      Disponible sur
+                    </Typography>
+                    <Typography component="p" variant="p">
+                      App Store
+                    </Typography>
+                  </Box>
+                </SocialButton>
+              </Stack>
+            </Box>
           </Box>
-          <HeroImageContainer
-            main={SolutionHeroImage}
-            background={HeroImageBackground}
-          />
+          <Box>
+            <HeroImageContainer
+              main={SolutionHeroImage}
+              background={HeroImageBackground}
+            />
+            <Stack
+              alignItems="center"
+              sx={{ display: { xs: "flex", md: "none" }, mt: 5 }}
+            >
+              <MainButton
+                text="Télécharger l’application"
+                sx={{
+                  width: "250px",
+                }}
+              />
+              <Stack direction="row" spacing={3} sx={{ mt: 5 }}>
+                <SocialButton direction="row" spacing={1}>
+                  <img src={GooglePlay} alt="googleplay" />
+                  <Box>
+                    <Typography component="span" variant="span">
+                      Disponible sur
+                    </Typography>
+                    <Typography component="p" variant="p">
+                      Google Play
+                    </Typography>
+                  </Box>
+                </SocialButton>
+                <SocialButton direction="row" spacing={1}>
+                  <img src={AppStore} alt="app store" />
+                  <Box>
+                    <Typography component="span" variant="span">
+                      Disponible sur
+                    </Typography>
+                    <Typography component="p" variant="p">
+                      App Store
+                    </Typography>
+                  </Box>
+                </SocialButton>
+              </Stack>
+            </Stack>
+          </Box>
         </Stack>
       </Container>
       <Functionalities />
+      <StrengthSection />
       <Container
         maxWidth="lg"
         sx={{ backgroundColor: palette.navbarBackground, py: 5, mb: "50px" }}
@@ -136,7 +200,7 @@ const Solution = () => {
         <Grid container spacing={3} justifyContent="center">
           <MyGridItem item xs={12} md={4}>
             <MyImageBox>
-              <img src={MedicineSvg1} alt="website" />
+              <img src={SolutionSvg1} alt="website" />
             </MyImageBox>
             <GridTitle>
               Availability of test results anywhere in the world
@@ -148,7 +212,7 @@ const Solution = () => {
           </MyGridItem>
           <MyGridItem item xs={12} md={4}>
             <MyImageBox>
-              <img src={MedicineSvg2} alt="patients" />
+              <img src={SolutionSvg2} alt="patients" />
             </MyImageBox>
             <GridTitle>
               Information about test results is confidential
@@ -160,7 +224,7 @@ const Solution = () => {
           </MyGridItem>
           <MyGridItem item xs={12} md={4}>
             <MyImageBox>
-              <img src={MedicineSvg3} alt="mobility" />
+              <img src={SolutionSvg3} alt="mobility" />
             </MyImageBox>
             <GridTitle>
               Get a doctor's consultation if You have any question{" "}
@@ -172,7 +236,7 @@ const Solution = () => {
           </MyGridItem>
           <MyGridItem item xs={12} md={4}>
             <MyImageBox>
-              <img src={MedicineSvg4} alt="care" />
+              <img src={SolutionSvg4} alt="care" />
             </MyImageBox>
             <GridTitle>
               Pay for testing online or at the test location
@@ -184,7 +248,7 @@ const Solution = () => {
           </MyGridItem>
           <MyGridItem item xs={12} md={4}>
             <MyImageBox>
-              <img src={MedicineSvg5} alt="easy" />
+              <img src={SolutionSvg5} alt="easy" />
             </MyImageBox>
             <GridTitle>Sign up for testing</GridTitle>
             <Typography sx={{ color: palette.blackText }} align="center">
@@ -194,7 +258,7 @@ const Solution = () => {
           </MyGridItem>
           <MyGridItem item xs={12} md={4}>
             <MyImageBox>
-              <img src={MedicineSvg6} alt="reactive" />
+              <img src={SolutionSvg6} alt="reactive" />
             </MyImageBox>
             <GridTitle>Arrive at the appointed time for testing</GridTitle>
             <Typography sx={{ color: palette.blackText }} align="center">
