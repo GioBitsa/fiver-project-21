@@ -8,6 +8,7 @@ import EcosystemComponent from "./EcosystemComponent/EcosystemComponent";
 import HeroImageContainer from "./HeroImageContainer/HeroImageContainer";
 import VideoPreview from "./VideoPreview/VideoPreview";
 import CommonQuestions from "./CommonQuestions/CommonQuestions";
+import StartingSteps from "./StartingSteps/StartingSteps";
 
 export {
   Announcement,
@@ -20,4 +21,5 @@ export {
   HeroImageContainer,
   VideoPreview,
   CommonQuestions,
+  StartingSteps,
 };
