@@ -13,7 +13,7 @@ const StartingSteps = () => {
         sx={{
           color: palette.primary,
           fontWeight: "bold",
-          fontSize: { xs: "21px", sm: "34px", md: "38px", lg: "48px" },
+          fontSize: { xs: "21px", sm: "34px", md: "38px", lg: "44px" },
           mb: "50px",
         }}
         align="center"
