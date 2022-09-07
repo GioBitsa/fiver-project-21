@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import {
   Announcement,
   Footer,
@@ -8,7 +8,7 @@ import {
   StartingSteps,
   Functionalities,
 } from "../../Components";
-import MedicineHeroImage from "../../Assets/Medicine/MedicineHeroImage.png";
+import SolutionHeroImage from "../../Assets/Solution/SolutionHeroImage.png";
 import HeroImageBackground from "../../Assets/HeroImageBackground.png";
 import HighLight from "../../Assets/HighLight.png";
 import { Container, Stack, Typography, Box, Grid } from "@mui/material";
@@ -24,7 +24,7 @@ import MedicineSvg6 from "../../Assets/Medicine/MedicineSvg (6).png";
 import MedicineVideoPreview from "../../Assets/Medicine/MedicineVideoPreview.png";
 import { BsChevronRight } from "react-icons/bs";
 
-const Medicine = () => {
+const Solution = () => {
   return (
     <>
       <Announcement />
@@ -66,7 +66,7 @@ const Medicine = () => {
                   src={HighLight}
                   alt="highlight"
                 />
-                Médecin
+                Assistant
               </Box>
             </Typography>
             <Typography
@@ -96,11 +96,12 @@ const Medicine = () => {
             </Typography>
           </Box>
           <HeroImageContainer
-            main={MedicineHeroImage}
+            main={SolutionHeroImage}
             background={HeroImageBackground}
           />
         </Stack>
       </Container>
+      <Functionalities />
       <Container
         maxWidth="lg"
         sx={{ backgroundColor: palette.navbarBackground, py: 5, mb: "50px" }}
@@ -115,7 +116,7 @@ const Medicine = () => {
             textAlign: { xs: "left", md: "center" },
           }}
         >
-          Fonctionnalités disponibles
+          Être assistant avec <br /> MobilityCare ?
         </Typography>
         <Typography
           component="p"
@@ -128,151 +129,105 @@ const Medicine = () => {
             textAlign: { xs: "left", md: "center" },
           }}
         >
-          Vous n’avez rien a payer et vous disposez d’un ensemble de
-          fonctionnalité habituellement payante. Notre priorité est
-          l’amélioration de votre prise en charge médical grâce à notre concept
-          unique tout en étant assité par un professionel.
+          Before testing, it is worth reading more detailed information or
+          consulting your doctor. The information below is not a guide to action
+          and is for informational purposes only
         </Typography>
         <Grid container spacing={3} justifyContent="center">
           <MyGridItem item xs={12} md={4}>
             <MyImageBox>
               <img src={MedicineSvg1} alt="website" />
             </MyImageBox>
-            <GridTitle>100% en ligne</GridTitle>
+            <GridTitle>
+              Availability of test results anywhere in the world
+            </GridTitle>
             <Typography sx={{ color: palette.blackText }} align="center">
-              Pas d’installation nécessaire, accédez à votre espace de travail
-              où que vous soyez.
+              You will receive the test results to your mail in document format
+              and to your account
             </Typography>
           </MyGridItem>
           <MyGridItem item xs={12} md={4}>
             <MyImageBox>
               <img src={MedicineSvg2} alt="patients" />
             </MyImageBox>
-            <GridTitle>Un meilleur suivi des patients</GridTitle>
+            <GridTitle>
+              Information about test results is confidential
+            </GridTitle>
             <Typography sx={{ color: palette.blackText }} align="center">
-              Echangez avec vos confrères et vos patients , transmettez leurs
-              des documents en quelques clics.
+              Right to dispose of the information received in accordance with
+              the current legislation
             </Typography>
           </MyGridItem>
           <MyGridItem item xs={12} md={4}>
             <MyImageBox>
               <img src={MedicineSvg3} alt="mobility" />
             </MyImageBox>
-            <GridTitle>Pas de contraintes de déplacement </GridTitle>
+            <GridTitle>
+              Get a doctor's consultation if You have any question{" "}
+            </GridTitle>
             <Typography sx={{ color: palette.blackText }} align="center">
-              Consultez même les personnes qui n’ont pas la possibilité de se
-              déplacer pour obtenir un avis médical.
+              Face-to-face or Online you can get a consultation at any testing
+              stage
             </Typography>
           </MyGridItem>
           <MyGridItem item xs={12} md={4}>
             <MyImageBox>
               <img src={MedicineSvg4} alt="care" />
             </MyImageBox>
-            <GridTitle> Gestion administrative simplifiée</GridTitle>
+            <GridTitle>
+              Pay for testing online or at the test location
+            </GridTitle>
             <Typography sx={{ color: palette.blackText }} align="center">
-              Facturation et télétransmission en ligne, mise à jour automatique.
+              After payment, you leave your contact information to receive test
+              results
             </Typography>
           </MyGridItem>
           <MyGridItem item xs={12} md={4}>
             <MyImageBox>
               <img src={MedicineSvg5} alt="easy" />
             </MyImageBox>
-            <GridTitle> Meilleure organisation du temps médical</GridTitle>
+            <GridTitle>Sign up for testing</GridTitle>
             <Typography sx={{ color: palette.blackText }} align="center">
-              Téléconsulter quand vous souhaitez, gérer et optimiser votre temps
-              entre votre pratique habituelle en cabinet et en ligne.
+              Fill out the online form.A consultation with a doctor will help
+              you to choose the right type of testing
             </Typography>
           </MyGridItem>
           <MyGridItem item xs={12} md={4}>
             <MyImageBox>
               <img src={MedicineSvg6} alt="reactive" />
             </MyImageBox>
-            <GridTitle> Plus rapide et réactive</GridTitle>
+            <GridTitle>Arrive at the appointed time for testing</GridTitle>
             <Typography sx={{ color: palette.blackText }} align="center">
-              En cas de nécessité, vous répondrez aux besoins de vos patients au
-              plus vite pour optimiser leurs délais de prise en charge.
+              Testing is carried out in accordance with the previously selected
+              type of testing
             </Typography>
           </MyGridItem>
         </Grid>
         <MainButton
-          text="S’inscrire"
+          text="Sign up for a test"
           sx={{ display: "flex", margin: "50px auto 25px", minWidth: "250px" }}
         />
       </Container>
-      <Functionalities />
-      <Container maxWidth="lg" sx={{ py: 5, mb: "50px" }}>
-        <MainButton text="Notre Interface 100% Web" />
-        <Typography
-          component="h2"
-          variant="h2"
-          sx={{
-            color: palette.primary,
-            fontWeight: "bold",
-            fontSize: { xs: "21px", sm: "34px", md: "38px", lg: "44px" },
-            my: 5,
-          }}
-        >
-          Votre interface
-        </Typography>
-        <img style={{ width: "100%" }} src={MedicineVideoPreview} alt="video" />
-        <Stack
-          direction="row"
-          justifyContent="space-between"
-          spacing={3}
-          sx={{ mt: 3 }}
-        >
-          <Box sx={{ maxWidth: "800px" }}>
-            <Typography
-              component="h3"
-              variant="h3"
-              sx={{
-                color: palette.primary,
-                fontWeight: "600",
-                fontSize: { xs: "16px", sm: "21px", md: "28px" },
-                mb: 2,
-              }}
-            >
-              Une remontée de données en temps réel.
-            </Typography>
-            <Typography
-              component="p"
-              variant="p"
-              sx={{ color: palette.blackText, opacity: 0.8 }}
-            >
-              Vous recevez sur votre interface visio l’ensemble des informations
-              issus de votre examen clinique en temps réel grâce à nos outils
-              connectés.
-            </Typography>
-          </Box>
-          <RightButton>
-            <BsChevronRight />
-          </RightButton>
-        </Stack>
-      </Container>
       <StartingSteps
-        title={
-          <Fragment>
-            3 étapes pour démarer avec <br /> Mobility Care
-          </Fragment>
-        }
+        title="Nos formations adaptées à votre niveau"
         steps={[
           {
             id: 1,
-            header: "S’inscrire",
-            desc: "Inscription et utilisation gratuite.",
+            header: "Infirmier(e)",
+            desc: "Completez votre pratique et votre formation pour utiliser au mieux le e-cabinet.",
             button: "S’inscrire",
           },
           {
             id: 2,
-            header: "Se former",
-            desc: "Accedez aux formations en ligne pour une prise en main facilité.",
-            button: "Suivre les formations",
+            header: "Aide soignant(e)",
+            desc: "Montez en compétence et valoriser encore plus votre travail.",
+            button: "S’inscrire",
           },
           {
             id: 3,
-            header: "Commencer",
-            desc: "Vous avez toutes les cartes en mains pour réaliser des téléconsultations",
-            button: "Se connecter",
+            header: "Autre",
+            desc: "Vous êtes titulaire baccalauréat et vous voulez en faire votre métier.",
+            button: "S’inscrire",
           },
         ]}
       />
@@ -282,4 +237,4 @@ const Medicine = () => {
   );
 };
 
-export default Medicine;
+export default Solution;

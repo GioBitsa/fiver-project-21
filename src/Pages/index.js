@@ -10,6 +10,7 @@ import CompleteDoctorProfile from "./CompleteDoctorProfile/CompleteDoctorProfile
 import Structure from "./Structure/Structure";
 import Priorite from "./Priorite/Priorite";
 import Medicine from "./Medicine/Medicine";
+import Solution from "./Solution/Solution";
 
 export {
   Teritories,
@@ -24,4 +25,5 @@ export {
   Structure,
   Priorite,
   Medicine,
+  Solution,
 };

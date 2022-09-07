@@ -4,7 +4,7 @@ import { MyItem, MyStack } from "./Style";
 import palette from "../../Shared/palette";
 import { OutlineMainButton } from "../Common";
 
-const StartingSteps = () => {
+const StartingSteps = ({ title, steps }) => {
   return (
     <Container maxWidth="lg" sx={{ py: 5 }}>
       <Typography
@@ -18,60 +18,27 @@ const StartingSteps = () => {
         }}
         align="center"
       >
-        3 étapes pour démarer avec <br />
-        Mobility Care
+        {title}
       </Typography>
       <Grid container>
-        <Grid item xs={12} md={4}>
-          <MyItem>
-            <MyStack>
-              <span>1</span>
-              <Box>
-                <Typography component="h6" variant="h6">
-                  S’inscrire
-                </Typography>
-                <Typography component="p" variant="p">
-                  Inscription et utilisation gratuite.
-                </Typography>
-              </Box>
-            </MyStack>
-            <OutlineMainButton text="S’inscrire" />
-          </MyItem>
-        </Grid>
-        <Grid item xs={12} md={4}>
-          <MyItem>
-            <MyStack>
-              <span>2</span>
-              <Box>
-                <Typography component="h6" variant="h6">
-                  Se former
-                </Typography>
-                <Typography component="p" variant="p">
-                  Accedez aux formations en ligne pour une prise en main
-                  facilité.
-                </Typography>
-              </Box>
-            </MyStack>
-            <OutlineMainButton text="Suivre les formations" />
-          </MyItem>
-        </Grid>
-        <Grid item xs={12} md={4}>
-          <MyItem>
-            <MyStack>
-              <span>3</span>
-              <Box>
-                <Typography component="h6" variant="h6">
-                  Commencer
-                </Typography>
-                <Typography component="p" variant="p">
-                  Vous avez toutes les cartes en mains pour réaliser des
-                  téléconsultations
-                </Typography>
-              </Box>
-            </MyStack>
-            <OutlineMainButton text="Se connecter" />
-          </MyItem>
-        </Grid>
+        {steps?.map((item, index) => (
+          <Grid key={index} item xs={12} md={4}>
+            <MyItem>
+              <MyStack>
+                <span>{item.id}</span>
+                <Box>
+                  <Typography component="h6" variant="h6">
+                    {item.header}
+                  </Typography>
+                  <Typography component="p" variant="p">
+                    {item.desc}
+                  </Typography>
+                </Box>
+              </MyStack>
+              <OutlineMainButton text={item.button} />
+            </MyItem>
+          </Grid>
+        ))}
       </Grid>
     </Container>
   );
