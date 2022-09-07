@@ -17,6 +17,7 @@ const palette = {
   blackText: "#222222",
   black: "#111827",
   arrow: "#E7E7E7",
+  lightPurple: "#EBEBEB",
   linearVerticaly:
     "linear-gradient(180deg, rgba(18,183,167,1) 0%, rgba(47,232,182,1) 100%)",
   linearHorizontaly:

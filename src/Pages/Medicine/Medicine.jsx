@@ -14,13 +14,15 @@ import HighLight from "../../Assets/HighLight.png";
 import { Container, Stack, Typography, Box, Grid } from "@mui/material";
 import { MainButton } from "../../Components/Common";
 import palette from "../../Shared/palette";
-import { MyImageBox, MyGridItem, GridTitle } from "./Style";
+import { MyImageBox, MyGridItem, GridTitle, RightButton } from "./Style";
 import MedicineSvg1 from "../../Assets/Medicine/MedicineSvg (1).png";
 import MedicineSvg2 from "../../Assets/Medicine/MedicineSvg (2).png";
 import MedicineSvg3 from "../../Assets/Medicine/MedicineSvg (3).png";
 import MedicineSvg4 from "../../Assets/Medicine/MedicineSvg (4).png";
 import MedicineSvg5 from "../../Assets/Medicine/MedicineSvg (5).png";
 import MedicineSvg6 from "../../Assets/Medicine/MedicineSvg (6).png";
+import MedicineVideoPreview from "../../Assets/Medicine/MedicineVideoPreview.png";
+import { BsChevronRight } from "react-icons/bs";
 
 const Medicine = () => {
   return (
@@ -99,7 +101,6 @@ const Medicine = () => {
           />
         </Stack>
       </Container>
-      <Functionalities />
       <Container
         maxWidth="lg"
         sx={{ backgroundColor: palette.navbarBackground, py: 5, mb: "50px" }}
@@ -197,6 +198,56 @@ const Medicine = () => {
           text="S’inscrire"
           sx={{ display: "flex", margin: "50px auto 25px", minWidth: "250px" }}
         />
+      </Container>
+      <Functionalities />
+      <Container maxWidth="lg" sx={{ py: 5, mb: "50px" }}>
+        <MainButton text="Notre Interface 100% Web" />
+        <Typography
+          component="h2"
+          variant="h2"
+          sx={{
+            color: palette.primary,
+            fontWeight: "bold",
+            fontSize: { xs: "21px", sm: "34px", md: "38px", lg: "44px" },
+            my: 5,
+          }}
+        >
+          Votre interface
+        </Typography>
+        <img style={{ width: "100%" }} src={MedicineVideoPreview} alt="video" />
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          spacing={3}
+          sx={{ mt: 3 }}
+        >
+          <Box sx={{ maxWidth: "800px" }}>
+            <Typography
+              component="h3"
+              variant="h3"
+              sx={{
+                color: palette.primary,
+                fontWeight: "600",
+                fontSize: { xs: "16px", sm: "21px", md: "28px" },
+                mb: 2,
+              }}
+            >
+              Une remontée de données en temps réel.
+            </Typography>
+            <Typography
+              component="p"
+              variant="p"
+              sx={{ color: palette.blackText, opacity: 0.8 }}
+            >
+              Vous recevez sur votre interface visio l’ensemble des informations
+              issus de votre examen clinique en temps réel grâce à nos outils
+              connectés.
+            </Typography>
+          </Box>
+          <RightButton>
+            <BsChevronRight />
+          </RightButton>
+        </Stack>
       </Container>
       <StartingSteps />
       <CommonQuestions />

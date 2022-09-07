@@ -37,3 +37,21 @@ export const MyGridItem = styled(Grid)({
   alignItems: "center",
   maxWidth: "500px !important",
 });
+
+export const RightButton = styled(Box)({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: palette.lightPurple,
+  borderRadius: "10px",
+  minWidth: "50px",
+  minHeight: "50px",
+  height: "50px",
+  cursor: "pointer",
+
+  "@media screen and (max-width: 600px)": {
+    minWidth: "40px",
+    height: "40px",
+    minHeight: "40px",
+  },
+});
