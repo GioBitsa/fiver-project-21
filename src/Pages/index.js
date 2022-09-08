@@ -11,6 +11,7 @@ import Structure from "./Structure/Structure";
 import Priorite from "./Priorite/Priorite";
 import Medicine from "./Medicine/Medicine";
 import Solution from "./Solution/Solution";
+import FirstTarif from "./FirstTarif/FirstTarif";
 
 export {
   Teritories,
@@ -26,4 +27,5 @@ export {
   Priorite,
   Medicine,
   Solution,
+  FirstTarif,
 };

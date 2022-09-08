@@ -11,6 +11,7 @@ import CommonQuestions from "./CommonQuestions/CommonQuestions";
 import StartingSteps from "./StartingSteps/StartingSteps";
 import Functionalities from "./Functionalities/Functionalities";
 import StrengthSection from "./StrengthSection/StrengthSection";
+import TarifHeroSection from "./TarifHeroSection/TarifHeroSection";
 
 export {
   Announcement,
@@ -26,4 +27,5 @@ export {
   StartingSteps,
   Functionalities,
   StrengthSection,
+  TarifHeroSection,
 };
