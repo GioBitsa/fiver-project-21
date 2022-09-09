@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import palette from "../../Shared/palette";
 import HighLight from "../../Assets/HighLight.png";
 import FirstTarifHeroImage from "../../Assets/FirstTarifHeroImage.png";
-import { Title, MyButton } from "./Style";
+import FirstTarifBackgroundImage from "../../Assets/FirstTarifBackgroundImage.png";
+import {
+  Title,
+  MyButton,
+  BackgroundNumberImage,
+  MainImage,
+  Content,
+} from "./Style";
 import { MdDone } from "react-icons/md";
 
 const TarifHeroSection = () => {
+  const [active, setActive] = useState("1");
+
   return (
     <>
       <Container maxWidth="lg" sx={{ py: 5 }}>
@@ -68,23 +77,37 @@ const TarifHeroSection = () => {
           et ainsi ne vous préoccuper que de vos patients/résidents/habitants.
         </Typography>
       </Container>
-      <Box sx={{ background: palette.linearVerticaly, py: 5 }}>
+      <Box
+        sx={{
+          background: palette.linearVerticaly,
+          py: 5,
+          position: "relative",
+          mb: "70px",
+        }}
+      >
         <Container maxWidth="lg">
           <Stack
-            direction="row"
+            direction={{ xs: "column", md: "row" }}
             justifyContent="space-between"
             alignItems="center"
             spacing={3}
+            sx={{ position: "relative" }}
           >
-            <img src={FirstTarifHeroImage} alt="tarif" />
-            <Box sx={{ maxWidth: "350px" }}>
+            <MainImage src={FirstTarifHeroImage} alt="tarif" />
+            <Content>
               <Title component="h2" variant="h2">
                 E-cabinet
               </Title>
               <Typography
                 component="p"
                 variant="p"
-                sx={{ color: palette.whiteText, opacity: 0.8, mt: 1, mb: 3 }}
+                sx={{
+                  color: palette.whiteText,
+                  opacity: 0.8,
+                  mt: 1,
+                  mb: 3,
+                  fontSize: { xs: "14px", sm: "16px" },
+                }}
               >
                 E-cabinet complet avec l’ensemble des outils numériques et les
                 périphériques nécessaires au bon fonctionnement du dispositif.
@@ -97,13 +120,22 @@ const TarifHeroSection = () => {
                 Choisissez votre plan :
               </Typography>
               <Stack direction="row" spacing={3}>
-                <MyButton>
-                  <MdDone />
+                <MyButton onClick={() => setActive("1")}>
+                  <span className={active === "1" ? "active" : ""}>
+                    <MdDone />
+                  </span>
                   Location
                 </MyButton>
+                <MyButton onClick={() => setActive("2")}>
+                  <span className={active === "2" ? "active" : ""}>
+                    <MdDone />
+                  </span>
+                  Achat
+                </MyButton>
               </Stack>
-            </Box>
+            </Content>
           </Stack>
+          <BackgroundNumberImage src={FirstTarifBackgroundImage} alt="tarif" />
         </Container>
       </Box>
     </>
