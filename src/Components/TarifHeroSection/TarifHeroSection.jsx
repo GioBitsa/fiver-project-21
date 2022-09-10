@@ -2,23 +2,33 @@ import React, { useState } from "react";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import palette from "../../Shared/palette";
 import HighLight from "../../Assets/HighLight.png";
-import FirstTarifHeroImage from "../../Assets/FirstTarifHeroImage.png";
-import FirstTarifBackgroundImage from "../../Assets/FirstTarifBackgroundImage.png";
+import Dots from "../../Assets/Tarif/Dots.png";
 import {
   Title,
   MyButton,
   BackgroundNumberImage,
   MainImage,
   Content,
+  DotsImage,
+  DotsContainer,
 } from "./Style";
 import { MdDone } from "react-icons/md";
 
-const TarifHeroSection = () => {
+const TarifHeroSection = ({
+  mainImage,
+  backgroundImage,
+  title,
+  desc,
+  paymentTitle,
+  firstButton,
+  secondButton,
+}) => {
   const [active, setActive] = useState("1");
+  const [activeDot, setActiveDot] = useState("1");
 
   return (
     <>
-      <Container maxWidth="lg" sx={{ py: 5 }}>
+      <Container maxWidth="lg" sx={{ py: 5, position: "relative" }}>
         <Typography
           component="h2"
           variant="h2"
@@ -76,6 +86,7 @@ const TarifHeroSection = () => {
           des services complémentaires pour que vos prestations soient optimales
           et ainsi ne vous préoccuper que de vos patients/résidents/habitants.
         </Typography>
+        <DotsImage src={Dots} alt="dots" />
       </Container>
       <Box
         sx={{
@@ -93,10 +104,10 @@ const TarifHeroSection = () => {
             spacing={3}
             sx={{ position: "relative" }}
           >
-            <MainImage src={FirstTarifHeroImage} alt="tarif" />
+            <MainImage src={mainImage} alt="tarif" />
             <Content>
               <Title component="h2" variant="h2">
-                E-cabinet
+                {title}
               </Title>
               <Typography
                 component="p"
@@ -109,34 +120,47 @@ const TarifHeroSection = () => {
                   fontSize: { xs: "14px", sm: "16px" },
                 }}
               >
-                E-cabinet complet avec l’ensemble des outils numériques et les
-                périphériques nécessaires au bon fonctionnement du dispositif.
+                {desc}
               </Typography>
               <Typography
                 component="h6"
                 variant="h6"
                 sx={{ color: palette.whiteText, opacity: 0.8, mt: 1, mb: 3 }}
               >
-                Choisissez votre plan :
+                {paymentTitle}
               </Typography>
               <Stack direction="row" spacing={3}>
                 <MyButton onClick={() => setActive("1")}>
                   <span className={active === "1" ? "active" : ""}>
                     <MdDone />
                   </span>
-                  Location
+                  {firstButton}
                 </MyButton>
                 <MyButton onClick={() => setActive("2")}>
                   <span className={active === "2" ? "active" : ""}>
                     <MdDone />
                   </span>
-                  Achat
+                  {secondButton}
                 </MyButton>
               </Stack>
             </Content>
           </Stack>
-          <BackgroundNumberImage src={FirstTarifBackgroundImage} alt="tarif" />
+          <BackgroundNumberImage src={backgroundImage} alt="tarif" />
         </Container>
+        <DotsContainer>
+          <span
+            className={activeDot === "1" ? "active" : ""}
+            onClick={() => setActiveDot("1")}
+          />
+          <span
+            className={activeDot === "2" ? "active" : ""}
+            onClick={() => setActiveDot("2")}
+          />
+          <span
+            className={activeDot === "3" ? "active" : ""}
+            onClick={() => setActiveDot("3")}
+          />
+        </DotsContainer>
       </Box>
     </>
   );
