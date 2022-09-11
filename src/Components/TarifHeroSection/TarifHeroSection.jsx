@@ -93,7 +93,7 @@ const TarifHeroSection = ({
           background: palette.linearVerticaly,
           py: 5,
           position: "relative",
-          mb: "70px",
+          mb: { xs: "50px", md: "100px" },
         }}
       >
         <Container maxWidth="lg">

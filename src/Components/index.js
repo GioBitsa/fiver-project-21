@@ -12,6 +12,7 @@ import StartingSteps from "./StartingSteps/StartingSteps";
 import Functionalities from "./Functionalities/Functionalities";
 import StrengthSection from "./StrengthSection/StrengthSection";
 import TarifHeroSection from "./TarifHeroSection/TarifHeroSection";
+import ServicesComponent from "./ServicesComponent/ServicesComponent";
 
 export {
   Announcement,
@@ -28,4 +29,5 @@ export {
   Functionalities,
   StrengthSection,
   TarifHeroSection,
+  ServicesComponent,
 };
