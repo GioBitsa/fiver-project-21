@@ -13,6 +13,7 @@ import Functionalities from "./Functionalities/Functionalities";
 import StrengthSection from "./StrengthSection/StrengthSection";
 import TarifHeroSection from "./TarifHeroSection/TarifHeroSection";
 import ServicesComponent from "./ServicesComponent/ServicesComponent";
+import SingleProductSection from "./SingleProductSection/SingleProductSection";
 
 export {
   Announcement,
@@ -30,4 +31,5 @@ export {
   StrengthSection,
   TarifHeroSection,
   ServicesComponent,
+  SingleProductSection,
 };

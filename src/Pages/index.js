@@ -13,6 +13,7 @@ import Medicine from "./Medicine/Medicine";
 import Solution from "./Solution/Solution";
 import FirstTarif from "./FirstTarif/FirstTarif";
 import SecondTarif from "./SecondTarif/SecondTarif";
+import Products from "./Products/Products";
 
 export {
   Teritories,
@@ -30,4 +31,5 @@ export {
   Solution,
   FirstTarif,
   SecondTarif,
+  Products,
 };
