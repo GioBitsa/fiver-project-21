@@ -83,6 +83,7 @@ const FirstTarif = () => {
         paymentTitle="Choisissez votre plan :"
         firstButton="Location"
         secondButton="Achat"
+        activeDot="1"
       />
       <Container
         maxWidth="lg"

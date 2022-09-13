@@ -13,6 +13,7 @@ import Medicine from "./Medicine/Medicine";
 import Solution from "./Solution/Solution";
 import FirstTarif from "./FirstTarif/FirstTarif";
 import SecondTarif from "./SecondTarif/SecondTarif";
+import ThirdTarif from "./ThirdTarif/ThirdTarif";
 import Products from "./Products/Products";
 
 export {
@@ -31,5 +32,6 @@ export {
   Solution,
   FirstTarif,
   SecondTarif,
+  ThirdTarif,
   Products,
 };

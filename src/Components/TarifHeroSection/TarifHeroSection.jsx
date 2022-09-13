@@ -22,9 +22,9 @@ const TarifHeroSection = ({
   paymentTitle,
   firstButton,
   secondButton,
+  activeDot,
 }) => {
   const [active, setActive] = useState("1");
-  const [activeDot, setActiveDot] = useState("1");
 
   return (
     <>
@@ -148,18 +148,9 @@ const TarifHeroSection = ({
           <BackgroundNumberImage src={backgroundImage} alt="tarif" />
         </Container>
         <DotsContainer>
-          <span
-            className={activeDot === "1" ? "active" : ""}
-            onClick={() => setActiveDot("1")}
-          />
-          <span
-            className={activeDot === "2" ? "active" : ""}
-            onClick={() => setActiveDot("2")}
-          />
-          <span
-            className={activeDot === "3" ? "active" : ""}
-            onClick={() => setActiveDot("3")}
-          />
+          <span className={activeDot === "1" ? "active" : ""} />
+          <span className={activeDot === "2" ? "active" : ""} />
+          <span className={activeDot === "3" ? "active" : ""} />
         </DotsContainer>
       </Box>
     </>

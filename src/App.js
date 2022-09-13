@@ -16,6 +16,7 @@ import {
   Solution,
   FirstTarif,
   SecondTarif,
+  ThirdTarif,
   Products,
 } from "./Pages";
 import "slick-carousel/slick/slick.css";
@@ -39,6 +40,7 @@ const App = () => {
       <Route path="/solution" element={<Solution />} />
       <Route path="/firsttarif" element={<FirstTarif />} />
       <Route path="/secondtarif" element={<SecondTarif />} />
+      <Route path="/thirdtarif" element={<ThirdTarif />} />
       <Route path="/products" element={<Products />} />
     </Routes>
   );

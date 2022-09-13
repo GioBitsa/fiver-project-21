@@ -13,15 +13,15 @@ import {
   DisabledRadioText,
 } from "./Style";
 import { Container, Typography, Stack, Box } from "@mui/material";
-import SecondTarifHeroImage from "../../Assets/Tarif/SecondTarifHeroImage.png";
-import SecondTarifBackgroundImage from "../../Assets/Tarif/SecondTarifBackgroundImage.png";
+import ThirdTarifHeroImage from "../../Assets/Tarif/ThirdTarifHeroImage.png";
+import ThirdTarifBackgroundImage from "../../Assets/Tarif/ThirdTarifBackground.png";
 import Services1 from "../../Assets/Services (1).png";
 import Services2 from "../../Assets/Services (2).png";
 import Services3 from "../../Assets/Services (3).png";
 import palette from "../../Shared/palette";
 import { MdDone } from "react-icons/md";
 
-const SecondTarif = () => {
+const ThirdTarif = () => {
   const [active, setActive] = useState("1");
 
   const contentArray = [
@@ -76,16 +76,15 @@ const SecondTarif = () => {
     <>
       <Navbar />
       <TarifHeroSection
-        mainImage={SecondTarifHeroImage}
-        backgroundImage={SecondTarifBackgroundImage}
-        title="MediScoot"
-        desc="Ce dispositif permet une
-        réactivité accrue en milieu urbain ou semi-urbain, de plus il s’inscrit dans une démarche
-        écologique car électrique. Sans permis !"
-        paymentTitle="Disponible seulement à la vente "
-        firstButton="Achat seul"
-        secondButton="Achat combiné"
-        activeDot="2"
+        mainImage={ThirdTarifHeroImage}
+        backgroundImage={ThirdTarifBackgroundImage}
+        title="MediCar"
+        desc="La MediCar vous permet de vous déplacer au delà des limites du MediScoot et de manière confortable, été comme hiver.
+        Toujours sans permis."
+        paymentTitle="Choisissez votre plan :"
+        firstButton="Location"
+        secondButton="Achat"
+        activeDot="3"
       />
       <Container
         maxWidth="lg"
@@ -100,7 +99,7 @@ const SecondTarif = () => {
             fontSize: { xs: "18px", sm: "24px", md: "34px" },
           }}
         >
-          Achat seul
+          Location
         </Typography>
         <Typography
           component="p"
@@ -121,17 +120,22 @@ const SecondTarif = () => {
         >
           <Box>
             <RadioText>
-              <span />
-              Tricycle électrique
+              <span /> Medi care specially make for medical
             </RadioText>
             <RadioText>
-              <span /> Système de fixation pour le E-cabinet
+              <span /> Connexion 4G incluse
             </RadioText>
             <RadioText>
-              <span /> Système de géolocalisation
+              <span /> Terminal de paiement
             </RadioText>
             <RadioText>
-              <span /> Gestion de flotte (en option)
+              <span /> Terminal de télétransmission
+            </RadioText>
+            <RadioText>
+              <span /> Consommables* avec envoi mensuel
+            </RadioText>
+            <RadioText>
+              <span /> 5 Sub Domain
             </RadioText>
           </Box>
           <Box>
@@ -211,4 +215,4 @@ const SecondTarif = () => {
   );
 };
 
-export default SecondTarif;
+export default ThirdTarif;
