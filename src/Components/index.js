@@ -15,6 +15,7 @@ import TarifHeroSection from "./TarifHeroSection/TarifHeroSection";
 import ServicesComponent from "./ServicesComponent/ServicesComponent";
 import SingleProductSection from "./SingleProductSection/SingleProductSection";
 import PageLayout from "./PageLayout/PageLayout";
+import ProfileDetails from "./ProfileDetails/ProfileDetails";
 
 export {
   Announcement,
@@ -34,4 +35,5 @@ export {
   ServicesComponent,
   SingleProductSection,
   PageLayout,
+  ProfileDetails,
 };
