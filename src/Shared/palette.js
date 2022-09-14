@@ -4,6 +4,7 @@ const palette = {
   lightGreen: "#069686",
   primary: "#14B8A6",
   lightPrimary: "#27DAC6",
+  veryLightPrimary: "#12B7A7",
   darkElectric: "#3EFCE7",
   electric: "#6AFFEE",
   lightElectric: "#95FFF3",
@@ -22,6 +23,7 @@ const palette = {
     "linear-gradient(180deg, rgba(18,183,167,1) 0%, rgba(47,232,182,1) 100%)",
   linearHorizontaly:
     "linear-gradient(270deg, rgba(18,183,167,1) 0%, rgba(47,232,182,1) 100%)",
+  sideBarButtonBackground: "#F1F1F1",
 };
 
 export default palette;
