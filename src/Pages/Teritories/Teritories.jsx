@@ -7,9 +7,9 @@ import {
   HeroImageContainer,
   VideoPreview,
 } from "../../Components";
-import HeroImg from "../../Assets/heroImg.png";
+import HeroImg from "../../Assets/Teritories/heroImg.png";
 import HeroImageBackground from "../../Assets/HeroImageBackground.png";
-import TeritoriesVideoPreview from "../../Assets/TeritoriesVideoPreview.png";
+import TeritoriesVideoPreview from "../../Assets/Teritories/TeritoriesVideoPreview.png";
 import HighLight from "../../Assets/HighLight.png";
 import { Container, Stack, Typography, Box, Grid } from "@mui/material";
 import { MainButton, OutlineMainButton } from "../../Components/Common";

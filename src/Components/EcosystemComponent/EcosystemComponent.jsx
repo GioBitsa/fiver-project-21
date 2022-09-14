@@ -3,11 +3,11 @@ import { Box, Container, Typography, Grid } from "@mui/material";
 import palette from "../../Shared/palette";
 import { Frame, MainLogoContainer, Features, DetailsContainer } from "./Style";
 import MainLogo from "../../Assets/MainLogo.png";
-import EcoSystemImage1 from "../../Assets/EcoSystemImage (1).png";
-import EcoSystemImage2 from "../../Assets/EcoSystemImage (2).png";
-import EcoSystemImage3 from "../../Assets/EcoSystemImage (3).png";
-import EcoSystemImage4 from "../../Assets/EcoSystemImage (4).png";
-import EcoSystemImage5 from "../../Assets/EcoSystemImage (5).png";
+import EcoSystemImage1 from "../../Assets/Icons/EcoSystemImage (1).png";
+import EcoSystemImage2 from "../../Assets/Icons/EcoSystemImage (2).png";
+import EcoSystemImage3 from "../../Assets/Icons/EcoSystemImage (3).png";
+import EcoSystemImage4 from "../../Assets/Icons/EcoSystemImage (4).png";
+import EcoSystemImage5 from "../../Assets/Icons/EcoSystemImage (5).png";
 import { OutlineMainButton } from "../Common";
 
 const EcoSystemImageArray = [

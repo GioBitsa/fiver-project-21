@@ -22,8 +22,8 @@ import SolutionSvg3 from "../../Assets/Solution/SolutionSvg (3).png";
 import SolutionSvg4 from "../../Assets/Solution/SolutionSvg (4).png";
 import SolutionSvg5 from "../../Assets/Solution/SolutionSvg (5).png";
 import SolutionSvg6 from "../../Assets/Solution/SolutionSvg (6).png";
-import GooglePlay from "../../Assets/GooglePlay.png";
-import AppStore from "../../Assets/AppStore.png";
+import GooglePlay from "../../Assets/Icons/GooglePlay.png";
+import AppStore from "../../Assets/Icons/AppStore.png";
 
 const Solution = () => {
   return (

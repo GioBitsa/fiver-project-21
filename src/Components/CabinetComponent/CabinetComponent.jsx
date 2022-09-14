@@ -10,20 +10,20 @@ import {
 } from "./Style";
 import palette from "../../Shared/palette";
 import CabinetMainImage from "../../Assets/CabinetMainImage.png";
-import CabinetImage1 from "../../Assets/CabinetImage (1).png";
-import CabinetImage2 from "../../Assets/CabinetImage (2).png";
-import CabinetImage3 from "../../Assets/CabinetImage (3).png";
-import CabinetImage4 from "../../Assets/CabinetImage (4).png";
-import CabinetImage5 from "../../Assets/CabinetImage (5).png";
-import CabinetImage6 from "../../Assets/CabinetImage (6).png";
-import CabinetImage7 from "../../Assets/CabinetImage (7).png";
-import CabinetImage8 from "../../Assets/CabinetImage (8).png";
-import CabinetImage9 from "../../Assets/CabinetImage (9).png";
-import CabinetImage10 from "../../Assets/CabinetImage (10).png";
-import CabinetImage11 from "../../Assets/CabinetImage (11).png";
-import CabinetImage12 from "../../Assets/CabinetImage (12).png";
-import CabinetImage13 from "../../Assets/CabinetImage (13).png";
-import CabinetImage14 from "../../Assets/CabinetImage (14).png";
+import CabinetImage1 from "../../Assets/Icons/CabinetImage (1).png";
+import CabinetImage2 from "../../Assets/Icons/CabinetImage (2).png";
+import CabinetImage3 from "../../Assets/Icons/CabinetImage (3).png";
+import CabinetImage4 from "../../Assets/Icons/CabinetImage (4).png";
+import CabinetImage5 from "../../Assets/Icons/CabinetImage (5).png";
+import CabinetImage6 from "../../Assets/Icons/CabinetImage (6).png";
+import CabinetImage7 from "../../Assets/Icons/CabinetImage (7).png";
+import CabinetImage8 from "../../Assets/Icons/CabinetImage (8).png";
+import CabinetImage9 from "../../Assets/Icons/CabinetImage (9).png";
+import CabinetImage10 from "../../Assets/Icons/CabinetImage (10).png";
+import CabinetImage11 from "../../Assets/Icons/CabinetImage (11).png";
+import CabinetImage12 from "../../Assets/Icons/CabinetImage (12).png";
+import CabinetImage13 from "../../Assets/Icons/CabinetImage (13).png";
+import CabinetImage14 from "../../Assets/Icons/CabinetImage (14).png";
 import { OutlineMainButton } from "../Common";
 
 const data = [

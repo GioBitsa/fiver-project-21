@@ -4,7 +4,7 @@ import { MainInput, InputPassword, MainButton } from "../../Components/Common";
 import palette from "../../Shared/palette";
 import { LogoContainer, RightContainer, LoginImg } from "./Style";
 import LogoWhite from "../../Assets/LogoWhite.png";
-import RecoveryImage from "../../Assets/RecoveryImage.png";
+import RecoveryImage from "../../Assets/Recovery/RecoveryImage.png";
 import BottomEllipse from "../../Assets/NewsLetterEllipse.png";
 import TopEllipse from "../../Assets/Ellipse.png";
 import BottomDots from "../../Assets/NewsLetterDots2.png";

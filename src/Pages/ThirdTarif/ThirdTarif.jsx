@@ -15,9 +15,9 @@ import {
 import { Container, Typography, Stack, Box } from "@mui/material";
 import ThirdTarifHeroImage from "../../Assets/Tarif/ThirdTarifHeroImage.png";
 import ThirdTarifBackgroundImage from "../../Assets/Tarif/ThirdTarifBackground.png";
-import Services1 from "../../Assets/Services (1).png";
-import Services2 from "../../Assets/Services (2).png";
-import Services3 from "../../Assets/Services (3).png";
+import Services1 from "../../Assets/Icons/Services (1).png";
+import Services2 from "../../Assets/Icons/Services (2).png";
+import Services3 from "../../Assets/Icons/Services (3).png";
 import palette from "../../Shared/palette";
 import { MdDone } from "react-icons/md";
 

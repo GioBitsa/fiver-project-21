@@ -20,8 +20,8 @@ import PrioriteSvg3 from "../../Assets/Priorite/PrioriteSvg (3).png";
 import PrioriteSvg4 from "../../Assets/Priorite/PrioriteSvg (4).png";
 import PrioriteSvg5 from "../../Assets/Priorite/PrioriteSvg (5).png";
 import PrioriteSvg6 from "../../Assets/Priorite/PrioriteSvg (6).png";
-import GooglePlay from "../../Assets/GooglePlay.png";
-import AppStore from "../../Assets/AppStore.png";
+import GooglePlay from "../../Assets/Icons/GooglePlay.png";
+import AppStore from "../../Assets/Icons/AppStore.png";
 import animationData from "../../Assets/Animations/Priorite/jaanoun.json";
 
 const Priorite = () => {

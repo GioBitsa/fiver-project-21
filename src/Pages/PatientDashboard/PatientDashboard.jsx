@@ -1,6 +1,6 @@
 import React from "react";
 import { PageLayout } from "../../Components";
-import Home from "../../Assets/Home.png";
+import Home from "../../Assets/Icons/Home.png";
 import User from "../../Assets/User.png";
 
 const PatientDashboard = () => {

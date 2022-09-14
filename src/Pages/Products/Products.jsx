@@ -19,10 +19,10 @@ import SecondTarifProductStack3 from "../../Assets/Tarif/SecondTarifProductStack
 import ThirdTarifProduct from "../../Assets/Tarif/ThirdTarifProduct.png";
 import ThirdTarifProductStack1 from "../../Assets/Tarif/ThirdTarifProductStack (1).png";
 import ThirdTarifProductStack2 from "../../Assets/Tarif/ThirdTarifProductStack (2).png";
-import Baterry from "../../Assets/Baterry.png";
-import TopSpeed from "../../Assets/TopSpeed.png";
-import Time from "../../Assets/Time.png";
-import Distance from "../../Assets/Distance.png";
+import Baterry from "../../Assets/Icons/Baterry.png";
+import TopSpeed from "../../Assets/Icons/TopSpeed.png";
+import Time from "../../Assets/Icons/Time.png";
+import Distance from "../../Assets/Icons/Distance.png";
 
 const Products = () => {
   return (
