@@ -13,6 +13,7 @@ export const MyAppBar = styled(AppBar, {
     marginLeft: `${drawerwidth}px`,
   }),
   backgroundColor: palette.primary,
+  boxShadow: "4px 2px 3px rgba(0, 0, 0, 0.05)",
 }));
 
 export const Main = styled("main", {

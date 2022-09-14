@@ -34,8 +34,17 @@ const SideBar = ({ profile, sideBarItems }) => {
               }
             }
           >
-            <img src={item.icon} alt={item.text} />
-            <span>{item.text}</span>
+            {item.icon === null ? (
+              <>
+                <img src={item.disabledIcon} alt={item.text} />
+                <span className="disabled">{item.text}</span>
+              </>
+            ) : (
+              <>
+                <img src={item.icon} alt={item.text} />
+                <span>{item.text}</span>
+              </>
+            )}
           </MyListItemButton>
         ))}
       </List>

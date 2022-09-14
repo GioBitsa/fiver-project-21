@@ -12,7 +12,7 @@ import SideBar from "./components/SideBar";
 import { AiOutlineMenu } from "react-icons/ai";
 import palette from "../../Shared/palette";
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 
 const PageLayout = ({ children, profile, sideBarItems }) => {
   const [open, setOpen] = useState(true);
@@ -56,7 +56,6 @@ const PageLayout = ({ children, profile, sideBarItems }) => {
           transition: "all 0.3s",
           flexShrink: { md: 0 },
         }}
-        aria-label="mailbox folders"
       >
         <Drawer
           variant="temporary"
@@ -70,6 +69,9 @@ const PageLayout = ({ children, profile, sideBarItems }) => {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: palette.whiteText,
+              boxShadow: "0 30px 100px rgba(0, 0, 0, 0.08)",
+              border: "none",
             },
           }}
         >
@@ -82,6 +84,9 @@ const PageLayout = ({ children, profile, sideBarItems }) => {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: palette.whiteText,
+              boxShadow: "0 30px 100px rgba(0, 0, 0, 0.08)",
+              border: "none",
             },
           }}
           open={open}

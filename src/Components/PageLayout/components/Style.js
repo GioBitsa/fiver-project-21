@@ -6,6 +6,7 @@ export const SideBarHeader = styled(Toolbar)({
   fontSize: "20px",
   color: palette.primary,
   fontWeight: "600",
+  justifyContent: "center",
   backgroundColor: palette.whiteText,
   boxShadow: "0 9px 25px rgba(0, 0, 0, 0.1)",
 
@@ -14,7 +15,6 @@ export const SideBarHeader = styled(Toolbar)({
     width: "40px",
     height: "40px",
     objectFit: "contain",
-    flexGrow: 1,
   },
 });
 
@@ -23,6 +23,7 @@ export const SideBarProfile = styled(Toolbar)({
   margin: "10px 0 0",
   display: "flex",
   alignItems: "center",
+  cursor: "pointer",
 
   "& img": {
     width: "35px",
@@ -70,6 +71,12 @@ export const MyListItemButton = styled(Button)({
     fontWeight: "600",
     fontSize: "14px",
     flexGrow: 1,
+  },
+
+  "& span.disabled": {
+    color: palette.blackText,
+    fontWeight: 500,
+    opacity: 0.4,
   },
 
   "&:hover": {
