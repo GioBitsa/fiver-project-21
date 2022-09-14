@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import {
   Teritories,
   Home,
@@ -43,7 +43,10 @@ const App = () => {
       <Route path="/secondtarif" element={<SecondTarif />} />
       <Route path="/thirdtarif" element={<ThirdTarif />} />
       <Route path="/products" element={<Products />} />
-      <Route path="/patient/dashboard" element={<PatientDashboard />} />
+      <Route path="/patient">
+        <Route index element={<Navigate to="dashboard" replace />} />
+        <Route path="dashboard" element={<PatientDashboard />} />
+      </Route>
     </Routes>
   );
 };

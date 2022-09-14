@@ -10,51 +10,49 @@ import User from "../../Assets/User.png";
 
 const PatientDashboard = () => {
   return (
-    <>
-      <PageLayout
-        profile={{ img: User, name: "Lydia Meli", desc: "Bienvenue" }}
-        sideBarItems={[
-          {
-            icon: Home,
-            disabledIcon: null,
-            text: "Tableau de bord",
-            active: true,
-          },
-          {
-            icon: null,
-            disabledIcon: ListDisabled,
-            text: "Dossier Médical",
-            active: false,
-          },
-          {
-            icon: null,
-            disabledIcon: HeartDisabled,
-            text: "Mes Favoris",
-            active: false,
-          },
-          {
-            icon: null,
-            disabledIcon: TickDisabled,
-            text: "Historique",
-            active: false,
-          },
-          {
-            icon: null,
-            disabledIcon: CalendarDisabled,
-            text: "Calendrier consultations programmé",
-            active: false,
-          },
-          {
-            icon: null,
-            disabledIcon: ChatDisabled,
-            text: "Demande d’une consultation non programmée",
-            active: false,
-          },
-        ]}
-      >
-        asd
-      </PageLayout>
-    </>
+    <PageLayout
+      profile={{ img: User, name: "Lydia Meli", desc: "Bienvenue" }}
+      sideBarItems={[
+        {
+          icon: Home,
+          disabledIcon: null,
+          text: "Tableau de bord",
+          active: true,
+        },
+        {
+          icon: null,
+          disabledIcon: ListDisabled,
+          text: "Dossier Médical",
+          active: false,
+        },
+        {
+          icon: null,
+          disabledIcon: HeartDisabled,
+          text: "Mes Favoris",
+          active: false,
+        },
+        {
+          icon: null,
+          disabledIcon: TickDisabled,
+          text: "Historique",
+          active: false,
+        },
+        {
+          icon: null,
+          disabledIcon: CalendarDisabled,
+          text: "Calendrier consultations programmé",
+          active: false,
+        },
+        {
+          icon: null,
+          disabledIcon: ChatDisabled,
+          text: "Demande d’une consultation non programmée",
+          active: false,
+        },
+      ]}
+    >
+      asd
+    </PageLayout>
   );
 };
 
