@@ -14,7 +14,7 @@ const MyButton = styled(Button)({
   },
 });
 
-const MainButton = ({ text, onClick, sx, size, className }) => {
+const MainButton = ({ text, onClick, sx, size, className, startIcon }) => {
   return (
     <MyButton
       sx={sx}
@@ -22,6 +22,7 @@ const MainButton = ({ text, onClick, sx, size, className }) => {
       className={className}
       disableRipple
       onClick={onClick}
+      startIcon={startIcon}
     >
       {text}
     </MyButton>

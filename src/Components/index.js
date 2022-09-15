@@ -16,6 +16,7 @@ import ServicesComponent from "./ServicesComponent/ServicesComponent";
 import SingleProductSection from "./SingleProductSection/SingleProductSection";
 import PageLayout from "./PageLayout/PageLayout";
 import ProfileDetails from "./ProfileDetails/ProfileDetails";
+import NewestDocuments from "./NewestDocuments/NewestDocuments";
 
 export {
   Announcement,
@@ -36,4 +37,5 @@ export {
   SingleProductSection,
   PageLayout,
   ProfileDetails,
+  NewestDocuments,
 };
