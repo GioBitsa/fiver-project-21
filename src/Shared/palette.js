@@ -23,6 +23,8 @@ const palette = {
     "linear-gradient(180deg, rgba(18,183,167,1) 0%, rgba(47,232,182,1) 100%)",
   linearHorizontaly:
     "linear-gradient(270deg, rgba(18,183,167,1) 0%, rgba(47,232,182,1) 100%)",
+  linearHorizontalyFliped:
+    "linear-gradient(270deg, rgba(47,232,182,1) 0%, rgba(18,183,167,1) 100%)",
   sideBarButtonBackground: "#F1F1F1",
 };
 

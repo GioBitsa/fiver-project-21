@@ -1,5 +1,5 @@
 import React from "react";
-import { PageLayout } from "../../Components";
+import { PageLayout, ProfileDetails } from "../../Components";
 import Home from "../../Assets/Icons/Home.png";
 import ListDisabled from "../../Assets/Icons/ListDisabled.png";
 import HeartDisabled from "../../Assets/Icons/HeartDisabled.png";
@@ -51,7 +51,7 @@ const PatientDashboard = () => {
         },
       ]}
     >
-      asd
+      <ProfileDetails />
     </PageLayout>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Toolbar,
@@ -21,6 +21,18 @@ const PageLayout = ({ children, profile, sideBarItems }) => {
     setOpen(!open);
   };
 
+  const handleResize = () => {
+    if (window.innerWidth < 1200) {
+      setOpen(false);
+    } else {
+      setOpen(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize, false);
+  }, []);
+
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -31,7 +43,7 @@ const PageLayout = ({ children, profile, sideBarItems }) => {
         sx={{
           width: {
             xs: "100%",
-            md: open ? `calc(100% - ${drawerWidth}px)` : "100%",
+            lg: open ? `calc(100% - ${drawerWidth}px)` : "100%",
           },
         }}
       >
@@ -52,9 +64,9 @@ const PageLayout = ({ children, profile, sideBarItems }) => {
       <Box
         component="nav"
         sx={{
-          width: { md: open ? drawerWidth : 0 },
+          width: { lg: open ? drawerWidth : 0 },
           transition: "all 0.3s",
-          flexShrink: { md: 0 },
+          flexShrink: { lg: 0 },
         }}
       >
         <Drawer
@@ -65,7 +77,7 @@ const PageLayout = ({ children, profile, sideBarItems }) => {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: "block", md: "none" },
+            display: { xs: "block", lg: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
@@ -80,7 +92,7 @@ const PageLayout = ({ children, profile, sideBarItems }) => {
         <Drawer
           variant="persistent"
           sx={{
-            display: { xs: "none", md: "block" },
+            display: { xs: "none", lg: "block" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
@@ -96,8 +108,8 @@ const PageLayout = ({ children, profile, sideBarItems }) => {
       </Box>
       <Main
         sx={{
-          p: 3,
-          width: { md: `calc(100% - ${drawerWidth}px)` },
+          p: { xs: 2, sm: 3 },
+          width: { lg: `calc(100% - ${drawerWidth}px)` },
         }}
       >
         <Toolbar />
