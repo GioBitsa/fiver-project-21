@@ -17,6 +17,7 @@ import SingleProductSection from "./SingleProductSection/SingleProductSection";
 import PageLayout from "./PageLayout/PageLayout";
 import ProfileDetails from "./ProfileDetails/ProfileDetails";
 import NewestDocuments from "./NewestDocuments/NewestDocuments";
+import NewMessages from "./NewMessages/NewMessages";
 
 export {
   Announcement,
@@ -38,4 +39,5 @@ export {
   PageLayout,
   ProfileDetails,
   NewestDocuments,
+  NewMessages,
 };

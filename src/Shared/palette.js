@@ -9,6 +9,7 @@ const palette = {
   electric: "#6AFFEE",
   lightElectric: "#95FFF3",
   veryLightElectric: "#C0FFF8",
+  darkGrey: "#5F5F7D",
   grey: "#979797",
   lightGrey: "#F5F5F5",
   secondaryButton: "#E9E9E9",

@@ -1,6 +1,11 @@
 import React from "react";
 import { Grid } from "@mui/material";
-import { NewestDocuments, PageLayout, ProfileDetails } from "../../Components";
+import {
+  NewestDocuments,
+  PageLayout,
+  ProfileDetails,
+  NewMessages,
+} from "../../Components";
 import Home from "../../Assets/Icons/Home.png";
 import ListDisabled from "../../Assets/Icons/ListDisabled.png";
 import HeartDisabled from "../../Assets/Icons/HeartDisabled.png";
@@ -55,7 +60,7 @@ const PatientDashboard = () => {
       <ProfileDetails />
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
-          asd
+          <NewMessages />
         </Grid>
         <Grid item xs={12} md={6}>
           <NewestDocuments />
