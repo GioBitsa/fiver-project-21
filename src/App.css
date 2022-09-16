@@ -11,6 +11,11 @@
   overflow: hidden !important
 }
 
+body {
+  padding: 0 !important;
+  overflow-y: auto !important
+}
+
 .navbar-ellipse {
   position: absolute;
   top: 100%;
