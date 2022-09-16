@@ -9,16 +9,13 @@ import { Typography, Container, Box, Stack, Grid } from "@mui/material";
 import palette from "../../Shared/palette";
 import HighLight from "../../Assets/HighLight.png";
 import { MainButton, OutlineMainButton } from "../../Components/Common";
-import FirstTarifProduct from "../../Assets/Tarif/FirstTarifProduct.png";
-import FirstTarifProductStack1 from "../../Assets/Tarif/FirstTarifProductStack (1).png";
-import FirstTarifProductStack2 from "../../Assets/Tarif/FirstTarifProductStack (2).png";
-import SecondTarifProduct from "../../Assets/Tarif/SecondTarifProduct.png";
-import SecondTarifProductStack1 from "../../Assets/Tarif/SecondTarifProductStack (1).png";
-import SecondTarifProductStack2 from "../../Assets/Tarif/SecondTarifProductStack (2).png";
-import SecondTarifProductStack3 from "../../Assets/Tarif/SecondTarifProductStack (3).png";
-import ThirdTarifProduct from "../../Assets/Tarif/ThirdTarifProduct.png";
-import ThirdTarifProductStack1 from "../../Assets/Tarif/ThirdTarifProductStack (1).png";
-import ThirdTarifProductStack2 from "../../Assets/Tarif/ThirdTarifProductStack (2).png";
+import FirstTarifProduct1 from "../../Assets/Tarif/FirstTarifProduct (1).png";
+import FirstTarifProduct2 from "../../Assets/Tarif/FirstTarifProduct (2).png";
+import SecondTarifProduct1 from "../../Assets/Tarif/SecondTarifProduct (1).png";
+import SecondTarifProduct2 from "../../Assets/Tarif/SecondTarifProduct (2).png";
+import SecondTarifProduct3 from "../../Assets/Tarif/SecondTarifProduct (3).png";
+import ThirdTarifProduct1 from "../../Assets/Tarif/ThirdTarifProduct (1).png";
+import ThirdTarifProduct2 from "../../Assets/Tarif/ThirdTarifProduct (2).png";
 import Baterry from "../../Assets/Icons/Baterry.png";
 import TopSpeed from "../../Assets/Icons/TopSpeed.png";
 import Time from "../../Assets/Icons/Time.png";
@@ -88,8 +85,8 @@ const Products = () => {
       </Container>
       <SingleProductSection
         align="right"
-        mainImage={FirstTarifProduct}
-        imageStack={[FirstTarifProductStack1, FirstTarifProductStack2]}
+        mainImage={FirstTarifProduct1}
+        imageStack={[FirstTarifProduct1, FirstTarifProduct2]}
         mainTitle="E-cabinet"
         contentTitle="Le Mediscoot est une association ingénieuse entre le e-cabinet et un tricycle électrique: "
       >
@@ -165,11 +162,11 @@ const Products = () => {
       </SingleProductSection>
       <SingleProductSection
         align="left"
-        mainImage={SecondTarifProduct}
+        mainImage={SecondTarifProduct1}
         imageStack={[
-          SecondTarifProductStack1,
-          SecondTarifProductStack2,
-          SecondTarifProductStack3,
+          SecondTarifProduct2,
+          SecondTarifProduct1,
+          SecondTarifProduct3,
         ]}
         mainTitle="MediScoot"
         contentTitle="Le Mediscoot est une association ingénieuse entre le e-cabinet et un tricycle électrique: "
@@ -274,8 +271,8 @@ const Products = () => {
       </SingleProductSection>
       <SingleProductSection
         align="right"
-        mainImage={ThirdTarifProduct}
-        imageStack={[ThirdTarifProductStack1, ThirdTarifProductStack2]}
+        mainImage={ThirdTarifProduct1}
+        imageStack={[ThirdTarifProduct1, ThirdTarifProduct2]}
         mainTitle="MediCar"
         contentTitle="La MediCar, disponible prochainement"
       >

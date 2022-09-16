@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import palette from "../../Shared/palette";
 import { MainButton } from "../Common";
@@ -17,6 +17,8 @@ const SingleProductSection = ({
   contentTitle,
   children,
 }) => {
+  const [selectedImage, setSelectedImage] = useState(mainImage);
+
   return (
     <Box
       sx={{
@@ -58,7 +60,7 @@ const SingleProductSection = ({
             >
               {mainTitle}
             </Typography>
-            <MainImage src={mainImage} alt="main" />
+            <MainImage src={selectedImage} alt="main" />
             <ImageStack
               direction="row"
               spacing={3}
@@ -69,7 +71,16 @@ const SingleProductSection = ({
               }}
             >
               {imageStack.map((item, index) => (
-                <img src={item} key={index} alt={index} />
+                <Box
+                  key={index}
+                  className={selectedImage === item ? "active" : ""}
+                >
+                  <img
+                    src={item}
+                    alt={index}
+                    onClick={() => setSelectedImage(item)}
+                  />
+                </Box>
               ))}
             </ImageStack>
             {align === "left" ? (
