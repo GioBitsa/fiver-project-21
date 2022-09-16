@@ -284,6 +284,7 @@ export const DetailsContainer = styled(Grid)({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+    transition: "all 0.3s ease",
   },
 
   "& > div > div": {
@@ -293,7 +294,7 @@ export const DetailsContainer = styled(Grid)({
     marginBottom: "20px",
   },
 
-  "& > .active": {
+  "& > div:hover": {
     transform: "scale(1.1)",
     background: palette.linearHorizontaly,
   },
@@ -303,7 +304,7 @@ export const DetailsContainer = styled(Grid)({
     color: palette.black,
   },
 
-  "& > .active > div h6": {
+  "& > div:hover > div h6": {
     color: palette.white,
   },
 
@@ -316,7 +317,7 @@ export const DetailsContainer = styled(Grid)({
     color: palette.primary,
   },
 
-  "& > .active > div span": {
+  "& > div:hover > div span": {
     color: palette.white,
   },
 
@@ -330,11 +331,16 @@ export const DetailsContainer = styled(Grid)({
     opacity: "0.5",
     backgroundColor: palette.grey,
   },
-  "& > .active > div span::after": {
+
+  "& > div:hover > div span::after": {
     backgroundColor: palette.white,
   },
 
-  "& > .active button": {
+  "& > div button": {
+    transition: "none",
+  },
+
+  "& > div:hover button": {
     borderColor: palette.white,
     backgroundColor: palette.white,
   },
@@ -368,7 +374,7 @@ export const DetailsContainer = styled(Grid)({
       alignItems: "center",
     },
 
-    "& > .active": {
+    "& > div:hover": {
       transform: "scale(1)",
       boxShadow: "0 4px 4px 0 rgba(0,0,0,0.25)",
       border: "none",

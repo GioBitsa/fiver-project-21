@@ -116,12 +116,12 @@ export const MyItem = styled(Box)({
 });
 
 export const SocialButton = styled(Stack)({
-  border: "1px solid black",
+  border: "1px solid rgba(0, 0, 0, 0.7)",
   borderRadius: "10px",
   padding: "7px 15px",
   alignItems: "center",
   lineHeight: "20px",
-  minWidth: "200px",
+  minWidth: "190px",
   justifyContent: "center",
   cursor: "pointer",
 
@@ -131,10 +131,10 @@ export const SocialButton = styled(Stack)({
   },
 
   "& p": {
-    fontSize: "18px",
+    fontSize: "16px",
     color: palette.black,
     textTransform: "uppercase",
-    fontWeight: "bold",
+    fontWeight: "600",
   },
 
   "& img": {
@@ -149,12 +149,10 @@ export const SocialButton = styled(Stack)({
     minWidth: "180px",
 
     "& span": {
-      fontSize: "12px",
       color: palette.whiteText,
     },
 
     "& p": {
-      fontSize: "16px",
       color: palette.whiteText,
     },
   },
@@ -162,10 +160,6 @@ export const SocialButton = styled(Stack)({
   "@media screen and (max-width: 600px)": {
     border: "1px solid white",
     minWidth: "150px",
-
-    "& span": {
-      fontSize: "12px",
-    },
 
     "& p": {
       fontSize: "14px",

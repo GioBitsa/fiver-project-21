@@ -48,12 +48,14 @@ export const RightContainer = styled(Box)({
 export const MyLink = styled("span")({
   display: "inline-block",
   fontSize: "16px",
-  fontWeight: "600",
+  fontWeight: "300",
+  borderBottom: "1px solid rgba(0, 0, 0, 0.8)",
   cursor: "pointer",
   marginBottom: "30px",
   position: "relative",
   left: "100%",
   transform: "translate(-100%)",
+  color: palette.blackText,
 });
 
 export const GoogleButton = styled(Button)({
@@ -66,6 +68,7 @@ export const GoogleButton = styled(Button)({
   borderRadius: "77px",
   width: "150px",
   height: "51px",
+  color: palette.blackText,
 
   "& img": {
     marginRight: "10px",
