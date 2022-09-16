@@ -5,6 +5,7 @@ import {
   PageLayout,
   ProfileDetails,
   NewMessages,
+  PatientDashboardTable,
 } from "../../Components";
 import Home from "../../Assets/Icons/Home.png";
 import ListDisabled from "../../Assets/Icons/ListDisabled.png";
@@ -58,6 +59,7 @@ const PatientDashboard = () => {
       ]}
     >
       <ProfileDetails />
+      <PatientDashboardTable />
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <NewMessages />
