@@ -168,7 +168,7 @@ export const Frame = styled(Box)({
 });
 
 export const MainLogoContainer = styled(Box)({
-  backgroundColor: palette.primary,
+  backgroundColor: palette.lightPrimary,
   borderRadius: "100%",
   width: "300px",
   height: "300px",
@@ -215,6 +215,7 @@ export const Features = styled(Box)({
   top: 0,
   left: 0,
   transform: "translate(-50%, -50%)",
+  cursor: "pointer",
 
   "& img": {
     display: "block",

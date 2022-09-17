@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Grid } from "@mui/material";
 import palette from "../../Shared/palette";
 import { Frame, MainLogoContainer, Features, DetailsContainer } from "./Style";
@@ -53,6 +53,14 @@ const DetailsContainerArray = [
 ];
 
 const EcosystemComponent = () => {
+  const [mainContent, setMainContent] = useState({
+    src: MainLogo,
+    text: "Patient",
+  });
+
+  const [myEcoSystemImageArray, setMyEcoSystemImageArray] =
+    useState(EcoSystemImageArray);
+
   return (
     <Box
       sx={{
@@ -80,13 +88,20 @@ const EcosystemComponent = () => {
         </Typography>
         <Frame>
           <MainLogoContainer>
-            <img src={MainLogo} alt="logo" />
+            <img src={mainContent.src} alt="logo" />
             <Typography component="h6" variant="h6">
-              Patient
+              {mainContent.text}
             </Typography>
           </MainLogoContainer>
-          {EcoSystemImageArray?.map((item, index) => (
-            <Features key={index}>
+          {myEcoSystemImageArray?.map((item, index) => (
+            <Features
+              key={index}
+              onClick={() => {
+                setMainContent({ src: item.src, text: item.text });
+                myEcoSystemImageArray[index] = mainContent;
+                setMyEcoSystemImageArray(myEcoSystemImageArray);
+              }}
+            >
               <img src={item.src} alt="logo" />
               <Typography component="p" variant="p">
                 {item.text}
