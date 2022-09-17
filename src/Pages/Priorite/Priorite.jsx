@@ -210,7 +210,11 @@ const Priorite = () => {
               }}
             >
               <Lottie
-                style={{ width: "100%", height: "100%" }}
+                className="lottie"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                }}
                 animationData={animationData}
                 loop={true}
               />

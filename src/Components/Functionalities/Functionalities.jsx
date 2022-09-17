@@ -9,6 +9,7 @@ const Functionalities = () => {
     <Box sx={{ backgroundColor: palette.navbarBackground, py: 5, mb: "50px" }}>
       <Container maxWidth="lg">
         <Lottie
+          className="lottie"
           style={{ width: "100%", height: "100%" }}
           animationData={animationData}
           loop={true}
