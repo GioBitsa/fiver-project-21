@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import { Box, Container, Typography, Grid } from "@mui/material";
 import palette from "../../Shared/palette";
-import { Frame, MainLogoContainer, Features, DetailsContainer } from "./Style";
-import MainLogo from "../../Assets/MainLogo.png";
+import {
+  Frame,
+  MainLogoContainer,
+  Features,
+  DetailsContainer,
+  ImageContainer,
+  MainImageContainer,
+} from "./Style";
+import MainLogo from "../../Assets/Icons/MainLogo.png";
 import EcoSystemImage1 from "../../Assets/Icons/EcoSystemImage (1).png";
 import EcoSystemImage2 from "../../Assets/Icons/EcoSystemImage (2).png";
 import EcoSystemImage3 from "../../Assets/Icons/EcoSystemImage (3).png";
@@ -88,7 +95,9 @@ const EcosystemComponent = () => {
         </Typography>
         <Frame>
           <MainLogoContainer>
-            <img src={mainContent.src} alt="logo" />
+            <MainImageContainer>
+              <img src={mainContent.src} alt="logo" />
+            </MainImageContainer>
             <Typography component="h6" variant="h6">
               {mainContent.text}
             </Typography>
@@ -102,7 +111,9 @@ const EcosystemComponent = () => {
                 setMyEcoSystemImageArray(myEcoSystemImageArray);
               }}
             >
-              <img src={item.src} alt="logo" />
+              <ImageContainer>
+                <img src={item.src} alt="logo" />
+              </ImageContainer>
               <Typography component="p" variant="p">
                 {item.text}
               </Typography>

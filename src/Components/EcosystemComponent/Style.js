@@ -168,7 +168,7 @@ export const Frame = styled(Box)({
 });
 
 export const MainLogoContainer = styled(Box)({
-  backgroundColor: palette.lightPrimary,
+  backgroundColor: palette.primary,
   borderRadius: "100%",
   width: "300px",
   height: "300px",
@@ -178,12 +178,10 @@ export const MainLogoContainer = styled(Box)({
   justifyContent: "center",
   border: `10px solid ${palette.whiteText}`,
 
-  "& img": {
-    width: "150px",
-  },
-
   "& h6": {
     color: palette.whiteText,
+    textAlign: "center",
+    padding: "0 10px",
   },
 
   "@media screen and (max-width: 900px)": {
@@ -192,24 +190,58 @@ export const MainLogoContainer = styled(Box)({
     position: "relative",
     zIndex: 1,
 
-    "& img": {
-      width: "100px",
-    },
-  },
-
-  "@media screen and (max-width: 600px)": {
-    width: "100px",
-    height: "100px",
-    border: `3px solid ${palette.whiteText}`,
-
-    "& img": {
-      width: "50px",
-    },
     "& h6": {
       fontSize: "14px",
     },
   },
+
+  "@media screen and (max-width: 600px)": {
+    width: "130px",
+    height: "130px",
+    border: `3px solid ${palette.whiteText}`,
+
+    "& h6": {
+      fontSize: "12px",
+    },
+  },
 });
+
+export const MainImageContainer = styled(Box)({
+  width: "150px",
+  height: "150px",
+  backgroundColor: palette.whiteText,
+  borderRadius: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
+  "& img": {
+    width: "80px",
+    height: "80px",
+    objectFit: "contain",
+  },
+
+  "@media screen and (max-width: 900px)": {
+    width: "100px",
+    height: "100px",
+
+    "& img": {
+      width: "50px",
+      height: "50px",
+    },
+  },
+
+  "@media screen and (max-width: 600px)": {
+    width: "50px",
+    height: "50px",
+
+    "& img": {
+      width: "30px",
+      height: "30px",
+    },
+  },
+});
+
 export const Features = styled(Box)({
   position: "absolute",
   top: 0,
@@ -218,17 +250,14 @@ export const Features = styled(Box)({
   cursor: "pointer",
 
   "& img": {
-    display: "block",
-    margin: "0 auto",
-    width: "100px",
-    height: "100px",
+    width: "70%",
+    height: "70%",
     objectFit: "contain",
   },
   "& p": {
     fontSize: "18px",
     fontWeight: 600,
     textAlign: "center",
-    transform: "translateY(-15px)",
     maxWidth: "100px",
   },
 
@@ -245,29 +274,28 @@ export const Features = styled(Box)({
 
   "@media screen and (max-width: 900px)": {
     "& img": {
-      width: "80px",
-      height: "80px",
+      width: "50px",
+      height: "50px",
     },
     "& p": {
-      fontSize: "16px",
+      fontSize: "15px",
     },
   },
 
   "@media screen and (max-width: 600px)": {
     "& img": {
-      width: "60px",
-      height: "60px",
+      width: "40px",
+      height: "40px",
     },
     "& p": {
       fontSize: "12px",
-      transform: "translateY(-10px)",
     },
   },
 
   "@media screen and (max-width: 450px)": {
     "& img": {
-      width: "50px",
-      height: "50px",
+      width: "30px",
+      height: "30px",
     },
   },
 });
@@ -415,5 +443,24 @@ export const DetailsContainer = styled(Grid)({
       maxWidth: "400px",
       padding: "8px 12px",
     },
+  },
+});
+
+export const ImageContainer = styled(Box)({
+  width: "100px",
+  height: "100px",
+  borderRadius: "100%",
+  border: `5px solid ${palette.primary}`,
+  backgroundColor: palette.whiteText,
+  margin: "0 auto",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  overflow: "hidden",
+
+  "@media screen and (max-width: 600px)": {
+    width: "50px",
+    height: "50px",
+    borderWidth: "2px",
   },
 });
