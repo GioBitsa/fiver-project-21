@@ -10,7 +10,7 @@ import palette from "../../Shared/palette";
 import HighLight from "../../Assets/HighLight.png";
 import { MainButton, OutlineMainButton } from "../../Components/Common";
 import FirstTarifProduct1 from "../../Assets/Tarif/FirstTarifProduct (1).png";
-import FirstTarifProduct2 from "../../Assets/Tarif/FirstTarifProduct (2).png";
+import FirstTarifProduct2 from "../../Assets/Tarif/FirstTarifProduct (2).jpeg";
 import SecondTarifProduct1 from "../../Assets/Tarif/SecondTarifProduct (1).png";
 import SecondTarifProduct2 from "../../Assets/Tarif/SecondTarifProduct (2).png";
 import SecondTarifProduct3 from "../../Assets/Tarif/SecondTarifProduct (3).png";
