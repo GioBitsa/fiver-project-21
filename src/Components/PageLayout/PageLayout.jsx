@@ -5,16 +5,23 @@ import {
   IconButton,
   CssBaseline,
   Drawer,
+  Stack,
+  Badge,
   Typography,
 } from "@mui/material";
 import { MyAppBar, Main } from "./Style";
 import SideBar from "./components/SideBar";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineSearch, AiOutlineBell } from "react-icons/ai";
+import { GoLocation } from "react-icons/go";
+import { BiChevronDown } from "react-icons/bi";
+import { RiFolderUploadLine } from "react-icons/ri";
 import palette from "../../Shared/palette";
+import EnglishLanguage from "../../Assets/EnglishLanguage.png";
+import User from "../../Assets/User.png";
 
 const drawerWidth = 300;
 
-const PageLayout = ({ children, profile, sideBarItems }) => {
+const PageLayout = ({ children, profile, sideBarItems, profileType }) => {
   const [open, setOpen] = useState(true);
 
   const handleDrawerToggle = () => {
@@ -48,17 +55,140 @@ const PageLayout = ({ children, profile, sideBarItems }) => {
         }}
       >
         <Toolbar>
-          <IconButton
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, color: palette.whiteText }}
-            disableRipple
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent="space-between"
+            spacing={2}
+            sx={{ width: "100%" }}
           >
-            <AiOutlineMenu />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Responsive drawer
-          </Typography>
+            <Box>
+              <IconButton
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2, color: palette.whiteText }}
+                disableRipple
+              >
+                <AiOutlineMenu />
+              </IconButton>
+              <IconButton
+                edge="start"
+                sx={{ mr: 2, color: palette.whiteText }}
+                disableRipple
+              >
+                <AiOutlineSearch />
+              </IconButton>
+            </Box>
+            <Stack direction="row" alignItems="center">
+              <IconButton edge="start" sx={{ ml: 2 }} disableRipple>
+                <img src={EnglishLanguage} alt="en" />
+              </IconButton>
+              <IconButton
+                edge="start"
+                sx={{ ml: 2, color: palette.whiteText }}
+                disableRipple
+              >
+                <Badge
+                  badgeContent={4}
+                  sx={{
+                    "& span": {
+                      backgroundColor: "#F86919",
+                      border: `1px solid ${palette.whiteText}`,
+                    },
+                  }}
+                >
+                  <AiOutlineBell />
+                </Badge>
+              </IconButton>
+              {profileType === "patient" ? (
+                <Stack
+                  direction="row"
+                  spacing={2}
+                  alignItems="center"
+                  sx={{
+                    borderLeft: "1px solid rgba(255, 255, 255, 0.5)",
+                    ml: 4,
+                    pl: 2,
+                    height: "40px",
+                    cursor: "pointer",
+                  }}
+                >
+                  <RiFolderUploadLine />
+                  <Typography
+                    component="h2"
+                    variant="h2"
+                    sx={{
+                      color: palette.whiteText,
+                      fontSize: "14px",
+                      fontWeight: 400,
+                    }}
+                  >
+                    Bulk Import Data
+                  </Typography>
+                  <BiChevronDown />
+                </Stack>
+              ) : (
+                <IconButton sx={{ ml: 4 }} disableRipple>
+                  <Badge
+                    variant="dot"
+                    size="large"
+                    sx={{
+                      "& span": {
+                        backgroundColor: "#00BB00",
+                        border: `1px solid ${palette.whiteText}`,
+                        width: "10px",
+                        height: "10px",
+                        right: "5px",
+                        bottom: "5px",
+                      },
+                    }}
+                    anchorOrigin={{
+                      vertical: "bottom",
+                      horizontal: "right",
+                    }}
+                  >
+                    <img src={User} alt="user" />
+                  </Badge>
+                  <Box>
+                    <Typography
+                      component="h2"
+                      variant="h2"
+                      sx={{
+                        color: palette.whiteText,
+                        fontWeight: 400,
+                        fontSize: "14px",
+                        ml: 1,
+                      }}
+                    >
+                      Anna L Copper
+                    </Typography>
+                    {profileType === "assistant" && (
+                      <Typography
+                        component="p"
+                        variant="p"
+                        sx={{
+                          color: palette.whiteText,
+                          fontWeight: 300,
+                          fontSize: "13px",
+                          ml: 1,
+                          mt: "5px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "flex-end",
+                          "& svg": {
+                            mr: 1,
+                          },
+                        }}
+                      >
+                        <GoLocation />
+                        France
+                      </Typography>
+                    )}
+                  </Box>
+                </IconButton>
+              )}
+            </Stack>
+          </Stack>
         </Toolbar>
       </MyAppBar>
       <Box

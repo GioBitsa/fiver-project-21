@@ -57,6 +57,7 @@ const PatientDashboard = () => {
           active: false,
         },
       ]}
+      profileType="patient"
     >
       <ProfileDetails />
       <PatientDashboardTable />
