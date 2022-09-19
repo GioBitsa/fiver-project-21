@@ -21,22 +21,27 @@ const EcoSystemImageArray = [
   {
     src: EcoSystemImage4,
     text: "Assistant(e)",
+    activeCard: 3,
   },
   {
     src: EcoSystemImage2,
     text: "Structure de santé",
+    activeCard: 5,
   },
   {
     src: EcoSystemImage5,
     text: "Médecin",
+    activeCard: 1,
   },
   {
     src: EcoSystemImage3,
     text: "Territoire/ Collectivité",
+    activeCard: 4,
   },
   {
     src: EcoSystemImage1,
     text: "Secours/ Transports",
+    activeCard: null,
   },
 ];
 
@@ -46,7 +51,6 @@ const DetailsContainerArray = [
   },
   {
     header: "Vous êtes un patient",
-    className: "active",
   },
   {
     header: "Vous êtes un(e) assistant(e)",
@@ -63,7 +67,10 @@ const EcosystemComponent = () => {
   const [mainContent, setMainContent] = useState({
     src: MainLogo,
     text: "Patient",
+    activeCard: 2,
   });
+
+  const [active, setActive] = useState(2);
 
   const [myEcoSystemImageArray, setMyEcoSystemImageArray] =
     useState(EcoSystemImageArray);
@@ -106,9 +113,14 @@ const EcosystemComponent = () => {
             <Features
               key={index}
               onClick={() => {
-                setMainContent({ src: item.src, text: item.text });
+                setMainContent({
+                  src: item.src,
+                  text: item.text,
+                  activeCard: item.activeCard,
+                });
                 myEcoSystemImageArray[index] = mainContent;
                 setMyEcoSystemImageArray(myEcoSystemImageArray);
+                setActive(item.activeCard);
               }}
             >
               <ImageContainer>
@@ -139,7 +151,7 @@ const EcosystemComponent = () => {
           <DetailsContainer container>
             {DetailsContainerArray?.map((item, index) => (
               <Grid
-                className={item.className}
+                className={active === index + 1 ? "active" : ""}
                 key={index}
                 item
                 xs={12}
