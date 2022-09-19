@@ -80,7 +80,11 @@ const PageLayout = ({ children, profile, sideBarItems, profileType }) => {
               </IconButton>
             </Box>
             <Stack direction="row" alignItems="center">
-              <IconButton edge="start" sx={{ ml: 2 }} disableRipple>
+              <IconButton
+                edge="start"
+                sx={{ ml: 2, display: { xs: "none", sm: "block" } }}
+                disableRipple
+              >
                 <img src={EnglishLanguage} alt="en" />
               </IconButton>
               <IconButton
@@ -106,6 +110,7 @@ const PageLayout = ({ children, profile, sideBarItems, profileType }) => {
                   spacing={2}
                   alignItems="center"
                   sx={{
+                    display: { xs: "none", sm: "flex" },
                     borderLeft: "1px solid rgba(255, 255, 255, 0.5)",
                     ml: 4,
                     pl: 2,
@@ -128,7 +133,10 @@ const PageLayout = ({ children, profile, sideBarItems, profileType }) => {
                   <BiChevronDown />
                 </Stack>
               ) : (
-                <IconButton sx={{ ml: 4 }} disableRipple>
+                <IconButton
+                  sx={{ ml: 4, display: { xs: "none", sm: "block" } }}
+                  disableRipple
+                >
                   <Badge
                     variant="dot"
                     size="large"
