@@ -15,7 +15,8 @@ import FirstTarif from "./FirstTarif/FirstTarif";
 import SecondTarif from "./SecondTarif/SecondTarif";
 import ThirdTarif from "./ThirdTarif/ThirdTarif";
 import Products from "./Products/Products";
-import PatientDashboard from "./PatientDashboard/PatientDashboard";
+import PatientDashboard from "./Patient/PatientDashboard/PatientDashboard";
+import PatientHistory from "./Patient/PatientHistory/PatientHistory";
 
 export {
   Teritories,
@@ -36,4 +37,5 @@ export {
   ThirdTarif,
   Products,
   PatientDashboard,
+  PatientHistory,
 };

@@ -19,6 +19,7 @@ import {
   ThirdTarif,
   Products,
   PatientDashboard,
+  PatientHistory,
 } from "./Pages";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -46,6 +47,7 @@ const App = () => {
       <Route path="/patient">
         <Route index element={<Navigate to="dashboard" replace />} />
         <Route path="dashboard" element={<PatientDashboard />} />
+        <Route path="history" element={<PatientHistory />} />
       </Route>
     </Routes>
   );

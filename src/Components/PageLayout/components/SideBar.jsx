@@ -4,8 +4,11 @@ import Logo from "../../../Assets/Logo.png";
 import { SideBarHeader, SideBarProfile, MyListItemButton } from "./Style";
 import { BiChevronDown } from "react-icons/bi";
 import palette from "../../../Shared/palette";
+import { useNavigate } from "react-router-dom";
 
 const SideBar = ({ profile, sideBarItems }) => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <SideBarHeader>
@@ -33,6 +36,7 @@ const SideBar = ({ profile, sideBarItems }) => {
                 borderRight: `5px solid ${palette.primary}`,
               }
             }
+            onClick={() => navigate(item.pathName)}
           >
             {item.icon === null ? (
               <>
