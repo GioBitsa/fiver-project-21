@@ -17,6 +17,11 @@ import ThirdTarif from "./ThirdTarif/ThirdTarif";
 import Products from "./Products/Products";
 import PatientDashboard from "./Patient/PatientDashboard/PatientDashboard";
 import PatientHistory from "./Patient/PatientHistory/PatientHistory";
+import PatientMedicalFiles from "./Patient/PatientMedicalFiles/PatientMedicalFiles";
+import PatientCalendar from "./Patient/PatientCalendar/PatientCalendar";
+import PatientFavorites from "./Patient/PatientFavorites/PatientFavorites";
+import PatientChat from "./Patient/PatientChat/PatientChat";
+import PatientMessage from "./Patient/PatientMessage/PatientMessage";
 
 export {
   Teritories,
@@ -38,4 +43,9 @@ export {
   Products,
   PatientDashboard,
   PatientHistory,
+  PatientMedicalFiles,
+  PatientCalendar,
+  PatientFavorites,
+  PatientChat,
+  PatientMessage,
 };

@@ -20,6 +20,11 @@ import {
   Products,
   PatientDashboard,
   PatientHistory,
+  PatientMedicalFiles,
+  PatientFavorites,
+  PatientChat,
+  PatientCalendar,
+  PatientMessage,
 } from "./Pages";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -48,6 +53,11 @@ const App = () => {
         <Route index element={<Navigate to="dashboard" replace />} />
         <Route path="dashboard" element={<PatientDashboard />} />
         <Route path="history" element={<PatientHistory />} />
+        <Route path="medical" element={<PatientMedicalFiles />} />
+        <Route path="favorites" element={<PatientFavorites />} />
+        <Route path="chat" element={<PatientChat />} />
+        <Route path="calendar" element={<PatientCalendar />} />
+        <Route path="message" element={<PatientMessage />} />
       </Route>
     </Routes>
   );

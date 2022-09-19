@@ -7,62 +7,14 @@ import {
   NewMessages,
   PatientDashboardTable,
 } from "../../../Components";
-import Home from "../../../Assets/Icons/Home.png";
-import ListDisabled from "../../../Assets/Icons/ListDisabled.png";
-import HeartDisabled from "../../../Assets/Icons/HeartDisabled.png";
-import TickDisabled from "../../../Assets/Icons/TickDisabled.png";
-import CalendarDisabled from "../../../Assets/Icons/CalendarDisabled.png";
-import ChatDisabled from "../../../Assets/Icons/ChatDisabled.png";
 import User from "../../../Assets/User.png";
+import { PatientSideBarRoutes } from "../../../Shared/routes";
 
 const PatientDashboard = () => {
   return (
     <PageLayout
       profile={{ img: User, name: "Lydia Meli", desc: "Bienvenue" }}
-      sideBarItems={[
-        {
-          icon: Home,
-          disabledIcon: null,
-          text: "Tableau de bord",
-          active: true,
-          pathName: "/patient/dashboard",
-        },
-        {
-          icon: null,
-          disabledIcon: ListDisabled,
-          text: "Dossier Médical",
-          active: false,
-          pathName: "/patient",
-        },
-        {
-          icon: null,
-          disabledIcon: HeartDisabled,
-          text: "Mes Favoris",
-          active: false,
-          pathName: "/patient",
-        },
-        {
-          icon: null,
-          disabledIcon: TickDisabled,
-          text: "Historique",
-          active: false,
-          pathName: "/patient/history",
-        },
-        {
-          icon: null,
-          disabledIcon: CalendarDisabled,
-          text: "Calendrier consultations programmé",
-          active: false,
-          pathName: "/patient",
-        },
-        {
-          icon: null,
-          disabledIcon: ChatDisabled,
-          text: "Demande d’une consultation non programmée",
-          active: false,
-          pathName: "/patient",
-        },
-      ]}
+      sideBarItems={PatientSideBarRoutes}
       profileType="patient"
     >
       <ProfileDetails />

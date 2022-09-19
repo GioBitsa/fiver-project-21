@@ -82,4 +82,9 @@ export const MyListItemButton = styled(Button)({
   "&:hover": {
     backgroundColor: palette.sideBarButtonBackground,
   },
+
+  "&.active": {
+    backgroundColor: palette.sideBarButtonBackground,
+    borderRight: `5px solid ${palette.primary}`,
+  },
 });

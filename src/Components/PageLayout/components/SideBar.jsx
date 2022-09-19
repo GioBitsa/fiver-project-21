@@ -3,11 +3,11 @@ import { Box, List } from "@mui/material";
 import Logo from "../../../Assets/Logo.png";
 import { SideBarHeader, SideBarProfile, MyListItemButton } from "./Style";
 import { BiChevronDown } from "react-icons/bi";
-import palette from "../../../Shared/palette";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SideBar = ({ profile, sideBarItems }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <div>
@@ -30,23 +30,18 @@ const SideBar = ({ profile, sideBarItems }) => {
           <MyListItemButton
             key={index}
             disableRipple
-            sx={
-              item.active && {
-                backgroundColor: palette.sideBarButtonBackground,
-                borderRight: `5px solid ${palette.primary}`,
-              }
-            }
+            className={item.pathName === location.pathname ? "active" : ""}
             onClick={() => navigate(item.pathName)}
           >
-            {item.icon === null ? (
-              <>
-                <img src={item.disabledIcon} alt={item.text} />
-                <span className="disabled">{item.text}</span>
-              </>
-            ) : (
+            {item.pathName === location.pathname ? (
               <>
                 <img src={item.icon} alt={item.text} />
                 <span>{item.text}</span>
+              </>
+            ) : (
+              <>
+                <img src={item.disabledIcon} alt={item.text} />
+                <span className="disabled">{item.text}</span>
               </>
             )}
           </MyListItemButton>

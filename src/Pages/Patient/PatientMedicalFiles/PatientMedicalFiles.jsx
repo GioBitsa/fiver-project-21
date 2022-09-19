@@ -3,7 +3,7 @@ import { PageLayout, HistoryTable } from "../../../Components";
 import User from "../../../Assets/User.png";
 import { PatientSideBarRoutes } from "../../../Shared/routes";
 
-const PatientHistory = () => {
+const PatientMedicalFiles = () => {
   return (
     <PageLayout
       profile={{ img: User, name: "Lydia Meli", desc: "Bienvenue" }}
@@ -16,4 +16,4 @@ const PatientHistory = () => {
   );
 };
 
-export default PatientHistory;
+export default PatientMedicalFiles;

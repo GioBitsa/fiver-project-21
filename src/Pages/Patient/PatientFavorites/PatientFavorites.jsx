@@ -1,19 +1,18 @@
 import React from "react";
-import { PageLayout, HistoryTable } from "../../../Components";
+import { PageLayout } from "../../../Components";
 import User from "../../../Assets/User.png";
 import { PatientSideBarRoutes } from "../../../Shared/routes";
 
-const PatientHistory = () => {
+const PatientFavorites = () => {
   return (
     <PageLayout
       profile={{ img: User, name: "Lydia Meli", desc: "Bienvenue" }}
       sideBarItems={PatientSideBarRoutes}
       profileType="patient"
     >
-      <HistoryTable />
-      Table should be here
+      content
     </PageLayout>
   );
 };
 
-export default PatientHistory;
+export default PatientFavorites;
