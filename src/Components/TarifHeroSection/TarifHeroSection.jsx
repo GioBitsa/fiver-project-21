@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import palette from "../../Shared/palette";
 import HighLight from "../../Assets/HighLight.png";
@@ -23,8 +23,12 @@ const TarifHeroSection = ({
   firstButton,
   secondButton,
   activeDot,
+  activeButton,
+  setActiveButton,
 }) => {
-  const [active, setActive] = useState("1");
+  const onChange = (index) => {
+    setActiveButton(index);
+  };
 
   return (
     <>
@@ -130,14 +134,14 @@ const TarifHeroSection = ({
                 {paymentTitle}
               </Typography>
               <Stack direction="row" spacing={3}>
-                <MyButton onClick={() => setActive("1")}>
-                  <span className={active === "1" ? "active" : ""}>
+                <MyButton onClick={() => onChange("1")}>
+                  <span className={activeButton === "1" ? "active" : ""}>
                     <MdDone />
                   </span>
                   {firstButton}
                 </MyButton>
-                <MyButton onClick={() => setActive("2")}>
-                  <span className={active === "2" ? "active" : ""}>
+                <MyButton onClick={() => onChange("2")}>
+                  <span className={activeButton === "2" ? "active" : ""}>
                     <MdDone />
                   </span>
                   {secondButton}

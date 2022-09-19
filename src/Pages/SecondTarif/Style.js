@@ -31,7 +31,7 @@ export const ChooseButton = styled(Box)({
 
   "& h5": {
     display: "inline-block",
-    color: palette.blackText,
+    color: palette.primary,
     fontWeight: "bold",
   },
 
@@ -53,37 +53,21 @@ export const ChooseButton = styled(Box)({
   },
 });
 
-export const ButtonDetails = styled(Box)({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "flex-end",
-  justifyContent: "flex-start",
-
-  "& h6": {
-    color: palette.blackText,
-    fontWeight: "bold",
-    fontSize: "15px",
-  },
-
-  "& p": {
-    color: palette.blackText,
-    opacity: 0.5,
-    fontSize: "12px",
-  },
-});
-
 export const RadioText = styled(Box)({
   display: "flex",
   alignItems: "center",
   marginBottom: "10px",
 
-  "& span": {
-    display: "inline-block",
+  "& img": {
+    display: "block",
     width: "20px",
     height: "20px",
-    borderRadius: "100%",
-    backgroundColor: palette.lightPrimary,
+    objectFit: "contain",
     marginRight: "10px",
+  },
+
+  "&.disabled": {
+    color: palette.red,
   },
 });
 
@@ -93,13 +77,15 @@ export const DisabledRadioText = styled(Box)({
   marginBottom: "10px",
   marginLeft: "20px",
 
-  "& span": {
-    display: "inline-block",
+  "& img": {
+    display: "block",
     width: "20px",
     height: "20px",
-    borderRadius: "100%",
-    backgroundColor: "transparent",
-    border: "1px solid rgba(0, 0, 0, 0.5)",
+    objectFit: "contain",
     marginRight: "10px",
+  },
+
+  "&.unchecked": {
+    opacity: 0.6,
   },
 });
