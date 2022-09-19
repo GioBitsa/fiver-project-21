@@ -19,6 +19,7 @@ import ProfileDetails from "./ProfileDetails/ProfileDetails";
 import NewestDocuments from "./NewestDocuments/NewestDocuments";
 import NewMessages from "./NewMessages/NewMessages";
 import PatientDashboardTable from "./PatientDashboardTable/PatientDashboardTable";
+import HistoryTable from "./HistoryTable/HistoryTable";
 
 export {
   Announcement,
@@ -42,4 +43,5 @@ export {
   NewestDocuments,
   NewMessages,
   PatientDashboardTable,
+  HistoryTable,
 };

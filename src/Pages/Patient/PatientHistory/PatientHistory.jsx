@@ -1,12 +1,5 @@
 import React from "react";
-import { Grid } from "@mui/material";
-import {
-  NewestDocuments,
-  PageLayout,
-  ProfileDetails,
-  NewMessages,
-  PatientDashboardTable,
-} from "../../../Components";
+import { PageLayout, HistoryTable } from "../../../Components";
 import Tick from "../../../Assets/Icons/Tick.png";
 import HomeDisabled from "../../../Assets/Icons/HomeDisabled.png";
 import ListDisabled from "../../../Assets/Icons/ListDisabled.png";
@@ -65,16 +58,7 @@ const PatientHistory = () => {
       ]}
       profileType="patient"
     >
-      <ProfileDetails />
-      <PatientDashboardTable />
-      <Grid container spacing={3}>
-        <Grid item xs={12} md={6}>
-          <NewMessages />
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <NewestDocuments />
-        </Grid>
-      </Grid>
+      <HistoryTable />
     </PageLayout>
   );
 };
