@@ -4,9 +4,10 @@ import {
   HeroImageContainer,
   Navbar,
   FormationsItemSection,
+  Footer,
 } from "../../Components";
 import { Box, Container, Typography, Stack } from "@mui/material";
-import { HeroContainer } from "./Style";
+import { HeroContainer, MyItem, SpanContainer, ImageContainer } from "./Style";
 import HighLight from "../../Assets/HighLight.png";
 import palette from "../../Shared/palette";
 import { MainButton } from "../../Components/Common";
@@ -17,6 +18,27 @@ import Clock from "../../Assets/Icons/Clock.png";
 import FormationsImage1 from "../../Assets/Formations/FormationsImage (1).png";
 import FormationsImage2 from "../../Assets/Formations/FormationsImage (2).png";
 import FormationsImage3 from "../../Assets/Formations/FormationsImage (3).png";
+import Advantages1 from "../../Assets/Formations/Advantages (1).png";
+import Advantages2 from "../../Assets/Formations/Advantages (2).png";
+import Advantages3 from "../../Assets/Formations/Advantages (3).png";
+
+const AdvantagesArray = [
+  {
+    src: Advantages1,
+    title: "En présentielle",
+    desc: "Possibilité pour notre équipe de formation de réaliser vos formations en présentielle.",
+  },
+  {
+    src: Advantages2,
+    title: "Ludique",
+    desc: "E-learning réalisé et adapté pour chaque profil d’apprenant, notre pédagogie se base sur les derniers outils d’apprentissage en ligne.",
+  },
+  {
+    src: Advantages3,
+    title: "Accompagnement",
+    desc: "À chaque étape de votre apprentissage, a travers notre plateforme de formation, nous répondons à vos questions jusqu’à ce que vous maitrisiez totalement nos outils.",
+  },
+];
 
 const Formations = () => {
   return (
@@ -229,6 +251,65 @@ const Formations = () => {
         dividerText="*formation gratuite pour un administrateur par structure"
         mainImage={FormationsImage3}
       />
+      <Box sx={{ backgroundColor: palette.navbarBackground, py: "50px" }}>
+        <Container maxWidth="lg">
+          <Typography
+            component="h2"
+            variant="h2"
+            sx={{
+              color: palette.primary,
+              fontWeight: "bold",
+              fontSize: { xs: "24px", sm: "30px", md: "38px" },
+              textAlign: { xs: "left", md: "center" },
+            }}
+          >
+            Trois avantages de notre formation
+          </Typography>
+          <Stack
+            direction={{ xs: "column", md: "row" }}
+            spacing={5}
+            sx={{ mt: 5 }}
+          >
+            {AdvantagesArray?.map((item, index) => (
+              <MyItem key={index}>
+                <ImageContainer>
+                  <img src={item.src} alt="advantage 1" />
+                  <SpanContainer>
+                    <span>{index + 1}</span>
+                  </SpanContainer>
+                </ImageContainer>
+                <Typography
+                  component="h6"
+                  variant="h6"
+                  sx={{
+                    color: palette.blackText,
+                    fontWeight: 600,
+                    fontSize: { xs: "18px", sm: "20px", md: "24px" },
+                    textAlign: "center",
+                    mb: 1,
+                  }}
+                >
+                  {item.title}
+                </Typography>
+                <Typography
+                  component="p"
+                  variant="p"
+                  sx={{
+                    color: palette.blackText,
+                    fontWeight: 300,
+                    fontSize: { xs: "14px", md: "16px" },
+                    textAlign: "center",
+                    mb: 2,
+                  }}
+                >
+                  {item.desc}
+                </Typography>
+              </MyItem>
+            ))}
+          </Stack>
+        </Container>
+      </Box>
+      <Footer />
     </>
   );
 };
