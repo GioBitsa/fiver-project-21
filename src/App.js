@@ -25,6 +25,7 @@ import {
   PatientChat,
   PatientCalendar,
   PatientMessage,
+  Formations,
 } from "./Pages";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -49,6 +50,7 @@ const App = () => {
       <Route path="/secondtarif" element={<SecondTarif />} />
       <Route path="/thirdtarif" element={<ThirdTarif />} />
       <Route path="/products" element={<Products />} />
+      <Route path="/formations" element={<Formations />} />
       <Route path="/patient">
         <Route index element={<Navigate to="dashboard" replace />} />
         <Route path="dashboard" element={<PatientDashboard />} />

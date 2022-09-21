@@ -22,6 +22,7 @@ import PatientCalendar from "./Patient/PatientCalendar/PatientCalendar";
 import PatientFavorites from "./Patient/PatientFavorites/PatientFavorites";
 import PatientChat from "./Patient/PatientChat/PatientChat";
 import PatientMessage from "./Patient/PatientMessage/PatientMessage";
+import Formations from "./Formations/Formations";
 
 export {
   Teritories,
@@ -48,4 +49,5 @@ export {
   PatientFavorites,
   PatientChat,
   PatientMessage,
+  Formations,
 };

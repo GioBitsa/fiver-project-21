@@ -20,6 +20,7 @@ import NewestDocuments from "./NewestDocuments/NewestDocuments";
 import NewMessages from "./NewMessages/NewMessages";
 import PatientDashboardTable from "./PatientDashboardTable/PatientDashboardTable";
 import HistoryTable from "./HistoryTable/HistoryTable";
+import FormationsItemSection from "./FormationsItemSection/FormationsItemSection";
 
 export {
   Announcement,
@@ -44,4 +45,5 @@ export {
   NewMessages,
   PatientDashboardTable,
   HistoryTable,
+  FormationsItemSection,
 };
