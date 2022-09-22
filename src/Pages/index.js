@@ -23,6 +23,7 @@ import PatientFavorites from "./Patient/PatientFavorites/PatientFavorites";
 import PatientChat from "./Patient/PatientChat/PatientChat";
 import PatientMessage from "./Patient/PatientMessage/PatientMessage";
 import Formations from "./Formations/Formations";
+import SecondMedicine from "./SecondMedicine/SecondMedicine";
 
 export {
   Teritories,
@@ -50,4 +51,5 @@ export {
   PatientChat,
   PatientMessage,
   Formations,
+  SecondMedicine,
 };

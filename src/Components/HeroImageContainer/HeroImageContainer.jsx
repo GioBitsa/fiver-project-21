@@ -23,10 +23,11 @@ export const MyImage = styled("img")({
   },
 });
 
-const HeroImageContainer = ({ main, background }) => {
+const HeroImageContainer = ({ main, background, sx }) => {
   return (
     <Box
       sx={{
+        ...sx,
         position: "relative",
         mr: { xs: "10px !important", md: "20px !important" },
       }}
