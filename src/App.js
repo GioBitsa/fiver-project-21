@@ -27,6 +27,7 @@ import {
   PatientMessage,
   Formations,
   SecondMedicine,
+  PrivacyPolicy,
 } from "./Pages";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -53,6 +54,7 @@ const App = () => {
       <Route path="/products" element={<Products />} />
       <Route path="/formations" element={<Formations />} />
       <Route path="/secondmedicine" element={<SecondMedicine />} />
+      <Route path="/privacypolicy" element={<PrivacyPolicy />} />
       <Route path="/patient">
         <Route index element={<Navigate to="dashboard" replace />} />
         <Route path="dashboard" element={<PatientDashboard />} />

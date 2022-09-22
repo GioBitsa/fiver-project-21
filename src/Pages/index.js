@@ -24,6 +24,7 @@ import PatientChat from "./Patient/PatientChat/PatientChat";
 import PatientMessage from "./Patient/PatientMessage/PatientMessage";
 import Formations from "./Formations/Formations";
 import SecondMedicine from "./SecondMedicine/SecondMedicine";
+import PrivacyPolicy from "./PrivacyPolicy/PrivacyPolicy";
 
 export {
   Teritories,
@@ -52,4 +53,5 @@ export {
   PatientMessage,
   Formations,
   SecondMedicine,
+  PrivacyPolicy,
 };
