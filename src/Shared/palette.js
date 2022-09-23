@@ -28,6 +28,7 @@ const palette = {
     "linear-gradient(270deg, rgba(47,232,182,1) 0%, rgba(18,183,167,1) 100%)",
   sideBarButtonBackground: "#F1F1F1",
   red: "#EA2424",
+  reserved: "#E5E5E5",
 };
 
 export default palette;
