@@ -134,7 +134,7 @@ const PageLayout = ({ children, profile, sideBarItems, profileType }) => {
                 </Stack>
               ) : (
                 <IconButton
-                  sx={{ ml: 4, display: { xs: "none", sm: "block" } }}
+                  sx={{ ml: 4, display: { xs: "none", sm: "flex" } }}
                   disableRipple
                 >
                   <Badge

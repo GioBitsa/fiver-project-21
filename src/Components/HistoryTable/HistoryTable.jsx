@@ -5,7 +5,7 @@ import { BsFilter } from "react-icons/bs";
 import { MyInputContainer, MyInput, FilterButton, SearchButton } from "./Style";
 import palette from "../../Shared/palette";
 
-const HistoryTable = () => {
+const HistoryTable = ({ type, title }) => {
   return (
     <>
       <Stack direction="row" alignItems="center" justifyContent="space-between">
@@ -19,18 +19,20 @@ const HistoryTable = () => {
             my: 2,
           }}
         >
-          Mon historique
+          {title}
         </Typography>
-        <IconButton
-          disableRipple
-          sx={{
-            backgroundColor: palette.primary,
-            color: palette.whiteText,
-            borderRadius: "10px",
-          }}
-        >
-          <AiOutlinePlus />
-        </IconButton>
+        {type === "history" && (
+          <IconButton
+            disableRipple
+            sx={{
+              backgroundColor: palette.primary,
+              color: palette.whiteText,
+              borderRadius: "10px",
+            }}
+          >
+            <AiOutlinePlus />
+          </IconButton>
+        )}
       </Stack>
       <MyInputContainer>
         <SearchButton>

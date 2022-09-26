@@ -28,6 +28,13 @@ import {
   Formations,
   SecondMedicine,
   PrivacyPolicy,
+  DoctorDashboard,
+  PatientsList,
+  DoctorMedicalFiles,
+  DoctorMessage,
+  DoctorAgenda,
+  DoctorCorespond,
+  DoctorStructure,
 } from "./Pages";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -42,7 +49,7 @@ const App = () => {
       <Route path="/create" element={<CreateProfile />} />
       <Route path="/assistant" element={<CreateAssistantProfile />} />
       <Route path="/complete" element={<CompleteProfile />} />
-      <Route path="/doctor" element={<CompleteDoctorProfile />} />
+      <Route path="/completedoctor" element={<CompleteDoctorProfile />} />
       <Route path="/teritories" element={<Teritories />} />
       <Route path="/structure" element={<Structure />} />
       <Route path="/priorite" element={<Priorite />} />
@@ -64,6 +71,16 @@ const App = () => {
         <Route path="chat" element={<PatientChat />} />
         <Route path="calendar" element={<PatientCalendar />} />
         <Route path="message" element={<PatientMessage />} />
+      </Route>
+      <Route path="/doctor">
+        <Route index element={<Navigate to="dashboard" replace />} />
+        <Route path="dashboard" element={<DoctorDashboard />} />
+        <Route path="list" element={<PatientsList />} />
+        <Route path="medical" element={<DoctorMedicalFiles />} />
+        <Route path="message" element={<DoctorMessage />} />
+        <Route path="agenda" element={<DoctorAgenda />} />
+        <Route path="structure" element={<DoctorStructure />} />
+        <Route path="corespond" element={<DoctorCorespond />} />
       </Route>
     </Routes>
   );

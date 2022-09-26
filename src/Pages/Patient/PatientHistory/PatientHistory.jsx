@@ -10,7 +10,7 @@ const PatientHistory = () => {
       sideBarItems={PatientSideBarRoutes}
       profileType="patient"
     >
-      <HistoryTable />
+      <HistoryTable type="history" title="Mes consultations réalisées" />
       Table should be here
     </PageLayout>
   );

@@ -25,6 +25,13 @@ import PatientMessage from "./Patient/PatientMessage/PatientMessage";
 import Formations from "./Formations/Formations";
 import SecondMedicine from "./SecondMedicine/SecondMedicine";
 import PrivacyPolicy from "./PrivacyPolicy/PrivacyPolicy";
+import DoctorDashboard from "./Doctor/DoctorDashboard/DoctorDashboard";
+import PatientsList from "./Doctor/PatientsList/PatientsList";
+import DoctorMedicalFiles from "./Doctor/DoctorMedicalFiles/DoctorMedicalFiles";
+import DoctorMessage from "./Doctor/DoctorMessage/DoctorMessage";
+import DoctorAgenda from "./Doctor/DoctorAgenda/DoctorAgenda";
+import DoctorStructure from "./Doctor/DoctorStructure/DoctorStructure";
+import DoctorCorespond from "./Doctor/DoctorCorespond/DoctorCorespond";
 
 export {
   Teritories,
@@ -54,4 +61,11 @@ export {
   Formations,
   SecondMedicine,
   PrivacyPolicy,
+  DoctorDashboard,
+  PatientsList,
+  DoctorMedicalFiles,
+  DoctorMessage,
+  DoctorAgenda,
+  DoctorStructure,
+  DoctorCorespond,
 };
