@@ -21,6 +21,7 @@ import NewMessages from "./NewMessages/NewMessages";
 import PatientDashboardTable from "./PatientDashboardTable/PatientDashboardTable";
 import HistoryTable from "./HistoryTable/HistoryTable";
 import FormationsItemSection from "./FormationsItemSection/FormationsItemSection";
+import ScheduleComponent from "./ScheduleComponent/ScheduleComponent";
 
 export {
   Announcement,
@@ -46,4 +47,5 @@ export {
   PatientDashboardTable,
   HistoryTable,
   FormationsItemSection,
+  ScheduleComponent,
 };
