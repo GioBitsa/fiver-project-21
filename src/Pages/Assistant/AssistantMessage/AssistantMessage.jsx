@@ -9,7 +9,7 @@ const AssistantMessage = () => {
       sideBarItems={AssistantSideBarRoutes}
       profileType="assistant"
     >
-      content
+      Assistant Messages Here
     </PageLayout>
   );
 };

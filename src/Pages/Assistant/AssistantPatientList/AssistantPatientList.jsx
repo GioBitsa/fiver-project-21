@@ -1,6 +1,7 @@
 import React from "react";
 import { PageLayout, HistoryTable } from "../../../Components";
 import { AssistantSideBarRoutes } from "../../../Shared/routes";
+import { Grid } from "@mui/material";
 
 const AssistantPatientList = () => {
   return (
@@ -10,7 +11,26 @@ const AssistantPatientList = () => {
       profileType="assistant"
     >
       <HistoryTable title="Liste des patients" />
-      Table should be here
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={4}>
+          Card Component Here
+        </Grid>
+        <Grid item xs={12} md={4}>
+          Card Component Here
+        </Grid>
+        <Grid item xs={12} md={4}>
+          Card Component Here
+        </Grid>
+        <Grid item xs={12} md={4}>
+          Card Component Here
+        </Grid>
+        <Grid item xs={12} md={4}>
+          Card Component Here
+        </Grid>
+        <Grid item xs={12} md={4}>
+          Card Component Here
+        </Grid>
+      </Grid>
     </PageLayout>
   );
 };

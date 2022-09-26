@@ -9,7 +9,7 @@ const DoctorMessage = () => {
       sideBarItems={DoctorSideBarRoutes}
       profileType="doctor"
     >
-      content
+      Doctor Messages here
     </PageLayout>
   );
 };

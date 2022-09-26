@@ -86,7 +86,7 @@ const DoctorMedicalFiles = () => {
                 See all
               </Typography>
             </Stack>
-            files list in patient features here
+            files list in doctor features here
           </MyItem>
         </Grid>
       </Grid>
