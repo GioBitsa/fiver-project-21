@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Stack, Grid } from "@mui/material";
+import { Typography, Stack, Grid, Box } from "@mui/material";
 import { PageLayout } from "../../../Components";
 import { AssistantSideBarRoutes } from "../../../Shared/routes";
 import { SignItem } from "./Style";
@@ -77,15 +77,31 @@ const AssistantChat = () => {
         />
       </Stack>
       <Grid container spacing={2} sx={{ mt: 2 }}>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={8} sx={{ maxHeight: "600px" }}>
           <img
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
             src={Map}
             alt="map"
           />
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} sx={{ maxHeight: "600px" }}>
           <InputWithSelectFilter />
+          <Typography
+            sx={{
+              color: palette.blackText,
+              fontSize: "16px",
+              fontWeight: "500",
+              my: 2,
+            }}
+          >
+            Liste des patients
+          </Typography>
+          <Stack
+            spacing={2}
+            sx={{ height: "calc(100% - 106px)", overflowY: "auto" }}
+          >
+            <Box>cards here</Box>
+          </Stack>
         </Grid>
       </Grid>
     </PageLayout>
