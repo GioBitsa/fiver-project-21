@@ -18,6 +18,8 @@ import Agenda from "../Assets/Icons/Agenda.png";
 import AgendaDisabled from "../Assets/Icons/AgendaDisabled.png";
 import Structure from "../Assets/Icons/Structure.png";
 import StructureDisabled from "../Assets/Icons/StructureDisabled.png";
+import Consultations from "../Assets/Icons/Consultations.png";
+import ConsultationsDisabled from "../Assets/Icons/ConsultationsDisabled.png";
 import Corespond from "../Assets/Icons/Corespond.png";
 
 export const PatientSideBarRoutes = [
@@ -107,5 +109,44 @@ export const DoctorSideBarRoutes = [
     disabledIcon: Corespond,
     text: "Mes correspondants",
     pathName: "/doctor/corespond",
+  },
+];
+
+export const AssistantSideBarRoutes = [
+  {
+    icon: Home,
+    disabledIcon: HomeDisabled,
+    text: "Tableau de bord",
+    pathName: "/assistant/dashboard",
+  },
+  {
+    icon: Message,
+    disabledIcon: MessageDisabled,
+    text: "Messages",
+    pathName: "/assistant/message",
+  },
+  {
+    icon: Calendar,
+    disabledIcon: CalendarDisabled,
+    text: "Calendrier consultations programmé",
+    pathName: "/assistant/calendar",
+  },
+  {
+    icon: Chat,
+    disabledIcon: ChatDisabled,
+    text: "Demande de consultation non programmée",
+    pathName: "/assistant/chat",
+  },
+  {
+    icon: MyPatients,
+    disabledIcon: MyPatientsDisabled,
+    text: "Mes patients",
+    pathName: "/assistant/list",
+  },
+  {
+    icon: Consultations,
+    disabledIcon: ConsultationsDisabled,
+    text: "Mes consultations réalisées",
+    pathName: "/assistant/consultations",
   },
 ];

@@ -32,6 +32,12 @@ import DoctorMessage from "./Doctor/DoctorMessage/DoctorMessage";
 import DoctorAgenda from "./Doctor/DoctorAgenda/DoctorAgenda";
 import DoctorStructure from "./Doctor/DoctorStructure/DoctorStructure";
 import DoctorCorespond from "./Doctor/DoctorCorespond/DoctorCorespond";
+import AssistantDashboard from "./Assistant/AssistantDashboard/AssistantDashboard";
+import AssistantMessage from "./Assistant/AssistantMessage/AssistantMessage";
+import AssistantCalendar from "./Assistant/AssistantCalendar/AssistantCalendar";
+import AssistantChat from "./Assistant/AssistantChat/AssistantChat";
+import AssistantPatientList from "./Assistant/AssistantPatientList/AssistantPatientList";
+import AssistantConsultations from "./Assistant/AssistantConsultations/AssistantConsultations";
 
 export {
   Teritories,
@@ -68,4 +74,10 @@ export {
   DoctorAgenda,
   DoctorStructure,
   DoctorCorespond,
+  AssistantDashboard,
+  AssistantMessage,
+  AssistantCalendar,
+  AssistantChat,
+  AssistantPatientList,
+  AssistantConsultations,
 };
