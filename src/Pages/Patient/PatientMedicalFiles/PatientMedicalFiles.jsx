@@ -1,17 +1,11 @@
 import React from "react";
-import { Typography, Grid, Select, MenuItem, Box, Stack } from "@mui/material";
+import { Typography, Grid, Box, Stack } from "@mui/material";
 import { PageLayout } from "../../../Components";
 import User from "../../../Assets/User.png";
 import { PatientSideBarRoutes } from "../../../Shared/routes";
-import {
-  MyItem,
-  MyInputContainer,
-  SearchButton,
-  MyInput,
-  MySelectContainer,
-} from "./Style";
+import { MyItem } from "./Style";
 import palette from "../../../Shared/palette";
-import { AiOutlineSearch } from "react-icons/ai";
+import { InputWithSelectFilter } from "../../../Components/Common";
 
 const PatientMedicalFiles = () => {
   return (
@@ -39,20 +33,7 @@ const PatientMedicalFiles = () => {
         <Grid item xs={12} md={7}>
           <MyItem>
             <Stack direction="row" alignItems="center" spacing={3}>
-              <MyInputContainer>
-                <SearchButton>
-                  <AiOutlineSearch />
-                </SearchButton>
-                <MyInput type="text" placeholder="Search test" />
-                <MySelectContainer>
-                  <Select defaultValue={1}>
-                    <MenuItem value={1}>Filter</MenuItem>
-                    <MenuItem value={2}>first option</MenuItem>
-                    <MenuItem value={3}>second option</MenuItem>
-                    <MenuItem value={4}>third option</MenuItem>
-                  </Select>
-                </MySelectContainer>
-              </MyInputContainer>
+              <InputWithSelectFilter />
               <Box>date</Box>
             </Stack>
             <Stack

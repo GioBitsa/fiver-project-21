@@ -5,6 +5,7 @@ import InputPassword from "./InputPassword/InputPassword";
 import MainSelect from "./MainSelect/MainSelect";
 import MainDatePicker from "./MainDatePicker/MainDatePicker";
 import Chip from "./Chip/Chip";
+import InputWithSelectFilter from "./InputWithSelectFilter/InputWithSelectFilter";
 
 export {
   MainButton,
@@ -14,4 +15,5 @@ export {
   MainSelect,
   MainDatePicker,
   Chip,
+  InputWithSelectFilter,
 };

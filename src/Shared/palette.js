@@ -27,7 +27,10 @@ const palette = {
   linearHorizontalyFliped:
     "linear-gradient(270deg, rgba(47,232,182,1) 0%, rgba(18,183,167,1) 100%)",
   sideBarButtonBackground: "#F1F1F1",
-  red: "#EA2424",
+  lightRed: "#EA2424",
+  red: "#D90505",
+  yellow: "#FFD600",
+  signGreen: "#06D106",
   reserved: "#E5E5E5",
 };
 
