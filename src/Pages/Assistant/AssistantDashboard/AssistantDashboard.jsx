@@ -3,20 +3,21 @@ import { Grid } from "@mui/material";
 import {
   NewestDocuments,
   PageLayout,
-  ProfileDetails,
+  AssistantProfileDetails,
   NewMessages,
   PatientDashboardTable,
 } from "../../../Components";
+import User2 from "../../../Assets/User (2).png";
 import { AssistantSideBarRoutes } from "../../../Shared/routes";
 
 const AssistantDashboard = () => {
   return (
     <PageLayout
-      profile={null}
+      profile={{ img: User2, name: "Anna L D", desc: "Bienvenue" }}
       sideBarItems={AssistantSideBarRoutes}
       profileType="assistant"
     >
-      <ProfileDetails />
+      <AssistantProfileDetails />
       <PatientDashboardTable />
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>

@@ -22,6 +22,7 @@ import PatientDashboardTable from "./PatientDashboardTable/PatientDashboardTable
 import HistoryTable from "./HistoryTable/HistoryTable";
 import FormationsItemSection from "./FormationsItemSection/FormationsItemSection";
 import ScheduleComponent from "./ScheduleComponent/ScheduleComponent";
+import AssistantProfileDetails from "./AssistantProfileDetails/AssistantProfileDetails";
 
 export {
   Announcement,
@@ -48,4 +49,5 @@ export {
   HistoryTable,
   FormationsItemSection,
   ScheduleComponent,
+  AssistantProfileDetails,
 };
