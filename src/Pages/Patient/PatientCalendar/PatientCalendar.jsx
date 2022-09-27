@@ -1,21 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { PageLayout, ScheduleComponent } from "../../../Components";
 import { Stack, Typography, Grid } from "@mui/material";
-import {
-  MyInputContainer,
-  SearchButton,
-  MyInput,
-  MyCalendarPicker,
-} from "./Style";
+import { MyInputContainer, SearchButton, MyInput } from "./Style";
 import User from "../../../Assets/User.png";
 import { PatientSideBarRoutes } from "../../../Shared/routes";
 import { AiOutlineSearch } from "react-icons/ai";
 import palette from "../../../Shared/palette";
-import moment from "moment";
+import { MyCalendar } from "../../../Components/Common";
 
 const PatientCalendar = () => {
-  const [date, setDate] = useState(moment());
-
   return (
     <PageLayout
       profile={{ img: User, name: "Lydia Meli", desc: "Bienvenue" }}
@@ -36,12 +29,7 @@ const PatientCalendar = () => {
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
-          <MyCalendarPicker
-            date={date}
-            onChange={(newDate) => {
-              setDate(newDate);
-            }}
-          />
+          <MyCalendar />
         </Grid>
         <Grid item xs={12} md={6}>
           <ScheduleComponent />

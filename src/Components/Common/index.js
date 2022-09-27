@@ -6,6 +6,7 @@ import MainSelect from "./MainSelect/MainSelect";
 import MainDatePicker from "./MainDatePicker/MainDatePicker";
 import Chip from "./Chip/Chip";
 import InputWithSelectFilter from "./InputWithSelectFilter/InputWithSelectFilter";
+import MyCalendar from "./MyCalendar/MyCalendar";
 
 export {
   MainButton,
@@ -16,4 +17,5 @@ export {
   MainDatePicker,
   Chip,
   InputWithSelectFilter,
+  MyCalendar,
 };
