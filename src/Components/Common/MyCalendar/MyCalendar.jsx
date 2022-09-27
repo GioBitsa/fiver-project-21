@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { MyCalendarPicker } from "./Style";
 import moment from "moment";
 
-const MyCalendar = () => {
+const MyCalendar = ({ sx }) => {
   const [date, setDate] = useState(moment());
 
   return (
@@ -11,6 +11,7 @@ const MyCalendar = () => {
       onChange={(newDate) => {
         setDate(newDate);
       }}
+      sx={sx}
     />
   );
 };

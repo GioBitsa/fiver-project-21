@@ -11,7 +11,7 @@ import { GoCalendar } from "react-icons/go";
 
 const AssistantProfileDetails = () => {
   return (
-    <Box>
+    <Box sx={{ mb: 3 }}>
       <Typography
         component="h2"
         variant="h2"

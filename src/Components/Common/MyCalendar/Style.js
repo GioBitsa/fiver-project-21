@@ -14,6 +14,10 @@ export const MyCalendarPicker = styled(CalendarPicker)({
     justifyContent: "space-between",
   },
 
+  "& .MuiPickersCalendarHeader-label": {
+    whiteSpace: "nowrap",
+  },
+
   "& .MuiDayPicker-weekContainer": {
     justifyContent: "space-between",
   },
