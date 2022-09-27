@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Grid, Typography, Stack, Box, Divider } from "@mui/material";
 import { PageLayout, AssistantProfileDetails } from "../../../Components";
 import User2 from "../../../Assets/User (2).png";
 import { AssistantSideBarRoutes } from "../../../Shared/routes";
-import { Item, DatesContainer } from "./Style";
+import { Item } from "./Style";
 import palette from "../../../Shared/palette";
 import Map from "../../../Assets/Map.png";
-import { MyCalendar } from "../../../Components/Common";
+import { MyCalendar, DatesSchedule } from "../../../Components/Common";
 
 const generalInformationsArray = [
   {
@@ -47,8 +47,6 @@ const datesArray = [
 ];
 
 const AssistantDashboard = () => {
-  const [active, setActive] = useState();
-
   return (
     <PageLayout
       profile={{ img: User2, name: "Anna L D", desc: "Bienvenue" }}
@@ -115,26 +113,7 @@ const AssistantDashboard = () => {
               Visites du jour :
             </Typography>
             <Divider sx={{ my: 2, display: { xs: "block", md: "none" } }} />
-            {datesArray?.map((item, index) => (
-              <DatesContainer
-                key={index}
-                direction="row"
-                spacing={2}
-                alignItems="center"
-                onClick={() => setActive(index)}
-                className={active === index ? "active" : ""}
-              >
-                <Typography component="p" variant="p">
-                  {item.time}
-                </Typography>
-                <Typography component="p" variant="p">
-                  {item.text}
-                </Typography>
-                <Typography component="p" variant="p">
-                  view details
-                </Typography>
-              </DatesContainer>
-            ))}
+            <DatesSchedule datesArray={datesArray} />
           </Item>
         </Grid>
       </Grid>
