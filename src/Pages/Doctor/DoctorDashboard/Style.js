@@ -1,5 +1,5 @@
 import { styled } from "@mui/system";
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Tabs } from "@mui/material";
 import palette from "../../../Shared/palette";
 
 export const Item = styled(Box)({
@@ -27,6 +27,11 @@ export const Item = styled(Box)({
 });
 
 export const ProfileDetailsContainer = styled(Item)({
+  minHeight: "350px",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+
   "& img": {
     width: "70px",
     height: "70px",
@@ -83,5 +88,62 @@ export const StackItem = styled(Stack)({
     fontSize: "10px",
     color: palette.blackText,
     fontWeight: "bold",
+  },
+});
+
+export const ChartImage = styled("img")({
+  display: "block",
+  width: "100%",
+  objectFit: "contain",
+  margin: "10px auto",
+  maxWidth: "300px",
+});
+
+export const MyTabsContainer = styled(Tabs)({
+  width: "100%",
+  backgroundColor: palette.navbarBackground,
+  marginBottom: "24px",
+
+  "& button": {
+    flex: 1,
+    color: "rgba(34, 34, 34, 0.4)",
+    fontSize: "12px",
+  },
+
+  "& svg": {
+    fontSize: "18px",
+    color: palette.blackText,
+    opacity: 0.4,
+  },
+
+  "& button.Mui-selected": {
+    background: palette.linearHorizontaly,
+    color: palette.whiteText,
+    fontWeight: 500,
+  },
+
+  "& button.Mui-selected svg": {
+    color: palette.whiteText,
+    opacity: 1,
+  },
+
+  "& button span": {
+    display: "none",
+  },
+
+  "& .MuiTabs-indicator": {
+    display: "none",
+  },
+
+  "@media screen and (min-width: 600px)": {
+    "& button": {
+      flexDirection: "row",
+      alignItems: "center",
+    },
+
+    "& button svg": {
+      marginBottom: "0 !important",
+      marginRight: "8px",
+    },
   },
 });
