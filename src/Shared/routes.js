@@ -20,6 +20,14 @@ import Structure from "../Assets/Icons/Structure.png";
 import StructureDisabled from "../Assets/Icons/StructureDisabled.png";
 import Consultations from "../Assets/Icons/Consultations.png";
 import ConsultationsDisabled from "../Assets/Icons/ConsultationsDisabled.png";
+import Team from "../Assets/Icons/Team.png";
+import TeamDisabled from "../Assets/Icons/TeamDisabled.png";
+import Transmission from "../Assets/Icons/Transmission.png";
+import TransmissionDisabled from "../Assets/Icons/TransmissionDisabled.png";
+import External from "../Assets/Icons/External.png";
+import ExternalDisabled from "../Assets/Icons/ExternalDisabled.png";
+import Application from "../Assets/Icons/Application.png";
+import ApplicationDisabled from "../Assets/Icons/ApplicationDisabled.png";
 import Corespond from "../Assets/Icons/Corespond.png";
 
 export const PatientSideBarRoutes = [
@@ -148,5 +156,62 @@ export const AssistantSideBarRoutes = [
     disabledIcon: ConsultationsDisabled,
     text: "Mes consultations réalisées",
     pathName: "/assistant/consultations",
+  },
+];
+
+export const TeamSideBarRoutes = [
+  {
+    icon: Home,
+    disabledIcon: HomeDisabled,
+    text: "Tableau de bord",
+    pathName: "/team/dashboard",
+  },
+  {
+    icon: MyPatients,
+    disabledIcon: MyPatientsDisabled,
+    text: "Dossiers médicaux",
+    pathName: "/team/list",
+  },
+  {
+    icon: Chat,
+    disabledIcon: ChatDisabled,
+    text: "Demande de consultation non programmée",
+    pathName: "/team/chat",
+  },
+  {
+    icon: Message,
+    disabledIcon: MessageDisabled,
+    text: "Messages",
+    pathName: "/team/message",
+  },
+  {
+    icon: Team,
+    disabledIcon: TeamDisabled,
+    text: "Team",
+    pathName: "/team/team",
+  },
+  {
+    icon: Agenda,
+    disabledIcon: AgendaDisabled,
+    text: "Agenda",
+    pathName: "/team/agenda",
+  },
+  {
+    icon: Transmission,
+    disabledIcon: TransmissionDisabled,
+    text: "Transmission",
+    pathName: "/team/transmission",
+  },
+  {
+    icon: External,
+    disabledIcon: ExternalDisabled,
+    text: "External Contacts",
+    pathName: "/team/external",
+  },
+  {
+    icon: Application,
+    disabledIcon: ApplicationDisabled,
+    text: "Application for Admission",
+    pathName: "/team/application",
   },
 ];

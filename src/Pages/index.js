@@ -38,6 +38,7 @@ import AssistantCalendar from "./Assistant/AssistantCalendar/AssistantCalendar";
 import AssistantChat from "./Assistant/AssistantChat/AssistantChat";
 import AssistantPatientList from "./Assistant/AssistantPatientList/AssistantPatientList";
 import AssistantConsultations from "./Assistant/AssistantConsultations/AssistantConsultations";
+import TeamDashboard from "./Team/TeamDashboard/TeamDashboard";
 
 export {
   Teritories,
@@ -80,4 +81,5 @@ export {
   AssistantChat,
   AssistantPatientList,
   AssistantConsultations,
+  TeamDashboard,
 };

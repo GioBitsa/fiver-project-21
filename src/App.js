@@ -41,6 +41,7 @@ import {
   AssistantChat,
   AssistantPatientList,
   AssistantConsultations,
+  TeamDashboard,
 } from "./Pages";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -96,6 +97,18 @@ const App = () => {
         <Route path="chat" element={<AssistantChat />} />
         <Route path="list" element={<AssistantPatientList />} />
         <Route path="consultations" element={<AssistantConsultations />} />
+      </Route>
+      <Route path="/team">
+        <Route index element={<Navigate to="dashboard" replace />} />
+        <Route path="dashboard" element={<TeamDashboard />} />
+        <Route path="list" element={<AssistantMessage />} />
+        <Route path="chat" element={<AssistantCalendar />} />
+        <Route path="message" element={<AssistantChat />} />
+        <Route path="team" element={<AssistantPatientList />} />
+        <Route path="agenda" element={<AssistantConsultations />} />
+        <Route path="transmission" element={<AssistantConsultations />} />
+        <Route path="external" element={<AssistantConsultations />} />
+        <Route path="application" element={<AssistantConsultations />} />
       </Route>
     </Routes>
   );
