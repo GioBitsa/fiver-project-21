@@ -39,6 +39,14 @@ import AssistantChat from "./Assistant/AssistantChat/AssistantChat";
 import AssistantPatientList from "./Assistant/AssistantPatientList/AssistantPatientList";
 import AssistantConsultations from "./Assistant/AssistantConsultations/AssistantConsultations";
 import TeamDashboard from "./Team/TeamDashboard/TeamDashboard";
+import TeamList from "./Team/TeamList/TeamList";
+import TeamChat from "./Team/TeamChat/TeamChat";
+import TeamMessage from "./Team/TeamMessage/TeamMessage";
+import Team from "./Team/Team/Team";
+import TeamAgenda from "./Team/TeamAgenda/TeamAgenda";
+import TeamTransmission from "./Team/TeamTransmission/TeamTransmission";
+import TeamExternal from "./Team/TeamExternal/TeamExternal";
+import TeamApplication from "./Team/TeamApplication/TeamApplication";
 
 export {
   Teritories,
@@ -82,4 +90,12 @@ export {
   AssistantPatientList,
   AssistantConsultations,
   TeamDashboard,
+  TeamList,
+  TeamChat,
+  TeamMessage,
+  Team,
+  TeamAgenda,
+  TeamTransmission,
+  TeamExternal,
+  TeamApplication,
 };

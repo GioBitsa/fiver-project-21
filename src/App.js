@@ -42,6 +42,14 @@ import {
   AssistantPatientList,
   AssistantConsultations,
   TeamDashboard,
+  TeamList,
+  TeamChat,
+  TeamMessage,
+  Team,
+  TeamAgenda,
+  TeamTransmission,
+  TeamExternal,
+  TeamApplication,
 } from "./Pages";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -101,14 +109,14 @@ const App = () => {
       <Route path="/team">
         <Route index element={<Navigate to="dashboard" replace />} />
         <Route path="dashboard" element={<TeamDashboard />} />
-        <Route path="list" element={<AssistantMessage />} />
-        <Route path="chat" element={<AssistantCalendar />} />
-        <Route path="message" element={<AssistantChat />} />
-        <Route path="team" element={<AssistantPatientList />} />
-        <Route path="agenda" element={<AssistantConsultations />} />
-        <Route path="transmission" element={<AssistantConsultations />} />
-        <Route path="external" element={<AssistantConsultations />} />
-        <Route path="application" element={<AssistantConsultations />} />
+        <Route path="list" element={<TeamList />} />
+        <Route path="chat" element={<TeamChat />} />
+        <Route path="message" element={<TeamMessage />} />
+        <Route path="team" element={<Team />} />
+        <Route path="agenda" element={<TeamAgenda />} />
+        <Route path="transmission" element={<TeamTransmission />} />
+        <Route path="external" element={<TeamExternal />} />
+        <Route path="application" element={<TeamApplication />} />
       </Route>
     </Routes>
   );
