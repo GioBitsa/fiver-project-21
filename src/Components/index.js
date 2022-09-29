@@ -23,6 +23,8 @@ import HistoryTable from "./HistoryTable/HistoryTable";
 import FormationsItemSection from "./FormationsItemSection/FormationsItemSection";
 import ScheduleComponent from "./ScheduleComponent/ScheduleComponent";
 import AssistantProfileDetails from "./AssistantProfileDetails/AssistantProfileDetails";
+import TeamMembers from "./TeamMembers/TeamMembers";
+import Recenties from "./Recenties/Recenties";
 
 export {
   Announcement,
@@ -50,4 +52,6 @@ export {
   FormationsItemSection,
   ScheduleComponent,
   AssistantProfileDetails,
+  TeamMembers,
+  Recenties,
 };

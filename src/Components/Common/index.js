@@ -8,6 +8,7 @@ import Chip from "./Chip/Chip";
 import InputWithSelectFilter from "./InputWithSelectFilter/InputWithSelectFilter";
 import MyCalendar from "./MyCalendar/MyCalendar";
 import DatesSchedule from "./DatesSchedule/DatesSchedule";
+import MySearchInput from "./MySearchInput/MySearchInput";
 
 export {
   MainButton,
@@ -20,4 +21,5 @@ export {
   InputWithSelectFilter,
   MyCalendar,
   DatesSchedule,
+  MySearchInput,
 };

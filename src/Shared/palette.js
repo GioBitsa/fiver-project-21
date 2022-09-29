@@ -32,6 +32,7 @@ const palette = {
   yellow: "#FFD600",
   signGreen: "#06D106",
   reserved: "#E5E5E5",
+  disabled: "#E3E3E3",
 };
 
 export default palette;
