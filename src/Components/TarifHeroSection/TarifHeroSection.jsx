@@ -13,6 +13,7 @@ import {
   DotsContainer,
 } from "./Style";
 import { MdDone } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const TarifHeroSection = ({
   mainImage,
@@ -26,6 +27,8 @@ const TarifHeroSection = ({
   activeButton,
   setActiveButton,
 }) => {
+  const navigate = useNavigate();
+
   const onChange = (index) => {
     setActiveButton(index);
   };
@@ -152,9 +155,18 @@ const TarifHeroSection = ({
           <BackgroundNumberImage src={backgroundImage} alt="tarif" />
         </Container>
         <DotsContainer>
-          <span className={activeDot === "1" ? "active" : ""} />
-          <span className={activeDot === "2" ? "active" : ""} />
-          <span className={activeDot === "3" ? "active" : ""} />
+          <span
+            className={activeDot === "1" ? "active" : ""}
+            onClick={() => navigate("/firsttarif")}
+          />
+          <span
+            className={activeDot === "2" ? "active" : ""}
+            onClick={() => navigate("/secondtarif")}
+          />
+          <span
+            className={activeDot === "3" ? "active" : ""}
+            onClick={() => navigate("/thirdtarif")}
+          />
         </DotsContainer>
       </Box>
     </>
