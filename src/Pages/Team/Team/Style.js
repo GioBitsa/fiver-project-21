@@ -23,3 +23,25 @@ export const MyButton = styled(Box)({
     width: "100%",
   },
 });
+
+export const MyDateButton = styled(Box)({
+  width: "100px",
+  height: "35px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  fontSize: "14px",
+  fontWeight: 500,
+  color: "rgba(34, 34, 34, 0.4)",
+  backgroundColor: palette.disabled,
+  cursor: "pointer",
+
+  "&.active": {
+    background: palette.primary,
+    color: palette.whiteText,
+  },
+
+  "@media screen and (max-width: 599px)": {
+    width: "80px",
+  },
+});

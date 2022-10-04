@@ -9,7 +9,7 @@ import {
   MainButton,
   MyCheckBox,
 } from "../../../Components/Common";
-import { MyButton } from "./Style";
+import { MyButton, MyDateButton } from "./Style";
 
 const checkBoxesArray = [
   {
@@ -40,6 +40,7 @@ const checkBoxesArray = [
 
 const Team = () => {
   const [active, setActive] = useState(1);
+  const [date, setDate] = useState("day");
 
   return (
     <PageLayout
@@ -184,15 +185,32 @@ const Team = () => {
               component="h3"
               variant="h3"
               sx={{
-                color: palette.lightPrimary,
-                fontSize: "18px",
+                color: { xs: palette.blackText, md: palette.lightPrimary },
+                fontSize: { xs: "16px", md: "18px" },
                 fontWeight: "600",
                 my: 2,
               }}
             >
               Assigner une semaine :
             </Typography>
+            <Stack direction="row" alignItems="center">
+              <MyDateButton
+                className={date === "day" ? "active" : ""}
+                onClick={() => setDate("day")}
+              >
+                Week
+              </MyDateButton>
+              <MyDateButton
+                className={date === "week" ? "active" : ""}
+                onClick={() => setDate("week")}
+              >
+                Month
+              </MyDateButton>
+            </Stack>
           </Stack>
+          {date === "day"
+            ? "calendar component daily"
+            : "calendar component weekly"}
         </Grid>
       </Grid>
     </PageLayout>
