@@ -35,3 +35,13 @@ body {
 .lottie svg {
   transform: unset !important;
 }
+
+.customScrollbarContainer::-webkit-scrollbar {
+  background: #E6E6E6 !important;
+  width: 5px;
+}
+
+.customScrollbarContainer::-webkit-scrollbar-thumb {
+  background: #14B8A6 !important;
+  border-radius: 0 0 10px 10px;
+}

@@ -9,6 +9,7 @@ import InputWithSelectFilter from "./InputWithSelectFilter/InputWithSelectFilter
 import MyCalendar from "./MyCalendar/MyCalendar";
 import DatesSchedule from "./DatesSchedule/DatesSchedule";
 import MySearchInput from "./MySearchInput/MySearchInput";
+import MyCheckBox from "./MyCheckBox/MyCheckBox";
 
 export {
   MainButton,
@@ -22,4 +23,5 @@ export {
   MyCalendar,
   DatesSchedule,
   MySearchInput,
+  MyCheckBox,
 };

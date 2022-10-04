@@ -8,9 +8,9 @@ import {
 import { Select, MenuItem } from "@mui/material";
 import { AiOutlineSearch } from "react-icons/ai";
 
-const InputWithSelectFilter = () => {
+const InputWithSelectFilter = ({ sx }) => {
   return (
-    <MyInputContainer>
+    <MyInputContainer sx={sx}>
       <SearchButton>
         <AiOutlineSearch />
       </SearchButton>

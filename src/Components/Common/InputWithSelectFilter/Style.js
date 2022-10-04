@@ -13,7 +13,7 @@ export const SearchButton = styled(Box)({
   top: 0,
   left: 0,
   width: "50px",
-  height: "50px",
+  height: "100%",
   zIndex: 2,
   display: "flex",
   alignItems: "center",
@@ -52,7 +52,7 @@ export const MySelectContainer = styled(Box)({
   right: 0,
   top: 0,
   width: "80px",
-  height: "50px",
+  height: "100%",
 
   "& > div": {
     width: "100%",

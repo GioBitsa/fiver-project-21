@@ -44,6 +44,7 @@ export const MyButton = styled(Box)({
   fontWeight: 500,
   color: "rgba(34, 34, 34, 0.4)",
   backgroundColor: palette.disabled,
+  cursor: "pointer",
 
   "&.active": {
     backgroundColor: palette.primary,
