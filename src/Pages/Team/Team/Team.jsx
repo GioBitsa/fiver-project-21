@@ -53,6 +53,7 @@ const Team = () => {
         alignItems="center"
         justifyContent="space-between"
         spacing={3}
+        sx={{ mb: 2 }}
       >
         <Typography
           component="h2"
@@ -61,7 +62,6 @@ const Team = () => {
             color: palette.primary,
             fontSize: { xs: "18px", sm: "21px", md: "24px" },
             fontWeight: "600",
-            my: 2,
           }}
         >
           Organiser son planning
