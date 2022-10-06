@@ -21,8 +21,8 @@ const TeamTourManagement = () => {
       profileType="team"
     >
       <Stack
-        direction={{ xs: "column", sm: "row" }}
-        alignItems={{ xs: "flex-start", sm: "center" }}
+        direction="row"
+        alignItems="center"
         justifyContent="space-between"
         spacing={2}
         sx={{ mb: 2 }}
@@ -40,7 +40,12 @@ const TeamTourManagement = () => {
         </Typography>
         <MainButton
           text="Valider"
-          sx={{ background: palette.linearHorizontaly }}
+          sx={{
+            background: palette.linearHorizontaly,
+            pl: 3,
+            pr: 3,
+            textTransform: "capitalize",
+          }}
         />
       </Stack>
       <MyDesktopDatePicker
