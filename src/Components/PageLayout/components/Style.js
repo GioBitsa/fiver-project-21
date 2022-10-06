@@ -87,4 +87,18 @@ export const MyListItemButton = styled(Button)({
     backgroundColor: palette.sideBarButtonBackground,
     borderRight: `5px solid ${palette.primary}`,
   },
+
+  "& .MuiButton-endIcon": {
+    display: "flex",
+    justifyContent: "flex-end",
+    color: palette.blackText,
+    opacity: 0.4,
+  },
+
+  "&.active .MuiButton-endIcon": {
+    display: "flex",
+    justifyContent: "flex-end",
+    color: palette.primary,
+    opacity: 1,
+  },
 });

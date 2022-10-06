@@ -195,6 +195,14 @@ export const TeamSideBarRoutes = [
     disabledIcon: AgendaDisabled,
     text: "Agenda",
     pathName: "/team/agenda",
+    children: [
+      {
+        icon: Agenda,
+        disabledIcon: AgendaDisabled,
+        text: "Tour Management",
+        pathName: "/team/tourmanagement",
+      },
+    ],
   },
   {
     icon: Transmission,
