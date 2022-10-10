@@ -48,6 +48,7 @@ import TeamTransmission from "./Team/TeamTransmission/TeamTransmission";
 import TeamExternal from "./Team/TeamExternal/TeamExternal";
 import TeamApplication from "./Team/TeamApplication/TeamApplication";
 import TeamTourManagement from "./Team/TeamTourManagement/TeamTourManagement";
+import Payment from "./Payment/Payment";
 
 export {
   Teritories,
@@ -100,4 +101,5 @@ export {
   TeamExternal,
   TeamApplication,
   TeamTourManagement,
+  Payment,
 };
