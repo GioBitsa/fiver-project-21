@@ -175,4 +175,12 @@ export const Header = styled(Stack)({
   "@media screen and (max-width: 899px)": {
     top: "20px",
   },
+
+  "@media screen and (max-width: 599px)": {
+    padding: "0 16px",
+
+    "& img": {
+      maxWidth: "200px",
+    },
+  },
 });
