@@ -12,6 +12,10 @@ export const MainBox = styled(Stack)({
     height: "auto",
     flexDirection: "column-reverse",
   },
+
+  "@media screen and (max-height: 700px)": {
+    height: "auto",
+  },
 });
 
 export const Content = styled(Box)({
