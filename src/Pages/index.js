@@ -50,6 +50,7 @@ import TeamApplication from "./Team/TeamApplication/TeamApplication";
 import TeamTourManagement from "./Team/TeamTourManagement/TeamTourManagement";
 import PaymentCard from "./Payment/PaymentCard/PaymentCard";
 import PaymentChoose from "./Payment/PaymentChoose/PaymentChoose";
+import ChooseCard from "./Payment/ChooseCard/ChooseCard";
 
 export {
   Teritories,
@@ -104,4 +105,5 @@ export {
   TeamTourManagement,
   PaymentCard,
   PaymentChoose,
+  ChooseCard,
 };
