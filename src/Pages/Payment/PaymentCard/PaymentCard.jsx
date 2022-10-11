@@ -9,18 +9,18 @@ import {
   CardImageContainer,
   Header,
 } from "./Style";
-import Ellipse from "../../Assets/Ellipse.png";
-import PaymentImage1 from "../../Assets/PaymentImage (1).png";
-import PaymentImage2 from "../../Assets/PaymentImage (2).png";
-import WhiteLogoWithText from "../../Assets/WhiteLogoWithText.png";
-import CardIcon from "../../Assets/Icons/CardIcon.png";
-import CardIconGreen from "../../Assets/Icons/CardIconGreen.png";
+import Ellipse from "../../../Assets/Ellipse.png";
+import PaymentImage1 from "../../../Assets/Payment/PaymentImage (1).png";
+import PaymentImage2 from "../../../Assets/Payment/PaymentImage (2).png";
+import WhiteLogoWithText from "../../../Assets/WhiteLogoWithText.png";
+import CardIcon from "../../../Assets/Icons/CardIcon.png";
+import CardIconGreen from "../../../Assets/Icons/CardIconGreen.png";
 import { Container, IconButton, Stack, Typography, Box } from "@mui/material";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
-import palette from "../../Shared/palette";
-import { MainButton } from "../../Components/Common";
+import palette from "../../../Shared/palette";
+import { MainButton } from "../../../Components/Common";
 
-const Payment = () => {
+const PaymentCard = () => {
   const [active, setActive] = useState("1");
 
   return (
@@ -142,4 +142,4 @@ const Payment = () => {
   );
 };
 
-export default Payment;
+export default PaymentCard;

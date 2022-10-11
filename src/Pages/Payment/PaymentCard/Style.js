@@ -1,7 +1,7 @@
 import { styled } from "@mui/system";
 import { Box, Stack } from "@mui/material";
-import palette from "../../Shared/palette";
-import { MainButton } from "../../Components/Common";
+import palette from "../../../Shared/palette";
+import { MainButton } from "../../../Components/Common";
 
 export const MainBox = styled(Box)({
   position: "relative",
