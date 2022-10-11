@@ -3,81 +3,106 @@ import { Box, Stack } from "@mui/material";
 import palette from "../../../Shared/palette";
 import { MainButton } from "../../../Components/Common";
 
-export const MainBox = styled(Box)({
+export const MainBox = styled(Stack)({
   position: "relative",
   width: "100%",
   height: "100vh",
 
   "@media screen and (max-width: 899px)": {
     height: "auto",
+    flexDirection: "column-reverse",
   },
 });
 
-export const CircleImage = styled("img")({
+export const Content = styled(Box)({
+  width: "50%",
+  height: "100%",
   position: "absolute",
   top: 0,
-  right: 0,
-
-  "@media screen and (max-width: 899px)": {
-    width: "70px",
-    height: "70px",
-  },
-});
-
-export const LeftPart = styled(Stack)({
-  flex: 1,
-  height: "100%",
+  left: 0,
+  zIndex: 1,
   background: palette.linearHorizontaly,
 
   "@media screen and (max-width: 899px)": {
-    width: "100%",
+    position: "initial",
     background: palette.whiteText,
+    width: "100%",
+    padding: "40px 0",
   },
 });
 
-export const PaymentImageContainer = styled(Box)({
-  flex: 1,
+export const MainImageContainer = styled(Box)({
+  width: "100%",
   height: "100%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  position: "relative",
   overflow: "hidden",
 
-  "& img": {
-    display: "none",
-    width: "100%",
+  "& img.main": {
+    display: "block",
+    width: "80%",
     height: "100%",
     objectFit: "contain",
-    margin: "0 auto",
+    margin: "0 0 0 auto",
+  },
+
+  "& img.first": {
+    width: "70%",
+  },
+
+  "& img.second": {
+    width: "50%",
+  },
+
+  "& img.ellipse": {
+    position: "absolute",
+    left: 0,
+    bottom: 0,
+    transform: "rotate(180deg)",
+  },
+
+  "& img.dots": {
+    position: "absolute",
+    right: 0,
+    bottom: 0,
   },
 
   "@media screen and (max-width: 899px)": {
+    height: "500px",
     background: palette.linearHorizontaly,
-    width: "100%",
     borderRadius: "0 0 30px 30px",
-    maxHeight: "550px",
-    minHeight: "450px",
 
     "& img": {
-      display: "block",
-      minWidth: "450px",
+      width: "70px",
+      height: "70px",
+    },
+
+    "& img.main": {
+      width: "100%",
+    },
+
+    "& img.first": {
+      width: "100%",
+      objectFit: "cover",
+    },
+
+    "& img.second": {
+      width: "70%",
     },
   },
 });
 
-export const MainContent = styled(Stack)({
+export const MyStack = styled(Stack)({
+  height: "100%",
   color: palette.whiteText,
 
   "& h3": {
     fontSize: "34px",
     fontWeight: 600,
-    marginBottom: "30px",
   },
 
   "& p": {
     fontSize: "18px",
     fontWeight: 600,
-    marginBottom: "10px",
   },
 
   "& h6": {
@@ -105,6 +130,42 @@ export const MainContent = styled(Stack)({
 });
 
 export const MyMainButton = styled(MainButton)({
+  paddingTop: "15px",
+  paddingBottom: "15px",
+  backgroundColor: palette.whiteText,
+  color: palette.primary,
+  fontWeight: "bold",
+  textTransform: "capitalize",
+  marginTop: "50px",
+
+  "&:hover": {
+    backgroundColor: palette.white,
+    color: palette.lightPrimary,
+  },
+
+  "@media screen and (max-width: 899px)": {
+    backgroundColor: palette.primary,
+    color: palette.whiteText,
+
+    "&:hover": {
+      backgroundColor: palette.lightPrimary,
+      color: palette.white,
+    },
+  },
+});
+
+export const CircleImage = styled("img")({
+  position: "absolute",
+  top: 0,
+  right: 0,
+
+  "@media screen and (max-width: 899px)": {
+    width: "70px",
+    height: "70px",
+  },
+});
+
+export const MyChooseButton = styled(MainButton)({
   color: palette.whiteText,
   flex: 1,
   backgroundColor: "transparent",
@@ -132,14 +193,12 @@ export const MyMainButton = styled(MainButton)({
 });
 
 export const CardImageContainer = styled(Box)({
-  margin: "0 auto 10px auto",
-  width: "100px",
-  height: "100px",
+  width: "100%",
 
   "& img": {
     display: "block",
-    width: "100%",
-    height: "100%",
+    width: "100px",
+    height: "100px",
     objectFit: "contain",
     margin: "0 auto",
   },
@@ -155,6 +214,13 @@ export const CardImageContainer = styled(Box)({
 
     "& img:last-of-type": {
       display: "block",
+    },
+  },
+
+  "@media screen and (max-width: 599px)": {
+    "& img": {
+      width: "70px",
+      height: "70px",
     },
   },
 });
