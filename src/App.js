@@ -54,6 +54,7 @@ import {
   PaymentCard,
   PaymentChoose,
   ChooseCard,
+  PaymentDetails,
 } from "./Pages";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -84,6 +85,7 @@ const App = () => {
       <Route path="/paymentcard" element={<PaymentCard />} />
       <Route path="/paymentchoose" element={<PaymentChoose />} />
       <Route path="/choosecard" element={<ChooseCard />} />
+      <Route path="/paymentdetails" element={<PaymentDetails />} />
       <Route path="/patient">
         <Route index element={<Navigate to="dashboard" replace />} />
         <Route path="dashboard" element={<PatientDashboard />} />
