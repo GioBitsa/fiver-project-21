@@ -1,5 +1,5 @@
 import React from "react";
-import { PageLayout } from "../../../Components";
+import { PageLayout, KendoReactComponent } from "../../../Components";
 import { TeamSideBarRoutes } from "../../../Shared/routes";
 import { Stack, Typography, TextField, Box, Grid } from "@mui/material";
 import { MainButton } from "../../../Components/Common";
@@ -118,7 +118,7 @@ const TeamAgenda = () => {
           </Grid>
         ))}
       </Grid>
-      table here
+      <KendoReactComponent />
     </PageLayout>
   );
 };

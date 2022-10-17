@@ -58,6 +58,7 @@ import {
 } from "./Pages";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "@progress/kendo-theme-default/dist/all.css";
 
 const App = () => {
   return (

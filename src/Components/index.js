@@ -25,6 +25,7 @@ import ScheduleComponent from "./ScheduleComponent/ScheduleComponent";
 import AssistantProfileDetails from "./AssistantProfileDetails/AssistantProfileDetails";
 import TeamMembers from "./TeamMembers/TeamMembers";
 import Recenties from "./Recenties/Recenties";
+import KendoReactComponent from "./KendoReactComponent/KendoReactComponent";
 
 export {
   Announcement,
@@ -54,4 +55,5 @@ export {
   AssistantProfileDetails,
   TeamMembers,
   Recenties,
+  KendoReactComponent,
 };
