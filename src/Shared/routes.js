@@ -189,6 +189,14 @@ export const TeamSideBarRoutes = [
     disabledIcon: TeamDisabled,
     text: "Team",
     pathName: "/team/team",
+    children: [
+      {
+        icon: Team,
+        disabledIcon: TeamDisabled,
+        text: "Nouveau patient ",
+        pathName: "/team/newpatient",
+      },
+    ],
   },
   {
     icon: Agenda,

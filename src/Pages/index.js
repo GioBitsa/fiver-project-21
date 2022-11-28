@@ -40,6 +40,7 @@ import AssistantPatientList from "./Assistant/AssistantPatientList/AssistantPati
 import AssistantConsultations from "./Assistant/AssistantConsultations/AssistantConsultations";
 import TeamDashboard from "./Team/TeamDashboard/TeamDashboard";
 import TeamList from "./Team/TeamList/TeamList";
+import NewPatient from "./Team/NewPatient/NewPatient";
 import TeamChat from "./Team/TeamChat/TeamChat";
 import TeamMessage from "./Team/TeamMessage/TeamMessage";
 import Team from "./Team/Team/Team";
@@ -108,4 +109,5 @@ export {
   PaymentChoose,
   ChooseCard,
   PaymentDetails,
+  NewPatient,
 };
