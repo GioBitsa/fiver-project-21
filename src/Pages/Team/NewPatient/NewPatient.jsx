@@ -62,7 +62,7 @@ const NewPatient = () => {
           />
         </Stack>
       </Stack>
-      {active === 1 ? <ManualAdding /> : <AutoAdding />}
+      {active === 1 ? <AutoAdding /> : <ManualAdding />}
     </PageLayout>
   );
 };
