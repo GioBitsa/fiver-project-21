@@ -28,6 +28,8 @@ import External from "../Assets/Icons/External.png";
 import ExternalDisabled from "../Assets/Icons/ExternalDisabled.png";
 import Application from "../Assets/Icons/Application.png";
 import ApplicationDisabled from "../Assets/Icons/ApplicationDisabled.png";
+import SettingsIcon from "../Assets/Icons/SettingsIcon.png";
+import SettingsIconDisabled from "../Assets/Icons/SettingsIconDisabled.png";
 import Corespond from "../Assets/Icons/Corespond.png";
 
 export const PatientSideBarRoutes = [
@@ -193,8 +195,14 @@ export const TeamSideBarRoutes = [
       {
         icon: Team,
         disabledIcon: TeamDisabled,
-        text: "Nouveau patient ",
+        text: "Nouveau patient",
         pathName: "/team/newpatient",
+      },
+      {
+        icon: Team,
+        disabledIcon: TeamDisabled,
+        text: "Planning hebdomadaire",
+        pathName: "/team/planning",
       },
     ],
   },
@@ -229,5 +237,11 @@ export const TeamSideBarRoutes = [
     disabledIcon: ApplicationDisabled,
     text: "Application for Admission",
     pathName: "/team/application",
+  },
+  {
+    icon: SettingsIcon,
+    disabledIcon: SettingsIconDisabled,
+    text: "Settings",
+    pathName: "/team/settings",
   },
 ];

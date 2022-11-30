@@ -49,6 +49,8 @@ import TeamTransmission from "./Team/TeamTransmission/TeamTransmission";
 import TeamExternal from "./Team/TeamExternal/TeamExternal";
 import TeamApplication from "./Team/TeamApplication/TeamApplication";
 import TeamTourManagement from "./Team/TeamTourManagement/TeamTourManagement";
+import TeamSettings from "./Team/TeamSettings/TeamSettings";
+import TeamPlanning from "./Team/TeamPlanning/TeamPlanning";
 import PaymentCard from "./Payment/PaymentCard/PaymentCard";
 import PaymentChoose from "./Payment/PaymentChoose/PaymentChoose";
 import ChooseCard from "./Payment/ChooseCard/ChooseCard";
@@ -105,6 +107,8 @@ export {
   TeamExternal,
   TeamApplication,
   TeamTourManagement,
+  TeamSettings,
+  TeamPlanning,
   PaymentCard,
   PaymentChoose,
   ChooseCard,
