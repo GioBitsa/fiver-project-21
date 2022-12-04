@@ -1,13 +1,13 @@
 import React from "react";
-import { PageLayout, PlanningTable } from "../../../Components";
-import { MainButton } from "../../../Components/Common";
-import { TeamSideBarRoutes } from "../../../Shared/routes";
+import { PageLayout, TeamMapComponent } from "../../../../Components";
+import { MainButton } from "../../../../Components/Common";
+import { TeamSideBarRoutes } from "../../../../Shared/routes";
 import { Typography, Stack } from "@mui/material";
-import palette from "../../../Shared/palette";
-import { EditedMainSelect, EditedMainDatePicker } from "./Style";
+import palette from "../../../../Shared/palette";
+import { EditedMainSelect, EditedMainDatePicker } from "../Style";
 import { useNavigate } from "react-router-dom";
 
-const TeamPlanning = () => {
+const TeamPlanningThird = () => {
   const navigate = useNavigate();
 
   return (
@@ -31,20 +31,20 @@ const TeamPlanning = () => {
             fontWeight: "600",
           }}
         >
-          Organiser sa tournée
+          Visualiser sa tournée
         </Typography>
         <MainButton
           text="Valider"
-          onClick={() => navigate("/team/planning/valider2")}
+          onClick={() => navigate("/team/planning/valider4")}
         />
       </Stack>
       <Stack direction="row" alignItems="center">
         <EditedMainSelect placeholder="Organisation des tournees semaine du" />
         <EditedMainDatePicker />
       </Stack>
-      <PlanningTable />
+      <TeamMapComponent />
     </PageLayout>
   );
 };
 
-export default TeamPlanning;
+export default TeamPlanningThird;

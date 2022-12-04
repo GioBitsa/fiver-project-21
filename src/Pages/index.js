@@ -51,6 +51,9 @@ import TeamApplication from "./Team/TeamApplication/TeamApplication";
 import TeamTourManagement from "./Team/TeamTourManagement/TeamTourManagement";
 import TeamSettings from "./Team/TeamSettings/TeamSettings";
 import TeamPlanning from "./Team/TeamPlanning/TeamPlanning";
+import TeamPlanningSecond from "./Team/TeamPlanning/TeamPlanningSecond/TeamPlanningSecond";
+import TeamPlanningThird from "./Team/TeamPlanning/TeamPlanningThird/TeamPlanningThird";
+import TeamPlanningFourth from "./Team/TeamPlanning/TeamPlanningFourth/TeamPlanningFourth";
 import PaymentCard from "./Payment/PaymentCard/PaymentCard";
 import PaymentChoose from "./Payment/PaymentChoose/PaymentChoose";
 import ChooseCard from "./Payment/ChooseCard/ChooseCard";
@@ -109,6 +112,9 @@ export {
   TeamTourManagement,
   TeamSettings,
   TeamPlanning,
+  TeamPlanningSecond,
+  TeamPlanningThird,
+  TeamPlanningFourth,
   PaymentCard,
   PaymentChoose,
   ChooseCard,

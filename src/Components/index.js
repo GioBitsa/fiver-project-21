@@ -26,6 +26,8 @@ import AssistantProfileDetails from "./AssistantProfileDetails/AssistantProfileD
 import TeamMembers from "./TeamMembers/TeamMembers";
 import Recenties from "./Recenties/Recenties";
 import KendoReactComponent from "./KendoReactComponent/KendoReactComponent";
+import PlanningTable from "./PlanningTable/PlanningTable";
+import TeamMapComponent from "./TeamMapComponent/TeamMapComponent";
 
 export {
   Announcement,
@@ -56,4 +58,6 @@ export {
   TeamMembers,
   Recenties,
   KendoReactComponent,
+  PlanningTable,
+  TeamMapComponent,
 };

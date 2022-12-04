@@ -53,6 +53,9 @@ import {
   TeamTourManagement,
   TeamSettings,
   TeamPlanning,
+  TeamPlanningSecond,
+  TeamPlanningThird,
+  TeamPlanningFourth,
   PaymentCard,
   PaymentChoose,
   ChooseCard,
@@ -133,6 +136,9 @@ const App = () => {
         <Route path="tourmanagement" element={<TeamTourManagement />} />
         <Route path="newpatient" element={<NewPatient />} />
         <Route path="planning" element={<TeamPlanning />} />
+        <Route path="planning/valider2" element={<TeamPlanningSecond />} />
+        <Route path="planning/valider3" element={<TeamPlanningThird />} />
+        <Route path="planning/valider4" element={<TeamPlanningFourth />} />
         <Route path="settings" element={<TeamSettings />} />
       </Route>
     </Routes>

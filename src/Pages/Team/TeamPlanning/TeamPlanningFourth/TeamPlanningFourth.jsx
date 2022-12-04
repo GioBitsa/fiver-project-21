@@ -1,15 +1,13 @@
 import React from "react";
-import { PageLayout, PlanningTable } from "../../../Components";
-import { MainButton } from "../../../Components/Common";
-import { TeamSideBarRoutes } from "../../../Shared/routes";
+import { PageLayout, TeamMapComponent } from "../../../../Components";
+import { MainButton } from "../../../../Components/Common";
+import { TeamSideBarRoutes } from "../../../../Shared/routes";
 import { Typography, Stack } from "@mui/material";
-import palette from "../../../Shared/palette";
-import { EditedMainSelect, EditedMainDatePicker } from "./Style";
-import { useNavigate } from "react-router-dom";
+import palette from "../../../../Shared/palette";
+import { EditedMainSelect, EditedMainDatePicker } from "../Style";
+import PrinterIcon from "../../../../Assets/Icons/PrinterIcon.png";
 
-const TeamPlanning = () => {
-  const navigate = useNavigate();
-
+const TeamPlanningFourth = () => {
   return (
     <PageLayout
       profile={null}
@@ -17,10 +15,11 @@ const TeamPlanning = () => {
       profileType="team"
     >
       <Stack
-        direction={{ xs: "column", md: "row" }}
+        direction={{ xs: "column", sm: "row" }}
+        alignItems={{ xs: "flex-start", sm: "center" }}
         justifyContent="space-between"
         spacing={3}
-        sx={{ my: 2 }}
+        sx={{ mb: 2 }}
       >
         <Typography
           component="h2"
@@ -31,20 +30,20 @@ const TeamPlanning = () => {
             fontWeight: "600",
           }}
         >
-          Organiser sa tournée
+          Visualiser sa tournée
         </Typography>
         <MainButton
-          text="Valider"
-          onClick={() => navigate("/team/planning/valider2")}
+          startIcon={<img src={PrinterIcon} alt="print" />}
+          text="Imprimer"
         />
       </Stack>
       <Stack direction="row" alignItems="center">
         <EditedMainSelect placeholder="Organisation des tournees semaine du" />
         <EditedMainDatePicker />
       </Stack>
-      <PlanningTable />
+      <TeamMapComponent />
     </PageLayout>
   );
 };
 
-export default TeamPlanning;
+export default TeamPlanningFourth;
