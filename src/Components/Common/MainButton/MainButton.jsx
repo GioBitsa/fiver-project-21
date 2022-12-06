@@ -3,16 +3,17 @@ import { Button } from "@mui/material";
 import { styled } from "@mui/system";
 import palette from "../../../Shared/palette";
 
-const MyButton = styled(Button)({
-  color: palette.whiteText,
-  backgroundColor: palette.primary,
+const MyButton = styled(Button)(({ disabled }) => ({
+  color: disabled ? palette.blackText : palette.whiteText,
+  backgroundColor: disabled ? palette.disabled : palette.primary,
   padding: "8px 12px",
   borderRadius: "7px",
+  opacity: disabled ? 0.6 : 1,
 
   "&:hover": {
     backgroundColor: palette.primary,
   },
-});
+}));
 
 const MainButton = ({
   text,
@@ -22,6 +23,7 @@ const MainButton = ({
   className,
   startIcon,
   endIcon,
+  disabled,
 }) => {
   return (
     <MyButton
@@ -32,6 +34,7 @@ const MainButton = ({
       onClick={onClick}
       startIcon={startIcon}
       endIcon={endIcon}
+      disabled={disabled}
     >
       {text}
     </MyButton>

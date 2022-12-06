@@ -248,6 +248,8 @@ const PageLayout = ({ children, profile, sideBarItems, profileType }) => {
         sx={{
           p: { xs: 2, sm: 3 },
           width: { lg: `calc(100% - ${drawerWidth}px)` },
+          backgroundColor: palette.white,
+          minHeight: "100vh",
         }}
       >
         <Toolbar />
